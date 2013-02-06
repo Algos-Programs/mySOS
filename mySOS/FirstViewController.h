@@ -12,4 +12,6 @@
 
 @interface FirstViewController : UIViewController
 - (IBAction)pressButtonCallMe:(id)sender;
+- (IBAction)pressButtonSendMessage:(id)sender;
+
 @end

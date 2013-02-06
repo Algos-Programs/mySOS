@@ -26,14 +26,35 @@
     // Dispose of any resources that can be recreated.
 }
 
+//*************************
+#pragma mark - Actions
+//*************************
+
 
 - (IBAction)pressButtonCallMe:(id)sender {
     
-    //-- Chiama il numero di telefono.
-    //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:0248844556"]];
+    [self callNumber];
+}
+
+- (IBAction)pressButtonSendMessage:(id)sender {
+    [self sendMessage];
+}
+
+//*************************
+#pragma mark - Calls
+//*************************
+
+- (void)callNumber {
     
-    //-- Manda un messaggio di testo.
-    //[[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"sms:3460602722"]];
+    //-- Chiama il numero di telefono.
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:0248844556"]];
+}
+
+//*************************
+#pragma mark - Messages
+//*************************
+
+- (void)sendMessage {
     
     MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
 	if([MFMessageComposeViewController canSendText])
@@ -47,8 +68,8 @@
         
         
 	}
-}
 
+}
 - (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result {
     
     switch (result) {
