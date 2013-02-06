@@ -26,4 +26,51 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (IBAction)pressButtonCallMe:(id)sender {
+    
+    //-- Chiama il numero di telefono.
+    //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:0248844556"]];
+    
+    //-- Manda un messaggio di testo.
+    //[[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"sms:3460602722"]];
+    
+    MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
+	if([MFMessageComposeViewController canSendText])
+	{
+		controller.body = @"Ciao, sono in pericolo, aiutatemi!";
+		//controller.recipients = [NSArray arrayWithObjects:@"3384865894", @"3382053386", nil];
+        controller.recipients = [NSArray arrayWithObjects: @"3460602722", nil];
+		controller.messageComposeDelegate = self;
+		[self presentModalViewController:controller animated:YES];
+        //[[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"sms:3460602722"]];
+        
+        
+	}
+}
+
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result {
+    
+    switch (result) {
+		case MessageComposeResultCancelled:
+			NSLog(@"Cancelled");
+			break;
+		case MessageComposeResultFailed:
+			//UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"MyApp" message:@"Unknown Error"
+            //delegate:self cancelButtonTitle:@”OK” otherButtonTitles: nil];
+			//[alert show];
+			//[alert release];
+			break;
+		case MessageComposeResultSent:
+            
+			NSLog(@"sent");
+            [self.navigationController popToRootViewControllerAnimated:YES];
+			break;
+		default:
+			break;
+	}
+    
+	[self dismissModalViewControllerAnimated:YES];
+    
+}
 @end
