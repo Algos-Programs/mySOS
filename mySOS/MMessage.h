@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import <MessageUI/MessageUI.h>
+#import <MapKit/MapKit.h>
 
 @interface MMessage : NSObject
 

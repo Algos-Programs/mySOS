@@ -31,6 +31,9 @@
 		A90607B016C2FEFB0014F0CB /* mySOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A90607AF16C2FEFB0014F0CB /* mySOSTests.m */; };
 		A90607BA16C2FF4C0014F0CB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90607B916C2FF4C0014F0CB /* MessageUI.framework */; };
 		A92EA12A16C3F7A300976BDA /* MMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A92EA12916C3F7A300976BDA /* MMessage.m */; };
+		A92EA12C16C3FC5400976BDA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A92EA12B16C3FC5400976BDA /* MapKit.framework */; };
+		A92EA12E16C40A0F00976BDA /* cog_02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A92EA12D16C40A0F00976BDA /* cog_02@2x.png */; };
+		A92EA13116C40B0900976BDA /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A92EA13016C40B0900976BDA /* SettingsViewController.m */; };
 		A93FAA3B16C3D599001BBF45 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */; };
 		A93FAA3C16C3F21F001BBF45 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */; };
 		A93FAA3D16C3F227001BBF45 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90607B916C2FF4C0014F0CB /* MessageUI.framework */; };
@@ -79,6 +82,10 @@
 		A90607B916C2FF4C0014F0CB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		A92EA12816C3F7A300976BDA /* MMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMessage.h; sourceTree = "<group>"; };
 		A92EA12916C3F7A300976BDA /* MMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMessage.m; sourceTree = "<group>"; };
+		A92EA12B16C3FC5400976BDA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A92EA12D16C40A0F00976BDA /* cog_02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cog_02@2x.png"; sourceTree = "<group>"; };
+		A92EA12F16C40B0900976BDA /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		A92EA13016C40B0900976BDA /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -87,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A92EA12C16C3FC5400976BDA /* MapKit.framework in Frameworks */,
 				A93FAA3B16C3D599001BBF45 /* CoreLocation.framework in Frameworks */,
 				A90607BA16C2FF4C0014F0CB /* MessageUI.framework in Frameworks */,
 				A906077116C2FEFB0014F0CB /* UIKit.framework in Frameworks */,
@@ -113,8 +121,7 @@
 		A906076416C2FEFB0014F0CB = {
 			isa = PBXGroup;
 			children = (
-				A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */,
-				A90607B916C2FF4C0014F0CB /* MessageUI.framework */,
+				A92EA12D16C40A0F00976BDA /* cog_02@2x.png */,
 				A906077616C2FEFB0014F0CB /* mySOS */,
 				A90607A816C2FEFB0014F0CB /* mySOSTests */,
 				A906076F16C2FEFB0014F0CB /* Frameworks */,
@@ -134,6 +141,9 @@
 		A906076F16C2FEFB0014F0CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A92EA12B16C3FC5400976BDA /* MapKit.framework */,
+				A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */,
+				A90607B916C2FF4C0014F0CB /* MessageUI.framework */,
 				A906077016C2FEFB0014F0CB /* UIKit.framework */,
 				A906077216C2FEFB0014F0CB /* Foundation.framework */,
 				A906077416C2FEFB0014F0CB /* CoreGraphics.framework */,
@@ -159,6 +169,8 @@
 				A906079816C2FEFB0014F0CB /* second.png */,
 				A906079A16C2FEFB0014F0CB /* second@2x.png */,
 				A906077716C2FEFB0014F0CB /* Supporting Files */,
+				A92EA12F16C40B0900976BDA /* SettingsViewController.h */,
+				A92EA13016C40B0900976BDA /* SettingsViewController.m */,
 			);
 			path = mySOS;
 			sourceTree = "<group>";
@@ -294,6 +306,7 @@
 				A906079416C2FEFB0014F0CB /* first@2x.png in Resources */,
 				A906079916C2FEFB0014F0CB /* second.png in Resources */,
 				A906079B16C2FEFB0014F0CB /* second@2x.png in Resources */,
+				A92EA12E16C40A0F00976BDA /* cog_02@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +346,7 @@
 				A906079016C2FEFB0014F0CB /* FirstViewController.m in Sources */,
 				A906079716C2FEFB0014F0CB /* SecondViewController.m in Sources */,
 				A92EA12A16C3F7A300976BDA /* MMessage.m in Sources */,
+				A92EA13116C40B0900976BDA /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

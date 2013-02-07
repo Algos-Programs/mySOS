@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FirstViewController.h"
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

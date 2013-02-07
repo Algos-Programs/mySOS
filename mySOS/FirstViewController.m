@@ -39,7 +39,7 @@ BOOL callNumber = NO;
 
 - (IBAction)pressButtonSendMessage:(id)sender {
     callNumber = NO;
-    [self sendMessageWithNumbers:[NSArray arrayWithObject:@"3460602722"] withText:@"Aiuto mi sono tagliato una gamba" withLocation:[self findCurrentLocation]];
+    [self sendMessageWithNumbers:[NSArray arrayWithObject:@"3460602722"] withText:@"Aiuto mi sono tagliato una gamba" withLocation:[FirstViewController findCurrentLocation]];
     //[self sendMessage];
 }
 
@@ -49,7 +49,7 @@ BOOL callNumber = NO;
 - (IBAction)pressButtonSOS:(id)sender {
     // asserendo callNumber dico di iniziare la chiamata se il messaggio è stato inviato.
     callNumber = YES;
-    [self sendMessage];
+    [self sendMessageWithNumbers:[NSArray arrayWithObject:@"3460602722"] withText:@"Aiuto mi sono tagliato una gamba" withLocation:[FirstViewController findCurrentLocation]];
 }
 
 //*************************
@@ -180,7 +180,7 @@ BOOL callNumber = NO;
 #pragma mark - Location
 //*************************
 
--(CLLocation*)findCurrentLocation
++ (CLLocation*)findCurrentLocation
 {
     CLLocationManager *locationManager = [[CLLocationManager alloc] init];
     if ([locationManager locationServicesEnabled])
@@ -194,5 +194,5 @@ BOOL callNumber = NO;
     
     return location;
 }
-
 @end
+
