@@ -7,14 +7,15 @@
 //
 
 #import "mySOSTests.h"
-
+#import "FirstViewController.h"
+#import <CoreLocation/CoreLocation.h>
 @implementation mySOSTests
 
 - (void)setUp
 {
     [super setUp];
-    
-    // Set-up code here.
+        // Set-up code here.
+
 }
 
 - (void)tearDown
@@ -27,6 +28,15 @@
 - (void)testExample
 {
     STFail(@"Unit tests are not implemented yet in mySOSTests");
+}
+
+- (void)testLocation {
+    
+    FirstViewController *fv = [[FirstViewController alloc] init];
+    CLLocation *location = [[CLLocation alloc] init];
+    location = [fv findCurrentLocation];
+    [fv sendMessageWithNumbers:[[NSArray alloc] initWithObjects:@"3460602722", nil] withText:@"Aiuto!!!" withLocation:location];
+
 }
 
 @end

@@ -9,10 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <MessageUI/MFMessageComposeViewController.h>
 #import <MessageUI/MessageUI.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController <UIVideoEditorControllerDelegate>
 - (IBAction)pressButtonCallMe:(id)sender;
 - (IBAction)pressButtonSendMessage:(id)sender;
 - (IBAction)pressButtonSOS:(id)sender;
+
+- (void)sendMessageWithNumbers:(NSArray *)numbers withText:(NSString *)text withLocation:(CLLocation *)location;
+- (CLLocation*)findCurrentLocation;
 
 @end

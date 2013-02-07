@@ -34,13 +34,13 @@ BOOL callNumber = NO;
 
 
 - (IBAction)pressButtonCallMe:(id)sender {
-    
     [self callNumber];
 }
 
 - (IBAction)pressButtonSendMessage:(id)sender {
     callNumber = NO;
-    [self sendMessage];
+    [self sendMessageWithNumbers:[NSArray arrayWithObject:@"3460602722"] withText:@"Aiuto mi sono tagliato una gamba" withLocation:[self findCurrentLocation]];
+    //[self sendMessage];
 }
 
 /**
@@ -68,9 +68,8 @@ BOOL callNumber = NO;
 //*************************
 #pragma mark - Messages
 //*************************
-
 /**
-    Invia il messaggio ad un numero.
+ Invia il messaggio ad un numero.
  */
 - (void)sendMessage {
     
@@ -80,12 +79,76 @@ BOOL callNumber = NO;
 		controller.body = @"TEST DI PROVA APPLICAZIONE!\nCiao, sono in pericolo, aiutatemi!";
 		//controller.recipients = [NSArray arrayWithObjects:@"3384865894", @"3382053386", nil];
         controller.recipients = [NSArray arrayWithObjects: @"3460602722", nil];
+		//controller.messageComposeDelegate = self;
+		[self presentModalViewController:controller animated:YES];
+        controller.messageComposeDelegate = self;
+        //[[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"sms:3460602722"]];
+	}
+}
+
+- (void)sendMessageWithText:(NSString *)text {
+    
+    MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
+	if([MFMessageComposeViewController canSendText])
+	{
+		controller.body = text;
+		//controller.recipients = [NSArray arrayWithObjects:@"3384865894", @"3382053386", nil];
+        controller.recipients = [NSArray arrayWithObjects: @"3460602722", nil];
 		controller.messageComposeDelegate = self;
 		[self presentModalViewController:controller animated:YES];
         //[[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"sms:3460602722"]];
 	}
-
+    
 }
+
+- (void)sendMessageWithNumbers:(NSArray *)numbers {
+    
+    MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
+	if([MFMessageComposeViewController canSendText])
+	{
+		controller.body = @"TEST DI PROVA APPLICAZIONE!\nCiao, sono in pericolo, aiutatemi!";
+		//controller.recipients = [NSArray arrayWithObjects:@"3384865894", @"3382053386", nil];
+        controller.recipients = numbers;
+		controller.messageComposeDelegate = self;
+		[self presentModalViewController:controller animated:YES];
+        //[[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"sms:3460602722"]];
+	}
+}
+
+
+- (void)sendMessageWithLocation:(CLLocation *)location {
+    
+    MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
+	if([MFMessageComposeViewController canSendText])
+	{
+		controller.body = @"TEST DI PROVA APPLICAZIONE!\nCiao, sono in pericolo, aiutatemi!\nMi trovo qui %i, %i";
+		//controller.recipients = [NSArray arrayWithObjects:@"3384865894", @"3382053386", nil];
+        controller.recipients = [NSArray arrayWithObjects: @"3460602722", nil];
+		controller.messageComposeDelegate = self;
+		[self presentModalViewController:controller animated:YES];
+        //[[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"sms:3460602722"]];
+	}
+}
+
+- (void)sendMessageWithNumbers:(NSArray *)numbers withText:(NSString *)text withLocation:(CLLocation *)location {
+    
+    MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
+	if([MFMessageComposeViewController canSendText])
+	{
+        CLLocationCoordinate2D coordinate=[location coordinate];
+        
+
+        NSString *coordinateStr = [[NSString alloc] initWithFormat:@"\nMi trovo qui: \nLongiudine: %f \nLatitudine: %f", coordinate.latitude, coordinate.longitude];
+        
+        text = [text stringByAppendingString:coordinateStr];
+        controller.body = text;
+        controller.recipients = numbers;
+		[self presentModalViewController:controller animated:YES];
+        controller.messageComposeDelegate = self;
+	}
+    
+}
+
 
 /**
     Decido cosa fare a seconda dell'esito del messaggio.
@@ -97,14 +160,10 @@ BOOL callNumber = NO;
 			NSLog(@"Cancelled");
 			break;
 		case MessageComposeResultFailed:
-			//UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"MyApp" message:@"Unknown Error"
-            //delegate:self cancelButtonTitle:@”OK” otherButtonTitles: nil];
-			//[alert show];
-			//[alert release];
 			break;
 		case MessageComposeResultSent:
             
-			NSLog(@"sent");
+			NSLog(@"sent Message");
             if(callNumber)
                 [self callNumber];
             [self.navigationController popToRootViewControllerAnimated:YES];
@@ -116,4 +175,24 @@ BOOL callNumber = NO;
 	[self dismissModalViewControllerAnimated:YES];
     
 }
+
+//*************************
+#pragma mark - Location
+//*************************
+
+-(CLLocation*)findCurrentLocation
+{
+    CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+    if ([locationManager locationServicesEnabled])
+    {
+        //locationManager.delegate = self;
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        locationManager.distanceFilter = kCLDistanceFilterNone;
+        [locationManager startUpdatingLocation];
+    }
+    CLLocation *location = [locationManager location];
+    
+    return location;
+}
+
 @end

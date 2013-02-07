@@ -30,7 +30,10 @@
 		A90607AD16C2FEFB0014F0CB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A90607AB16C2FEFB0014F0CB /* InfoPlist.strings */; };
 		A90607B016C2FEFB0014F0CB /* mySOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A90607AF16C2FEFB0014F0CB /* mySOSTests.m */; };
 		A90607BA16C2FF4C0014F0CB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90607B916C2FF4C0014F0CB /* MessageUI.framework */; };
+		A92EA12A16C3F7A300976BDA /* MMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A92EA12916C3F7A300976BDA /* MMessage.m */; };
 		A93FAA3B16C3D599001BBF45 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */; };
+		A93FAA3C16C3F21F001BBF45 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */; };
+		A93FAA3D16C3F227001BBF45 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90607B916C2FF4C0014F0CB /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,8 @@
 		A90607AE16C2FEFB0014F0CB /* mySOSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mySOSTests.h; sourceTree = "<group>"; };
 		A90607AF16C2FEFB0014F0CB /* mySOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mySOSTests.m; sourceTree = "<group>"; };
 		A90607B916C2FF4C0014F0CB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		A92EA12816C3F7A300976BDA /* MMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMessage.h; sourceTree = "<group>"; };
+		A92EA12916C3F7A300976BDA /* MMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMessage.m; sourceTree = "<group>"; };
 		A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -94,6 +99,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A93FAA3D16C3F227001BBF45 /* MessageUI.framework in Frameworks */,
+				A93FAA3C16C3F21F001BBF45 /* CoreLocation.framework in Frameworks */,
 				A90607A316C2FEFB0014F0CB /* SenTestingKit.framework in Frameworks */,
 				A90607A416C2FEFB0014F0CB /* UIKit.framework in Frameworks */,
 				A90607A516C2FEFB0014F0CB /* Foundation.framework in Frameworks */,
@@ -138,6 +145,7 @@
 		A906077616C2FEFB0014F0CB /* mySOS */ = {
 			isa = PBXGroup;
 			children = (
+				A92EA12616C3F74A00976BDA /* Model */,
 				A906077F16C2FEFB0014F0CB /* AppDelegate.h */,
 				A906078016C2FEFB0014F0CB /* AppDelegate.m */,
 				A906078816C2FEFB0014F0CB /* MainStoryboard_iPhone.storyboard */,
@@ -186,6 +194,23 @@
 				A90607AB16C2FEFB0014F0CB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A92EA12616C3F74A00976BDA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A92EA12716C3F75100976BDA /* Message */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A92EA12716C3F75100976BDA /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				A92EA12816C3F7A300976BDA /* MMessage.h */,
+				A92EA12916C3F7A300976BDA /* MMessage.m */,
+			);
+			name = Message;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +332,7 @@
 				A906078116C2FEFB0014F0CB /* AppDelegate.m in Sources */,
 				A906079016C2FEFB0014F0CB /* FirstViewController.m in Sources */,
 				A906079716C2FEFB0014F0CB /* SecondViewController.m in Sources */,
+				A92EA12A16C3F7A300976BDA /* MMessage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
