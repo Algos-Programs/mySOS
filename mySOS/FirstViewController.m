@@ -47,9 +47,9 @@ BOOL callNumber = NO;
     Invia un messagggio e (solo se questo è stato inviato) chiama il numero prefissato.
  */
 - (IBAction)pressButtonSOS:(id)sender {
+    // asserendo callNumber dico di iniziare la chiamata se il messaggio è stato inviato.
     callNumber = YES;
     [self sendMessage];
-    [self callNumber];
 }
 
 //*************************
@@ -77,7 +77,7 @@ BOOL callNumber = NO;
     MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
 	if([MFMessageComposeViewController canSendText])
 	{
-		controller.body = @"Ciao, sono in pericolo, aiutatemi!";
+		controller.body = @"TEST DI PROVA APPLICAZIONE!\nCiao, sono in pericolo, aiutatemi!";
 		//controller.recipients = [NSArray arrayWithObjects:@"3384865894", @"3382053386", nil];
         controller.recipients = [NSArray arrayWithObjects: @"3460602722", nil];
 		controller.messageComposeDelegate = self;
