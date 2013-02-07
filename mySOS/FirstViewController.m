@@ -14,6 +14,8 @@
 
 @implementation FirstViewController
 
+BOOL callNumber = NO;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -37,13 +39,26 @@
 }
 
 - (IBAction)pressButtonSendMessage:(id)sender {
+    callNumber = NO;
     [self sendMessage];
+}
+
+/**
+    Invia un messagggio e (solo se questo è stato inviato) chiama il numero prefissato.
+ */
+- (IBAction)pressButtonSOS:(id)sender {
+    callNumber = YES;
+    [self sendMessage];
+    [self callNumber];
 }
 
 //*************************
 #pragma mark - Calls
 //*************************
 
+/**
+    Chiama un numero prefissato.
+ */
 - (void)callNumber {
     
     //-- Chiama il numero di telefono.
@@ -54,6 +69,9 @@
 #pragma mark - Messages
 //*************************
 
+/**
+    Invia il messaggio ad un numero.
+ */
 - (void)sendMessage {
     
     MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
@@ -65,11 +83,13 @@
 		controller.messageComposeDelegate = self;
 		[self presentModalViewController:controller animated:YES];
         //[[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"sms:3460602722"]];
-        
-        
 	}
 
 }
+
+/**
+    Decido cosa fare a seconda dell'esito del messaggio.
+ */
 - (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result {
     
     switch (result) {
@@ -85,6 +105,8 @@
 		case MessageComposeResultSent:
             
 			NSLog(@"sent");
+            if(callNumber)
+                [self callNumber];
             [self.navigationController popToRootViewControllerAnimated:YES];
 			break;
 		default:

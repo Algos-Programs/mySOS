@@ -30,6 +30,7 @@
 		A90607AD16C2FEFB0014F0CB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A90607AB16C2FEFB0014F0CB /* InfoPlist.strings */; };
 		A90607B016C2FEFB0014F0CB /* mySOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A90607AF16C2FEFB0014F0CB /* mySOSTests.m */; };
 		A90607BA16C2FF4C0014F0CB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90607B916C2FF4C0014F0CB /* MessageUI.framework */; };
+		A93FAA3B16C3D599001BBF45 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		A90607AE16C2FEFB0014F0CB /* mySOSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mySOSTests.h; sourceTree = "<group>"; };
 		A90607AF16C2FEFB0014F0CB /* mySOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mySOSTests.m; sourceTree = "<group>"; };
 		A90607B916C2FF4C0014F0CB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A93FAA3B16C3D599001BBF45 /* CoreLocation.framework in Frameworks */,
 				A90607BA16C2FF4C0014F0CB /* MessageUI.framework in Frameworks */,
 				A906077116C2FEFB0014F0CB /* UIKit.framework in Frameworks */,
 				A906077316C2FEFB0014F0CB /* Foundation.framework in Frameworks */,
@@ -103,6 +106,7 @@
 		A906076416C2FEFB0014F0CB = {
 			isa = PBXGroup;
 			children = (
+				A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */,
 				A90607B916C2FF4C0014F0CB /* MessageUI.framework */,
 				A906077616C2FEFB0014F0CB /* mySOS */,
 				A90607A816C2FEFB0014F0CB /* mySOSTests */,
@@ -493,6 +497,7 @@
 				A90607B516C2FEFB0014F0CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A90607B616C2FEFB0014F0CB /* Build configuration list for PBXNativeTarget "mySOSTests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +506,7 @@
 				A90607B816C2FEFB0014F0CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
