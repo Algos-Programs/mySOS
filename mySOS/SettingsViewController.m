@@ -51,6 +51,22 @@ static const NSString *TITLE_SEZIONE_1 = @"Destinatari Messaggi";
 
 #pragma mark - Table view data source
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    
+    switch (section) {
+        case 0: //numero da chiamare
+            return TITLE_SEZIONE_0;
+            break;
+            
+        case 1: //numero per messaggi.
+            return TITLE_SEZIONE_1;
+            break;
+        default:
+            return @"ERRORE";
+    }
+    
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
