@@ -40,6 +40,9 @@
 		A93FAA3C16C3F21F001BBF45 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */; };
 		A93FAA3D16C3F227001BBF45 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90607B916C2FF4C0014F0CB /* MessageUI.framework */; };
 		A9B9D00416C5139600AE88C4 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B9D00316C5139600AE88C4 /* SettingViewController.m */; };
+		A9B9D00816C57C5000AE88C4 /* MPlist.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B9D00716C57C5000AE88C4 /* MPlist.m */; };
+		A9B9D00C16C57CE500AE88C4 /* File.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9B9D00B16C57CE500AE88C4 /* File.strings */; };
+		A9B9D00F16C57D1C00AE88C4 /* MFile.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B9D00E16C57D1C00AE88C4 /* MFile.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +99,11 @@
 		A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A9B9D00216C5139600AE88C4 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		A9B9D00316C5139600AE88C4 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		A9B9D00616C57C5000AE88C4 /* MPlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPlist.h; sourceTree = "<group>"; };
+		A9B9D00716C57C5000AE88C4 /* MPlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPlist.m; sourceTree = "<group>"; };
+		A9B9D00B16C57CE500AE88C4 /* File.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = File.strings; sourceTree = "<group>"; };
+		A9B9D00D16C57D1C00AE88C4 /* MFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFile.h; sourceTree = "<group>"; };
+		A9B9D00E16C57D1C00AE88C4 /* MFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFile.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,8 +187,6 @@
 				A906079816C2FEFB0014F0CB /* second.png */,
 				A906079A16C2FEFB0014F0CB /* second@2x.png */,
 				A906077716C2FEFB0014F0CB /* Supporting Files */,
-				A92EA12F16C40B0900976BDA /* SettingsViewController.h */,
-				A92EA13016C40B0900976BDA /* SettingsViewController.m */,
 				A9B9D00216C5139600AE88C4 /* SettingViewController.h */,
 				A9B9D00316C5139600AE88C4 /* SettingViewController.m */,
 			);
@@ -190,6 +196,7 @@
 		A906077716C2FEFB0014F0CB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A9B9D00516C57C2E00AE88C4 /* OLD */,
 				A906077816C2FEFB0014F0CB /* mySOS-Info.plist */,
 				A906077916C2FEFB0014F0CB /* InfoPlist.strings */,
 				A906077C16C2FEFB0014F0CB /* main.m */,
@@ -224,6 +231,11 @@
 			isa = PBXGroup;
 			children = (
 				A92EA12716C3F75100976BDA /* Message */,
+				A9B9D00616C57C5000AE88C4 /* MPlist.h */,
+				A9B9D00716C57C5000AE88C4 /* MPlist.m */,
+				A9B9D00B16C57CE500AE88C4 /* File.strings */,
+				A9B9D00D16C57D1C00AE88C4 /* MFile.h */,
+				A9B9D00E16C57D1C00AE88C4 /* MFile.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -246,6 +258,15 @@
 				A92EA13D16C4FE1D00976BDA /* MyTextField.m */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		A9B9D00516C57C2E00AE88C4 /* OLD */ = {
+			isa = PBXGroup;
+			children = (
+				A92EA12F16C40B0900976BDA /* SettingsViewController.h */,
+				A92EA13016C40B0900976BDA /* SettingsViewController.m */,
+			);
+			name = OLD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +351,7 @@
 				A906079916C2FEFB0014F0CB /* second.png in Resources */,
 				A906079B16C2FEFB0014F0CB /* second@2x.png in Resources */,
 				A92EA12E16C40A0F00976BDA /* cog_02@2x.png in Resources */,
+				A9B9D00C16C57CE500AE88C4 /* File.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +395,8 @@
 				A92EA13B16C4FDF200976BDA /* NumericCell.m in Sources */,
 				A92EA13E16C4FE1D00976BDA /* MyTextField.m in Sources */,
 				A9B9D00416C5139600AE88C4 /* SettingViewController.m in Sources */,
+				A9B9D00816C57C5000AE88C4 /* MPlist.m in Sources */,
+				A9B9D00F16C57D1C00AE88C4 /* MFile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
