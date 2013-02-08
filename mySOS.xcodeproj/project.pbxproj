@@ -39,6 +39,7 @@
 		A93FAA3B16C3D599001BBF45 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */; };
 		A93FAA3C16C3F21F001BBF45 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */; };
 		A93FAA3D16C3F227001BBF45 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90607B916C2FF4C0014F0CB /* MessageUI.framework */; };
+		A9B9D00416C5139600AE88C4 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B9D00316C5139600AE88C4 /* SettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,8 @@
 		A92EA13C16C4FE1D00976BDA /* MyTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTextField.h; sourceTree = "<group>"; };
 		A92EA13D16C4FE1D00976BDA /* MyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTextField.m; sourceTree = "<group>"; };
 		A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A9B9D00216C5139600AE88C4 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		A9B9D00316C5139600AE88C4 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +181,8 @@
 				A906077716C2FEFB0014F0CB /* Supporting Files */,
 				A92EA12F16C40B0900976BDA /* SettingsViewController.h */,
 				A92EA13016C40B0900976BDA /* SettingsViewController.m */,
+				A9B9D00216C5139600AE88C4 /* SettingViewController.h */,
+				A9B9D00316C5139600AE88C4 /* SettingViewController.m */,
 			);
 			path = mySOS;
 			sourceTree = "<group>";
@@ -367,6 +372,7 @@
 				A92EA13116C40B0900976BDA /* SettingsViewController.m in Sources */,
 				A92EA13B16C4FDF200976BDA /* NumericCell.m in Sources */,
 				A92EA13E16C4FE1D00976BDA /* MyTextField.m in Sources */,
+				A9B9D00416C5139600AE88C4 /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
