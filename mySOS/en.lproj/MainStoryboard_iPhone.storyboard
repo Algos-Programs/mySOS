@@ -97,7 +97,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="iAw-Bo-GLY" kind="relationship" relationship="rootViewController" id="xec-CW-czs"/>
+                        <segue destination="uux-RQ-IBu" kind="relationship" relationship="rootViewController" id="yrl-sL-5md"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J3S-8P-DCF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -109,7 +109,7 @@
             <objects>
                 <viewController id="iAw-Bo-GLY" customClass="SettingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YyY-lU-BcE">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sij-cG-PDN">
@@ -203,12 +203,12 @@
             </objects>
             <point key="canvasLocation" x="897" y="538"/>
         </scene>
-        <!--View Controller-->
+        <!--Setting View Controller-->
         <scene sceneID="bw7-f7-gwR">
             <objects>
-                <viewController id="uux-RQ-IBu" sceneMemberID="viewController">
+                <viewController id="uux-RQ-IBu" customClass="SettingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RtN-7x-k3U">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aLI-ph-hL7">
@@ -237,48 +237,79 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pYe-3g-Cwa">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5g8-mj-5aN">
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pYe-3g-Cwa">
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes"/>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Testo del messaggio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APq-FN-ZFb">
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" red="0.1098039299249649" green="0.31372550129890442" blue="0.066666670143604279" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Stop" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rv-yO-yWW">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="HF4-sR-l8J" firstAttribute="centerX" secondItem="aLI-ph-hL7" secondAttribute="centerX" type="default" id="38g-JW-e5r"/>
+                                    <constraint firstItem="pYe-3g-Cwa" firstAttribute="top" secondItem="aLI-ph-hL7" secondAttribute="top" constant="244" id="3II-cS-ZHH"/>
                                     <constraint firstAttribute="trailing" secondItem="ruq-ky-sxV" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="5Q4-ZL-jg6"/>
-                                    <constraint firstItem="aqY-z1-hqE" firstAttribute="top" secondItem="aLI-ph-hL7" secondAttribute="top" constant="105" id="680-cB-e6e"/>
                                     <constraint firstAttribute="trailing" secondItem="7hi-pr-X8z" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="8P9-bc-j02"/>
                                     <constraint firstItem="pYe-3g-Cwa" firstAttribute="leading" secondItem="aLI-ph-hL7" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="CR5-6i-3oz"/>
+                                    <constraint firstItem="APq-FN-ZFb" firstAttribute="top" secondItem="aLI-ph-hL7" secondAttribute="top" constant="217" id="G0y-eG-e6V"/>
+                                    <constraint firstAttribute="bottom" secondItem="6rv-yO-yWW" secondAttribute="bottom" constant="8" id="HqT-nA-CCe"/>
                                     <constraint firstItem="7hi-pr-X8z" firstAttribute="leading" secondItem="aLI-ph-hL7" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="I2U-Fx-joK"/>
                                     <constraint firstAttribute="trailing" secondItem="aqY-z1-hqE" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="IlI-m1-ONb"/>
                                     <constraint firstItem="aqY-z1-hqE" firstAttribute="leading" secondItem="aLI-ph-hL7" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="KFc-1m-VRH"/>
                                     <constraint firstItem="HF4-sR-l8J" firstAttribute="leading" secondItem="aLI-ph-hL7" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Kgv-oL-KNM"/>
+                                    <constraint firstItem="6rv-yO-yWW" firstAttribute="top" secondItem="aLI-ph-hL7" secondAttribute="top" constant="426" id="O3e-i4-2bx"/>
                                     <constraint firstAttribute="trailing" secondItem="pYe-3g-Cwa" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="PLr-rt-cYm"/>
                                     <constraint firstItem="ruq-ky-sxV" firstAttribute="leading" secondItem="aLI-ph-hL7" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="RuX-Zz-Uh6"/>
                                     <constraint firstAttribute="trailing" secondItem="HF4-sR-l8J" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Tz0-AR-eL9"/>
-                                    <constraint firstItem="pYe-3g-Cwa" firstAttribute="top" secondItem="APq-FN-ZFb" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="XCZ-le-I7C"/>
-                                    <constraint firstItem="APq-FN-ZFb" firstAttribute="centerX" secondItem="aLI-ph-hL7" secondAttribute="centerX" type="default" id="ZAA-oP-MJm"/>
                                     <constraint firstItem="APq-FN-ZFb" firstAttribute="leading" secondItem="aLI-ph-hL7" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="bwz-4z-gxY"/>
+                                    <constraint firstAttribute="trailing" secondItem="5g8-mj-5aN" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="dqz-g5-3Uv"/>
+                                    <constraint firstItem="aqY-z1-hqE" firstAttribute="top" secondItem="aLI-ph-hL7" secondAttribute="top" constant="20" symbolic="YES" type="default" id="fKH-9q-9pg"/>
                                     <constraint firstItem="7hi-pr-X8z" firstAttribute="top" secondItem="aqY-z1-hqE" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gk5-Qf-YPl"/>
-                                    <constraint firstItem="APq-FN-ZFb" firstAttribute="top" secondItem="aLI-ph-hL7" secondAttribute="top" constant="264" id="h9A-Ze-36R"/>
+                                    <constraint firstItem="5g8-mj-5aN" firstAttribute="top" secondItem="ruq-ky-sxV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hg9-S6-dM6"/>
+                                    <constraint firstItem="6rv-yO-yWW" firstAttribute="centerX" secondItem="pYe-3g-Cwa" secondAttribute="centerX" type="default" id="iGP-5v-bTI"/>
                                     <constraint firstItem="ruq-ky-sxV" firstAttribute="top" secondItem="HF4-sR-l8J" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="m09-8O-ucA"/>
-                                    <constraint firstAttribute="bottom" secondItem="pYe-3g-Cwa" secondAttribute="bottom" constant="515" id="rXl-6A-qKt"/>
+                                    <constraint firstItem="5g8-mj-5aN" firstAttribute="leading" secondItem="aLI-ph-hL7" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pI4-D5-pIO"/>
                                     <constraint firstAttribute="trailing" secondItem="APq-FN-ZFb" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="sW2-gP-1yB"/>
-                                    <constraint firstItem="HF4-sR-l8J" firstAttribute="top" secondItem="aLI-ph-hL7" secondAttribute="top" constant="188" id="uPn-pT-fnW"/>
+                                    <constraint firstItem="HF4-sR-l8J" firstAttribute="top" secondItem="aLI-ph-hL7" secondAttribute="top" constant="103" id="zsI-6T-1vZ"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="aLI-ph-hL7" firstAttribute="top" secondItem="RtN-7x-k3U" secondAttribute="top" constant="-52" id="0cY-Ga-VgY"/>
-                            <constraint firstAttribute="bottom" secondItem="aLI-ph-hL7" secondAttribute="bottom" constant="-241" id="L7e-pX-NPL"/>
+                            <constraint firstItem="aLI-ph-hL7" firstAttribute="bottom" secondItem="RtN-7x-k3U" secondAttribute="bottom" type="default" id="PoT-1T-o31"/>
                             <constraint firstItem="aLI-ph-hL7" firstAttribute="leading" secondItem="RtN-7x-k3U" secondAttribute="leading" type="default" id="a87-KX-eCw"/>
+                            <constraint firstItem="aLI-ph-hL7" firstAttribute="top" secondItem="RtN-7x-k3U" secondAttribute="top" type="default" id="qo8-RS-BJq"/>
                             <constraint firstItem="aLI-ph-hL7" firstAttribute="trailing" secondItem="RtN-7x-k3U" secondAttribute="trailing" type="default" id="umg-Gz-hbV"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="vt4-3m-bmT">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="uiv-Cg-JzJ">
+                            <connections>
+                                <action selector="pressButtonCancel:" destination="uux-RQ-IBu" id="dUQ-1d-JMw"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="esw-C4-5LN">
+                            <connections>
+                                <action selector="pressButtonSave:" destination="uux-RQ-IBu" id="Nod-sY-lth"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="callNumberTextField" destination="7hi-pr-X8z" id="sDZ-V1-UcJ"/>
+                        <outlet property="mexNumber1TextField" destination="ruq-ky-sxV" id="7am-xD-1mf"/>
+                        <outlet property="textMessageTextField" destination="pYe-3g-Cwa" id="X72-D8-UL2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8bA-6d-eXD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
