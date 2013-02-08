@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "NumericCell.h"
 @interface SettingsViewController : UITableViewController
+
+- (IBAction)pressButtonSave:(id)sender;
 
 @end

@@ -110,7 +110,13 @@
                         </prototypes>
                         <sections/>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="DDd-ms-Wmm"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="DDd-ms-Wmm">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="shb-Gp-pUK">
+                            <connections>
+                                <action selector="pressButtonSave:" destination="okq-YR-Ph5" id="e21-og-BWS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VbY-TH-HB3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,7 +126,7 @@
         <scene sceneID="Nf3-Fc-a5J">
             <objects>
                 <navigationController definesPresentationContext="YES" id="aWq-m0-Rfk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="18B-zI-zoD"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="cog_02@2x.png" id="18B-zI-zoD"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BMz-ni-qxx">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -152,6 +158,9 @@
             <point key="canvasLocation" x="132" y="180"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cog_02@2x.png" width="52" height="52"/>
+    </resources>
     <classes>
         <class className="FirstViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstViewController.h"/>
@@ -166,6 +175,9 @@
         </class>
         <class className="SettingsViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="pressButtonSave:"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -34,6 +34,8 @@
 		A92EA12C16C3FC5400976BDA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A92EA12B16C3FC5400976BDA /* MapKit.framework */; };
 		A92EA12E16C40A0F00976BDA /* cog_02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A92EA12D16C40A0F00976BDA /* cog_02@2x.png */; };
 		A92EA13116C40B0900976BDA /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A92EA13016C40B0900976BDA /* SettingsViewController.m */; };
+		A92EA13B16C4FDF200976BDA /* NumericCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A92EA13A16C4FDF200976BDA /* NumericCell.m */; };
+		A92EA13E16C4FE1D00976BDA /* MyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A92EA13D16C4FE1D00976BDA /* MyTextField.m */; };
 		A93FAA3B16C3D599001BBF45 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */; };
 		A93FAA3C16C3F21F001BBF45 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */; };
 		A93FAA3D16C3F227001BBF45 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90607B916C2FF4C0014F0CB /* MessageUI.framework */; };
@@ -86,6 +88,10 @@
 		A92EA12D16C40A0F00976BDA /* cog_02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cog_02@2x.png"; sourceTree = "<group>"; };
 		A92EA12F16C40B0900976BDA /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		A92EA13016C40B0900976BDA /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		A92EA13916C4FDF200976BDA /* NumericCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumericCell.h; sourceTree = "<group>"; };
+		A92EA13A16C4FDF200976BDA /* NumericCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumericCell.m; sourceTree = "<group>"; };
+		A92EA13C16C4FE1D00976BDA /* MyTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTextField.h; sourceTree = "<group>"; };
+		A92EA13D16C4FE1D00976BDA /* MyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTextField.m; sourceTree = "<group>"; };
 		A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -155,6 +161,7 @@
 		A906077616C2FEFB0014F0CB /* mySOS */ = {
 			isa = PBXGroup;
 			children = (
+				A92EA13216C4130F00976BDA /* View */,
 				A92EA12616C3F74A00976BDA /* Model */,
 				A906077F16C2FEFB0014F0CB /* AppDelegate.h */,
 				A906078016C2FEFB0014F0CB /* AppDelegate.m */,
@@ -223,6 +230,17 @@
 				A92EA12916C3F7A300976BDA /* MMessage.m */,
 			);
 			name = Message;
+			sourceTree = "<group>";
+		};
+		A92EA13216C4130F00976BDA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A92EA13916C4FDF200976BDA /* NumericCell.h */,
+				A92EA13A16C4FDF200976BDA /* NumericCell.m */,
+				A92EA13C16C4FE1D00976BDA /* MyTextField.h */,
+				A92EA13D16C4FE1D00976BDA /* MyTextField.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +365,8 @@
 				A906079716C2FEFB0014F0CB /* SecondViewController.m in Sources */,
 				A92EA12A16C3F7A300976BDA /* MMessage.m in Sources */,
 				A92EA13116C40B0900976BDA /* SettingsViewController.m in Sources */,
+				A92EA13B16C4FDF200976BDA /* NumericCell.m in Sources */,
+				A92EA13E16C4FE1D00976BDA /* MyTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

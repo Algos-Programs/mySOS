@@ -7,7 +7,6 @@
 //
 
 #import "SettingsViewController.h"
-
 @interface SettingsViewController ()
 
 @end
@@ -19,6 +18,7 @@ static const NSString *TITLE_SEZIONE_1 = @"Destinatari Messaggi";
 @implementation SettingsViewController
 
 //Array contentente il nome delle sezioni.
+NSArray *sectionTitles;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -32,6 +32,8 @@ static const NSString *TITLE_SEZIONE_1 = @"Destinatari Messaggi";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    sectionTitles = [[NSArray alloc] initWithObjects:TITLE_SEZIONE_0, TITLE_SEZIONE_1, nil];
+
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -41,6 +43,7 @@ static const NSString *TITLE_SEZIONE_1 = @"Destinatari Messaggi";
 }
 - (void)viewWillAppear:(BOOL)animated {
     
+    [self.tableView setScrollEnabled:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,18 +56,7 @@ static const NSString *TITLE_SEZIONE_1 = @"Destinatari Messaggi";
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
-    switch (section) {
-        case 0: //numero da chiamare
-            return TITLE_SEZIONE_0;
-            break;
-            
-        case 1: //numero per messaggi.
-            return TITLE_SEZIONE_1;
-            break;
-        default:
-            return @"ERRORE";
-    }
-    
+    return [sectionTitles objectAtIndex:section];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -94,10 +86,19 @@ static const NSString *TITLE_SEZIONE_1 = @"Destinatari Messaggi";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
+    NumericCell *cell = [[NumericCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    [cell configure];
+    
+    /*
+    UITextField *xTextFiedl = [[UITextField alloc] initWithFrame:CGRectMake(10, 2, 300, 40)];
+    [xTextFiedl setTextAlignment:NSTextAlignmentCenter];
+    [xTextFiedl setBackgroundColor:[UIColor redColor]];
+    [self textFieldDidBeginEditing:xTextFiedl];
+    [cell addSubview:xTextFiedl];
+    */
     // Configure the cell...
-    
     return cell;
 }
 
@@ -140,6 +141,59 @@ static const NSString *TITLE_SEZIONE_1 = @"Destinatari Messaggi";
 }
 */
 
+//*********************************
+#pragma mark - Text Field
+//*********************************
+
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [self animateTextField:textField up:YES];
+}
+
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [self animateTextField:textField up:NO];
+}
+
+
+- (void) animateTextField: (UITextField*) textField up: (BOOL) up
+{
+    int animatedDistance;
+    int moveUpValue = textField.frame.origin.y+ textField.frame.size.height;
+    UIInterfaceOrientation orientation =
+    [[UIApplication sharedApplication] statusBarOrientation];
+    if (orientation == UIInterfaceOrientationPortrait ||
+        orientation == UIInterfaceOrientationPortraitUpsideDown)
+    {
+        
+        animatedDistance = 216-(460-moveUpValue-5);
+    }
+    else
+    {
+        animatedDistance = 162-(320-moveUpValue-5);
+    }
+    
+    if(animatedDistance>0)
+    {
+        const int movementDistance = animatedDistance;
+        const float movementDuration = 0.3f;
+        int movement = (up ? -movementDistance : movementDistance);
+        [UIView beginAnimations: nil context: nil];
+        [UIView setAnimationBeginsFromCurrentState: YES];
+        [UIView setAnimationDuration: movementDuration];
+        self.view.frame = CGRectOffset(self.view.frame, 0, movement);
+        [UIView commitAnimations];
+    }
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    [textField resignFirstResponder];
+    return YES;
+}
+
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -153,4 +207,45 @@ static const NSString *TITLE_SEZIONE_1 = @"Destinatari Messaggi";
      */
 }
 
+//*********************************
+#pragma mark - Actions
+//*********************************
+
+- (IBAction)pressButtonSave:(id)sender {
+    
+
+    for (NSInteger i=1; i<4; i++) {
+        NSIndexPath *index = [[NSIndexPath alloc] initWithIndex:i];
+        NumericCell *cell =  (NumericCell *)[self.tableView cellForRowAtIndexPath:index];
+        MyTextField *textField = (MyTextField *)[cell myTextField];
+        NSLog(@"%@", textField.text);
+    }
+    
+    
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
