@@ -13,6 +13,7 @@
 @end
 
 @implementation SettingViewController
+@synthesize switchLocalization = _switchLocalization;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,13 +31,18 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    
     if (freeVersion) {
-        self.mexNumber1TextField.enabled = YES;
-        self.mexNumber2TextField.enabled = YES;
-        self.mexNumber3TextField.enabled = YES;
+        [self.switchLocalization setEnabled:NO];
+        [self.switchLocalization setOn:NO];
     }
     
+    else
+        [self.switchLocalization setOn:YES];
+    
+    self.mexNumber1TextField.enabled = YES;
+    self.mexNumber2TextField.enabled = YES;
+    self.mexNumber3TextField.enabled = YES;
+
     self.textMessageTextField.text = @"Aiuto mi sono tagliato una gamba!";
 }
 
@@ -87,8 +93,10 @@
     Qui entra ogni volta che scrivo nel textField callNumber
  */
 - (IBAction)didChangeCallNumberTextField:(id)sender {
-    
-    self.mexNumber1TextField.text = self.callNumberTextField.text;
+#warning Fare sempre o solo in free mode?
+    if (freeVersion) {
+        self.mexNumber1TextField.text = self.callNumberTextField.text;
+    }
 }
 
 // -- Button Actions
@@ -106,7 +114,7 @@
 
 
 - (IBAction)pressButtonCancel:(id)sender {
-    
+    [self.callNumberTextField resignFirstResponder];
     self.tabBarController.selectedIndex = 0;
 }
 
@@ -114,8 +122,26 @@
     Abbassa la tastiera quando clicco sulla view.
  */
 - (IBAction)gestureClouseKeyBoard:(id)sender {
-    [self.callNumberTextField resignFirstResponder];
+    [self keyBoardDown];
 }
+
+
+- (IBAction)beginEditingLocaization:(id)sender {
+    
+    if (freeVersion) {
+        [self.switchLocalization setEnabled:NO];
+        [self showAlertFreeVersion];
+    }
+}
+
+- (IBAction)touchUpInsideSwitchLocalization:(id)sender {
+    if (freeVersion) {
+        [self.switchLocalization setEnabled:NO];
+        [self showAlertFreeVersion];
+    }
+
+}
+
 
 //***************************************
 #pragma mark - Metodi Intercettazione
@@ -125,11 +151,7 @@
  Intercetta quando comincia a scrivere
  */
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
-    int k = 9;
-    if (textField == self.mexNumber1TextField) {
-        int c = 9;
-        //NON PUOI!
-    }
+
 }
 /**
     Intercetta quando finisci di scrivere.
@@ -138,6 +160,7 @@
     
     
 }
+
 //***************************************
 #pragma mark - Metodi Aler
 //***************************************
@@ -170,7 +193,20 @@
     [self showAlerWithMessage:@"Se vuoi cambiarlo fai l'aggiornamento a 0.79 €"];
 }
 
+//***************************************
+#pragma mark - Metodi di Comodo
+//***************************************
 
+/**
+ Abbassa la tastiera
+ */
+- (void)keyBoardDown {
+    [self.callNumberTextField resignFirstResponder];
+    [self.mexNumber1TextField resignFirstResponder];
+    [self.mexNumber2TextField resignFirstResponder];
+    [self.mexNumber3TextField resignFirstResponder];
+    [self.textMessageTextField resignFirstResponder];
+}
 
 
 @end

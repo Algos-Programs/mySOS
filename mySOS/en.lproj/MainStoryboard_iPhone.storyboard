@@ -268,33 +268,52 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VGh-XH-1rh">
+                                        <connections>
+                                            <action selector="beginEditingLocaization:" destination="uux-RQ-IBu" eventType="editingDidBegin" id="FIH-Bk-iX6"/>
+                                            <action selector="touchUpInsideSwitchLocalization:" destination="uux-RQ-IBu" eventType="touchUpInside" id="RQL-c7-VZG"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Localizzazione!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIn-3G-bAR">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="WGo-cv-N11"/>
+                                            <constraint firstAttribute="width" constant="181" id="sJQ-Vr-NIk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" red="0.33725491166114807" green="0.070588238537311554" blue="0.30196079611778259" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="pYe-3g-Cwa" firstAttribute="top" secondItem="aLI-ph-hL7" secondAttribute="top" constant="244" id="3II-cS-ZHH"/>
+                                    <constraint firstItem="VGh-XH-1rh" firstAttribute="leading" secondItem="aLI-ph-hL7" secondAttribute="leading" constant="223" id="6fX-J3-MRp"/>
                                     <constraint firstItem="5g8-mj-5aN" firstAttribute="trailing" secondItem="APq-FN-ZFb" secondAttribute="trailing" type="default" id="9hl-kF-SCp"/>
                                     <constraint firstItem="pYe-3g-Cwa" firstAttribute="leading" secondItem="aLI-ph-hL7" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="CR5-6i-3oz"/>
-                                    <constraint firstAttribute="bottom" secondItem="6rv-yO-yWW" secondAttribute="bottom" constant="8" id="HqT-nA-CCe"/>
                                     <constraint firstItem="7hi-pr-X8z" firstAttribute="leading" secondItem="aLI-ph-hL7" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="I2U-Fx-joK"/>
                                     <constraint firstItem="aqY-z1-hqE" firstAttribute="leading" secondItem="aLI-ph-hL7" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="KFc-1m-VRH"/>
                                     <constraint firstItem="HF4-sR-l8J" firstAttribute="leading" secondItem="aLI-ph-hL7" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Kgv-oL-KNM"/>
                                     <constraint firstItem="6rv-yO-yWW" firstAttribute="top" secondItem="aLI-ph-hL7" secondAttribute="top" constant="426" id="O3e-i4-2bx"/>
                                     <constraint firstItem="ruq-ky-sxV" firstAttribute="leading" secondItem="aLI-ph-hL7" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="RuX-Zz-Uh6"/>
                                     <constraint firstItem="7hi-pr-X8z" firstAttribute="trailing" secondItem="HF4-sR-l8J" secondAttribute="trailing" type="default" id="Scl-1o-LEA"/>
-                                    <constraint firstAttribute="trailing" secondItem="aqY-z1-hqE" secondAttribute="trailing" constant="19" id="TVb-7z-zga"/>
+                                    <constraint firstAttribute="trailing" secondItem="VGh-XH-1rh" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="WKO-x8-Z01"/>
                                     <constraint firstItem="ruq-ky-sxV" firstAttribute="trailing" secondItem="5g8-mj-5aN" secondAttribute="trailing" type="default" id="XbF-bi-eGL"/>
+                                    <constraint firstItem="ZIn-3G-bAR" firstAttribute="leading" secondItem="aLI-ph-hL7" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Zeg-Iq-dLH"/>
+                                    <constraint firstItem="VGh-XH-1rh" firstAttribute="top" secondItem="aLI-ph-hL7" secondAttribute="top" constant="319" id="ax4-TW-aN2"/>
                                     <constraint firstItem="APq-FN-ZFb" firstAttribute="leading" secondItem="aLI-ph-hL7" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="bwz-4z-gxY"/>
                                     <constraint firstItem="7hi-pr-X8z" firstAttribute="trailing" secondItem="aqY-z1-hqE" secondAttribute="trailing" type="default" id="cKf-Gf-GhM"/>
                                     <constraint firstItem="pYe-3g-Cwa" firstAttribute="trailing" secondItem="APq-FN-ZFb" secondAttribute="trailing" type="default" id="caC-Kk-VZh"/>
+                                    <constraint firstAttribute="bottom" secondItem="6rv-yO-yWW" secondAttribute="bottom" constant="8" id="dO0-FZ-awy"/>
+                                    <constraint firstItem="ZIn-3G-bAR" firstAttribute="centerY" secondItem="VGh-XH-1rh" secondAttribute="centerY" type="default" id="e8y-tK-M2T"/>
                                     <constraint firstItem="HF4-sR-l8J" firstAttribute="trailing" secondItem="ruq-ky-sxV" secondAttribute="trailing" type="default" id="eSh-xm-XlX"/>
                                     <constraint firstItem="aqY-z1-hqE" firstAttribute="top" secondItem="aLI-ph-hL7" secondAttribute="top" constant="20" symbolic="YES" type="default" id="fKH-9q-9pg"/>
                                     <constraint firstItem="7hi-pr-X8z" firstAttribute="top" secondItem="aqY-z1-hqE" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gk5-Qf-YPl"/>
                                     <constraint firstItem="5g8-mj-5aN" firstAttribute="top" secondItem="ruq-ky-sxV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hg9-S6-dM6"/>
-                                    <constraint firstItem="6rv-yO-yWW" firstAttribute="centerX" secondItem="pYe-3g-Cwa" secondAttribute="centerX" type="default" id="iGP-5v-bTI"/>
+                                    <constraint firstItem="6rv-yO-yWW" firstAttribute="centerX" secondItem="pYe-3g-Cwa" secondAttribute="centerX" type="default" id="i75-LH-vC4"/>
                                     <constraint firstItem="ruq-ky-sxV" firstAttribute="top" secondItem="HF4-sR-l8J" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="m09-8O-ucA"/>
                                     <constraint firstItem="5g8-mj-5aN" firstAttribute="leading" secondItem="aLI-ph-hL7" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pI4-D5-pIO"/>
+                                    <constraint firstItem="aqY-z1-hqE" firstAttribute="centerX" secondItem="aLI-ph-hL7" secondAttribute="centerX" type="default" id="pzc-3A-jti"/>
                                     <constraint firstItem="APq-FN-ZFb" firstAttribute="top" secondItem="aLI-ph-hL7" secondAttribute="top" constant="216" id="qbG-Vc-zMk"/>
-                                    <constraint firstItem="ruq-ky-sxV" firstAttribute="centerX" secondItem="aLI-ph-hL7" secondAttribute="centerX" type="default" id="sLr-2P-ups"/>
                                     <constraint firstItem="HF4-sR-l8J" firstAttribute="top" secondItem="aLI-ph-hL7" secondAttribute="top" constant="103" id="zsI-6T-1vZ"/>
                                 </constraints>
                                 <connections>
@@ -326,6 +345,7 @@
                         <outlet property="callNumberTextField" destination="7hi-pr-X8z" id="sDZ-V1-UcJ"/>
                         <outlet property="mexNumber1TextField" destination="ruq-ky-sxV" id="7am-xD-1mf"/>
                         <outlet property="mexNumber2TextField" destination="5g8-mj-5aN" id="0tp-WT-zDr"/>
+                        <outlet property="switchLocalization" destination="VGh-XH-1rh" id="47n-X2-3fu"/>
                         <outlet property="textMessageTextField" destination="pYe-3g-Cwa" id="X72-D8-UL2"/>
                     </connections>
                 </viewController>
@@ -361,37 +381,6 @@
     <resources>
         <image name="cog_02@2x.png" width="52" height="52"/>
     </resources>
-    <classes>
-        <class className="FirstViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="pressButtonCallMe:"/>
-                <relationship kind="action" name="pressButtonSOS:"/>
-                <relationship kind="action" name="pressButtonSendMessage:"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SettingViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="didChangeCallNumberTextField:"/>
-                <relationship kind="action" name="gestureClouseKeyBoard:"/>
-                <relationship kind="action" name="pressButtonCancel:"/>
-                <relationship kind="action" name="pressButtonSave:"/>
-                <relationship kind="action" name="pressCallNumberTextField:"/>
-                <relationship kind="action" name="pressMexNumber1TextField:"/>
-                <relationship kind="action" name="pressMexNumber2TextField:"/>
-                <relationship kind="action" name="pressTextMessageTextField:"/>
-                <relationship kind="outlet" name="callNumberTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="mexNumber1TextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="mexNumber2TextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="mexNumber3TextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textMessageTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

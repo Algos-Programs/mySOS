@@ -18,6 +18,11 @@
 @property (weak, nonatomic) IBOutlet UITextField *mexNumber3TextField;
 @property (weak, nonatomic) IBOutlet UITextField *textMessageTextField;
 
+//-- Switch Localizzazione
+@property (weak, nonatomic) IBOutlet UISwitch *switchLocalization;
+- (IBAction)beginEditingLocaization:(id)sender;
+- (IBAction)touchUpInsideSwitchLocalization:(id)sender;
+
 //-- TextField Actions  EDITING DID END
 - (IBAction)pressCallNumberTextField:(id)sender;
 
