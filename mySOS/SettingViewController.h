@@ -26,8 +26,15 @@
 - (IBAction)pressMexNumber2TextField:(id)sender;
 - (IBAction)pressTextMessageTextField:(id)sender;
 
+//-- TextField Did Change
+- (IBAction)didChangeCallNumberTextField:(id)sender;
+
 //-- Button Actions
 - (IBAction)pressButtonSave:(id)sender;
 - (IBAction)pressButtonCancel:(id)sender;
 
+/**
+ Abbassa la tastiera quando clicco sulla view.
+ */
+- (IBAction)gestureClouseKeyBoard:(id)sender;
 @end

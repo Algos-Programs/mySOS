@@ -225,6 +225,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                         <connections>
+                                            <action selector="didChangeCallNumberTextField:" destination="uux-RQ-IBu" eventType="editingChanged" id="FHL-oF-3Sr"/>
                                             <action selector="pressCallNumberTextField:" destination="uux-RQ-IBu" eventType="editingDidEnd" id="7W7-gb-ar6"/>
                                         </connections>
                                     </textField>
@@ -247,7 +248,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                         <connections>
-                                            <action selector="pressMexNumber2TextField:" destination="uux-RQ-IBu" eventType="editingDidBegin" id="igh-qA-1OE"/>
+                                            <action selector="pressMexNumber2TextField:" destination="uux-RQ-IBu" eventType="editingDidBegin" id="8yE-Rr-EQg"/>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pYe-3g-Cwa">
@@ -268,11 +269,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="pYe-3g-Cwa" firstAttribute="top" secondItem="aLI-ph-hL7" secondAttribute="top" constant="244" id="3II-cS-ZHH"/>
                                     <constraint firstItem="5g8-mj-5aN" firstAttribute="trailing" secondItem="APq-FN-ZFb" secondAttribute="trailing" type="default" id="9hl-kF-SCp"/>
                                     <constraint firstItem="pYe-3g-Cwa" firstAttribute="leading" secondItem="aLI-ph-hL7" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="CR5-6i-3oz"/>
-                                    <constraint firstItem="APq-FN-ZFb" firstAttribute="top" secondItem="aLI-ph-hL7" secondAttribute="top" constant="217" id="G0y-eG-e6V"/>
                                     <constraint firstAttribute="bottom" secondItem="6rv-yO-yWW" secondAttribute="bottom" constant="8" id="HqT-nA-CCe"/>
                                     <constraint firstItem="7hi-pr-X8z" firstAttribute="leading" secondItem="aLI-ph-hL7" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="I2U-Fx-joK"/>
                                     <constraint firstItem="aqY-z1-hqE" firstAttribute="leading" secondItem="aLI-ph-hL7" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="KFc-1m-VRH"/>
@@ -292,9 +293,13 @@
                                     <constraint firstItem="6rv-yO-yWW" firstAttribute="centerX" secondItem="pYe-3g-Cwa" secondAttribute="centerX" type="default" id="iGP-5v-bTI"/>
                                     <constraint firstItem="ruq-ky-sxV" firstAttribute="top" secondItem="HF4-sR-l8J" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="m09-8O-ucA"/>
                                     <constraint firstItem="5g8-mj-5aN" firstAttribute="leading" secondItem="aLI-ph-hL7" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pI4-D5-pIO"/>
-                                    <constraint firstItem="ruq-ky-sxV" firstAttribute="centerX" secondItem="aLI-ph-hL7" secondAttribute="centerX" type="default" id="vxP-Lh-GUQ"/>
+                                    <constraint firstItem="APq-FN-ZFb" firstAttribute="top" secondItem="aLI-ph-hL7" secondAttribute="top" constant="216" id="qbG-Vc-zMk"/>
+                                    <constraint firstItem="ruq-ky-sxV" firstAttribute="centerX" secondItem="aLI-ph-hL7" secondAttribute="centerX" type="default" id="sLr-2P-ups"/>
                                     <constraint firstItem="HF4-sR-l8J" firstAttribute="top" secondItem="aLI-ph-hL7" secondAttribute="top" constant="103" id="zsI-6T-1vZ"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="McC-mt-HTw" appends="YES" id="jt3-LA-FzS"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
@@ -320,10 +325,16 @@
                     <connections>
                         <outlet property="callNumberTextField" destination="7hi-pr-X8z" id="sDZ-V1-UcJ"/>
                         <outlet property="mexNumber1TextField" destination="ruq-ky-sxV" id="7am-xD-1mf"/>
+                        <outlet property="mexNumber2TextField" destination="5g8-mj-5aN" id="0tp-WT-zDr"/>
                         <outlet property="textMessageTextField" destination="pYe-3g-Cwa" id="X72-D8-UL2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8bA-6d-eXD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="McC-mt-HTw">
+                    <connections>
+                        <action selector="gestureClouseKeyBoard:" destination="uux-RQ-IBu" id="7nj-O1-S25"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1307" y="538"/>
         </scene>
@@ -365,6 +376,8 @@
         <class className="SettingViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingViewController.h"/>
             <relationships>
+                <relationship kind="action" name="didChangeCallNumberTextField:"/>
+                <relationship kind="action" name="gestureClouseKeyBoard:"/>
                 <relationship kind="action" name="pressButtonCancel:"/>
                 <relationship kind="action" name="pressButtonSave:"/>
                 <relationship kind="action" name="pressCallNumberTextField:"/>

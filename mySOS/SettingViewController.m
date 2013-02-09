@@ -52,7 +52,7 @@
 
 //-- TextField Actions  EDITING DID END
 - (IBAction)pressCallNumberTextField:(id)sender {
-    self.mexNumber1TextField.text = self.callNumberTextField.text;
+    //Quando Finisce fa qualcosa.
 }
 
 //-- TextField Actions EDITING DID BEGIN
@@ -61,16 +61,16 @@
     
     if (freeVersion) {
         [self showAlertFreeVersion];
-        //self.mexNumber1TextField.enabled = NO;
+        self.mexNumber1TextField.enabled = NO;
     }
 }
 
 - (IBAction)pressMexNumber2TextField:(id)sender {
     
     if (freeVersion) {
+        self.mexNumber2TextField.selected = NO;
         [self showAlertFreeVersion];
         self.mexNumber2TextField.enabled = NO;
-        self.mexNumber2TextField.selected = NO;
     }
 
 }
@@ -81,6 +81,14 @@
         [self showAlertFreeVersion];
         self.textMessageTextField.enabled = NO;
     }
+}
+
+/**
+    Qui entra ogni volta che scrivo nel textField callNumber
+ */
+- (IBAction)didChangeCallNumberTextField:(id)sender {
+    
+    self.mexNumber1TextField.text = self.callNumberTextField.text;
 }
 
 // -- Button Actions
@@ -100,6 +108,13 @@
 - (IBAction)pressButtonCancel:(id)sender {
     
     self.tabBarController.selectedIndex = 0;
+}
+
+/**
+    Abbassa la tastiera quando clicco sulla view.
+ */
+- (IBAction)gestureClouseKeyBoard:(id)sender {
+    [self.callNumberTextField resignFirstResponder];
 }
 
 //***************************************
