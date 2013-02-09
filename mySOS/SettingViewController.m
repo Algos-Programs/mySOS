@@ -31,6 +31,12 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     
+    if (freeVersion) {
+        self.mexNumber1TextField.enabled = YES;
+        self.mexNumber2TextField.enabled = YES;
+        self.mexNumber3TextField.enabled = YES;
+    }
+    
     self.textMessageTextField.text = @"Aiuto mi sono tagliato una gamba!";
 }
 
@@ -52,12 +58,29 @@
 //-- TextField Actions EDITING DID BEGIN
 
 - (IBAction)pressMexNumber1TextField:(id)sender {
+    
+    if (freeVersion) {
+        [self showAlertFreeVersion];
+        //self.mexNumber1TextField.enabled = NO;
+    }
 }
 
 - (IBAction)pressMexNumber2TextField:(id)sender {
+    
+    if (freeVersion) {
+        [self showAlertFreeVersion];
+        self.mexNumber2TextField.enabled = NO;
+        self.mexNumber2TextField.selected = NO;
+    }
+
 }
 
-- (IBAction)pressTextMessageTextField:(id)sender {
+- (IBAction)pressTextMessageTextField:(id)sender  {
+    
+    if (freeVersion) {
+        [self showAlertFreeVersion];
+        self.textMessageTextField.enabled = NO;
+    }
 }
 
 // -- Button Actions
@@ -117,7 +140,20 @@
     [alert show];
 }
 
+- (void)showAlerWithMessage:(NSString *)message {
+    
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Attenzione Versione Free"
+                                                   message: message
+                                                  delegate: self
+                                         cancelButtonTitle:@"Cancel"
+                                         otherButtonTitles:@"OK",nil];
+    [alert show];
+}
 
+- (void)showAlertFreeVersion {
+    
+    [self showAlerWithMessage:@"Se vuoi cambiarlo fai l'aggiornamento a 0.79 €"];
+}
 
 
 
