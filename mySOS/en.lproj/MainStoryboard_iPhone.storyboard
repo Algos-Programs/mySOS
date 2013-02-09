@@ -88,11 +88,11 @@
             </objects>
             <point key="canvasLocation" x="653" y="-138"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller - Settings-->
         <scene sceneID="Nf3-Fc-a5J">
             <objects>
                 <navigationController definesPresentationContext="YES" id="aWq-m0-Rfk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="cog_02@2x.png" id="18B-zI-zoD"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="cog_02@2x.png" id="18B-zI-zoD"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BMz-ni-qxx">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -224,6 +224,9 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7hi-pr-X8z">
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                        <connections>
+                                            <action selector="pressCallNumberTextField:" destination="uux-RQ-IBu" eventType="editingDidEnd" id="7W7-gb-ar6"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Destinatario Messaggio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HF4-sR-l8J">
                                         <constraints>
@@ -236,14 +239,23 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ruq-ky-sxV">
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                        <connections>
+                                            <action selector="pressMexNumber1TextField:" destination="uux-RQ-IBu" eventType="editingDidBegin" id="ZEK-uw-VWz"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5g8-mj-5aN">
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                        <connections>
+                                            <action selector="pressMexNumber2TextField:" destination="uux-RQ-IBu" eventType="editingDidBegin" id="igh-qA-1OE"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pYe-3g-Cwa">
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes"/>
+                                        <connections>
+                                            <action selector="pressTextMessageTextField:" destination="uux-RQ-IBu" eventType="editingDidBegin" id="vc3-dr-aF5"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Testo del messaggio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APq-FN-ZFb">
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -257,30 +269,30 @@
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="HF4-sR-l8J" firstAttribute="centerX" secondItem="aLI-ph-hL7" secondAttribute="centerX" type="default" id="38g-JW-e5r"/>
                                     <constraint firstItem="pYe-3g-Cwa" firstAttribute="top" secondItem="aLI-ph-hL7" secondAttribute="top" constant="244" id="3II-cS-ZHH"/>
-                                    <constraint firstAttribute="trailing" secondItem="ruq-ky-sxV" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="5Q4-ZL-jg6"/>
-                                    <constraint firstAttribute="trailing" secondItem="7hi-pr-X8z" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="8P9-bc-j02"/>
+                                    <constraint firstItem="5g8-mj-5aN" firstAttribute="trailing" secondItem="APq-FN-ZFb" secondAttribute="trailing" type="default" id="9hl-kF-SCp"/>
                                     <constraint firstItem="pYe-3g-Cwa" firstAttribute="leading" secondItem="aLI-ph-hL7" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="CR5-6i-3oz"/>
                                     <constraint firstItem="APq-FN-ZFb" firstAttribute="top" secondItem="aLI-ph-hL7" secondAttribute="top" constant="217" id="G0y-eG-e6V"/>
                                     <constraint firstAttribute="bottom" secondItem="6rv-yO-yWW" secondAttribute="bottom" constant="8" id="HqT-nA-CCe"/>
                                     <constraint firstItem="7hi-pr-X8z" firstAttribute="leading" secondItem="aLI-ph-hL7" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="I2U-Fx-joK"/>
-                                    <constraint firstAttribute="trailing" secondItem="aqY-z1-hqE" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="IlI-m1-ONb"/>
                                     <constraint firstItem="aqY-z1-hqE" firstAttribute="leading" secondItem="aLI-ph-hL7" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="KFc-1m-VRH"/>
                                     <constraint firstItem="HF4-sR-l8J" firstAttribute="leading" secondItem="aLI-ph-hL7" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Kgv-oL-KNM"/>
                                     <constraint firstItem="6rv-yO-yWW" firstAttribute="top" secondItem="aLI-ph-hL7" secondAttribute="top" constant="426" id="O3e-i4-2bx"/>
-                                    <constraint firstAttribute="trailing" secondItem="pYe-3g-Cwa" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="PLr-rt-cYm"/>
                                     <constraint firstItem="ruq-ky-sxV" firstAttribute="leading" secondItem="aLI-ph-hL7" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="RuX-Zz-Uh6"/>
-                                    <constraint firstAttribute="trailing" secondItem="HF4-sR-l8J" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Tz0-AR-eL9"/>
+                                    <constraint firstItem="7hi-pr-X8z" firstAttribute="trailing" secondItem="HF4-sR-l8J" secondAttribute="trailing" type="default" id="Scl-1o-LEA"/>
+                                    <constraint firstAttribute="trailing" secondItem="aqY-z1-hqE" secondAttribute="trailing" constant="19" id="TVb-7z-zga"/>
+                                    <constraint firstItem="ruq-ky-sxV" firstAttribute="trailing" secondItem="5g8-mj-5aN" secondAttribute="trailing" type="default" id="XbF-bi-eGL"/>
                                     <constraint firstItem="APq-FN-ZFb" firstAttribute="leading" secondItem="aLI-ph-hL7" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="bwz-4z-gxY"/>
-                                    <constraint firstAttribute="trailing" secondItem="5g8-mj-5aN" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="dqz-g5-3Uv"/>
+                                    <constraint firstItem="7hi-pr-X8z" firstAttribute="trailing" secondItem="aqY-z1-hqE" secondAttribute="trailing" type="default" id="cKf-Gf-GhM"/>
+                                    <constraint firstItem="pYe-3g-Cwa" firstAttribute="trailing" secondItem="APq-FN-ZFb" secondAttribute="trailing" type="default" id="caC-Kk-VZh"/>
+                                    <constraint firstItem="HF4-sR-l8J" firstAttribute="trailing" secondItem="ruq-ky-sxV" secondAttribute="trailing" type="default" id="eSh-xm-XlX"/>
                                     <constraint firstItem="aqY-z1-hqE" firstAttribute="top" secondItem="aLI-ph-hL7" secondAttribute="top" constant="20" symbolic="YES" type="default" id="fKH-9q-9pg"/>
                                     <constraint firstItem="7hi-pr-X8z" firstAttribute="top" secondItem="aqY-z1-hqE" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gk5-Qf-YPl"/>
                                     <constraint firstItem="5g8-mj-5aN" firstAttribute="top" secondItem="ruq-ky-sxV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hg9-S6-dM6"/>
                                     <constraint firstItem="6rv-yO-yWW" firstAttribute="centerX" secondItem="pYe-3g-Cwa" secondAttribute="centerX" type="default" id="iGP-5v-bTI"/>
                                     <constraint firstItem="ruq-ky-sxV" firstAttribute="top" secondItem="HF4-sR-l8J" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="m09-8O-ucA"/>
                                     <constraint firstItem="5g8-mj-5aN" firstAttribute="leading" secondItem="aLI-ph-hL7" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pI4-D5-pIO"/>
-                                    <constraint firstAttribute="trailing" secondItem="APq-FN-ZFb" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="sW2-gP-1yB"/>
+                                    <constraint firstItem="ruq-ky-sxV" firstAttribute="centerX" secondItem="aLI-ph-hL7" secondAttribute="centerX" type="default" id="vxP-Lh-GUQ"/>
                                     <constraint firstItem="HF4-sR-l8J" firstAttribute="top" secondItem="aLI-ph-hL7" secondAttribute="top" constant="103" id="zsI-6T-1vZ"/>
                                 </constraints>
                             </scrollView>
@@ -355,6 +367,10 @@
             <relationships>
                 <relationship kind="action" name="pressButtonCancel:"/>
                 <relationship kind="action" name="pressButtonSave:"/>
+                <relationship kind="action" name="pressCallNumberTextField:"/>
+                <relationship kind="action" name="pressMexNumber1TextField:"/>
+                <relationship kind="action" name="pressMexNumber2TextField:"/>
+                <relationship kind="action" name="pressTextMessageTextField:"/>
                 <relationship kind="outlet" name="callNumberTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="mexNumber1TextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="mexNumber2TextField" candidateClass="UITextField"/>

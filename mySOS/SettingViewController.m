@@ -40,6 +40,28 @@
     // Dispose of any resources that can be recreated.
 }
 
+//***************************************
+#pragma mark - Metodi Actions
+//***************************************
+
+//-- TextField Actions  EDITING DID END
+- (IBAction)pressCallNumberTextField:(id)sender {
+    self.mexNumber1TextField.text = self.callNumberTextField.text;
+}
+
+//-- TextField Actions EDITING DID BEGIN
+
+- (IBAction)pressMexNumber1TextField:(id)sender {
+}
+
+- (IBAction)pressMexNumber2TextField:(id)sender {
+}
+
+- (IBAction)pressTextMessageTextField:(id)sender {
+}
+
+// -- Button Actions
+
 - (IBAction)pressButtonSave:(id)sender {
     if ((![self.callNumberTextField.text isEqual: @""]) && ((![self.mexNumber1TextField.text isEqual: @""]) || (![self.mexNumber2TextField.text isEqual: @""]) || (![self.mexNumber3TextField.text isEqual: @""]))) {
         
@@ -51,6 +73,36 @@
     }
 }
 
+
+- (IBAction)pressButtonCancel:(id)sender {
+    
+    self.tabBarController.selectedIndex = 0;
+}
+
+//***************************************
+#pragma mark - Metodi Intercettazione
+//***************************************
+
+/**
+ Intercetta quando comincia a scrivere
+ */
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    int k = 9;
+    if (textField == self.mexNumber1TextField) {
+        int c = 9;
+        //NON PUOI!
+    }
+}
+/**
+    Intercetta quando finisci di scrivere.
+ */
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    
+    
+}
+//***************************************
+#pragma mark - Metodi Aler
+//***************************************
 
 - (void)showAlert {
     UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Alert Title here"
@@ -66,8 +118,8 @@
 }
 
 
-- (IBAction)pressButtonCancel:(id)sender {
-    
-    self.tabBarController.selectedIndex = 0;
-}
+
+
+
+
 @end
