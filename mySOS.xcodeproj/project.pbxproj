@@ -39,6 +39,10 @@
 		A9312BEE16C7D95700FBBB80 /* Call.png in Resources */ = {isa = PBXBuildFile; fileRef = A9312BED16C7D95700FBBB80 /* Call.png */; };
 		A9312BF016C7D9DA00FBBB80 /* Call_1.png in Resources */ = {isa = PBXBuildFile; fileRef = A9312BEF16C7D9DA00FBBB80 /* Call_1.png */; };
 		A9312BF216C7DA6D00FBBB80 /* Send_SMS.png in Resources */ = {isa = PBXBuildFile; fileRef = A9312BF116C7DA6D00FBBB80 /* Send_SMS.png */; };
+		A9312BF816C7E35400FBBB80 /* icona2_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = A9312BF716C7E35400FBBB80 /* icona2_114x114.png */; };
+		A9312BFA16C7E43A00FBBB80 /* icona3.png in Resources */ = {isa = PBXBuildFile; fileRef = A9312BF916C7E43A00FBBB80 /* icona3.png */; };
+		A9312BFC16C7E53800FBBB80 /* icona4_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = A9312BFB16C7E53800FBBB80 /* icona4_114x114.png */; };
+		A9312BFE16C7E5CE00FBBB80 /* icona5_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = A9312BFD16C7E5CE00FBBB80 /* icona5_114x114.png */; };
 		A93FAA3B16C3D599001BBF45 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */; };
 		A93FAA3C16C3F21F001BBF45 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */; };
 		A93FAA3D16C3F227001BBF45 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90607B916C2FF4C0014F0CB /* MessageUI.framework */; };
@@ -109,6 +113,10 @@
 		A9312BED16C7D95700FBBB80 /* Call.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Call.png; sourceTree = "<group>"; };
 		A9312BEF16C7D9DA00FBBB80 /* Call_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Call_1.png; sourceTree = "<group>"; };
 		A9312BF116C7DA6D00FBBB80 /* Send_SMS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Send_SMS.png; sourceTree = "<group>"; };
+		A9312BF716C7E35400FBBB80 /* icona2_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icona2_114x114.png; sourceTree = "<group>"; };
+		A9312BF916C7E43A00FBBB80 /* icona3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icona3.png; sourceTree = "<group>"; };
+		A9312BFB16C7E53800FBBB80 /* icona4_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icona4_114x114.png; sourceTree = "<group>"; };
+		A9312BFD16C7E5CE00FBBB80 /* icona5_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icona5_114x114.png; sourceTree = "<group>"; };
 		A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A9B9D00216C5139600AE88C4 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		A9B9D00316C5139600AE88C4 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
@@ -158,6 +166,10 @@
 		A906076416C2FEFB0014F0CB = {
 			isa = PBXGroup;
 			children = (
+				A9312BFD16C7E5CE00FBBB80 /* icona5_114x114.png */,
+				A9312BFB16C7E53800FBBB80 /* icona4_114x114.png */,
+				A9312BF916C7E43A00FBBB80 /* icona3.png */,
+				A9312BF716C7E35400FBBB80 /* icona2_114x114.png */,
 				A92EA12D16C40A0F00976BDA /* cog_02@2x.png */,
 				A9B9D01016C5824E00AE88C4 /* speech_bubble@2x.png */,
 				A9B9D01216C661F400AE88C4 /* background.png */,
@@ -392,6 +404,10 @@
 				A9312BEE16C7D95700FBBB80 /* Call.png in Resources */,
 				A9312BF016C7D9DA00FBBB80 /* Call_1.png in Resources */,
 				A9312BF216C7DA6D00FBBB80 /* Send_SMS.png in Resources */,
+				A9312BF816C7E35400FBBB80 /* icona2_114x114.png in Resources */,
+				A9312BFA16C7E43A00FBBB80 /* icona3.png in Resources */,
+				A9312BFC16C7E53800FBBB80 /* icona4_114x114.png in Resources */,
+				A9312BFE16C7E5CE00FBBB80 /* icona5_114x114.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
