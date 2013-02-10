@@ -26,6 +26,7 @@ BOOL changeView = NO;
     if ([[dic objectForKey:KEY_CALL_NUMBER] isEqual: @""] & [[dic objectForKey:KEY_MEX_1_NUMBER] isEqual: @""] & [[dic objectForKey:KEY_TEXT_MESSAGE] isEqual: @""]) {
         
         [SettingViewController showAlerWithMessage:@"Impostare i parametri iniziali nella schermata default"];
+        changeView = YES;
     }
     
     //_____
@@ -38,6 +39,12 @@ BOOL changeView = NO;
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    if(changeView)
+        self.tabBarController.selectedIndex = 1;
 }
 
 - (void)viewDidAppear:(BOOL)animated {

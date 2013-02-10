@@ -28,6 +28,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [MFile writeDictionary:[NSDictionary dictionaryWithObject:@"Aiuto sono in pericolo!" forKey:KEY_TEXT_MESSAGE]];
 }
 
 
@@ -52,7 +53,13 @@
 
     self.callNumberTextField.text = [dic objectForKey:KEY_CALL_NUMBER];
     self.mexNumber1TextField.text = [dic objectForKey:KEY_MEX_1_NUMBER];
-    self.mexNumber2TextField.text = [dic objectForKey:KEY_MEX_2_NUMBER];
+    
+    if ([dic objectForKey:KEY_MEX_2_NUMBER] == nil) {
+        self.mexNumber2TextField.text = @"";
+    }
+    else
+        self.mexNumber2TextField.text = [dic objectForKey:KEY_MEX_2_NUMBER];
+    
     self.textMessageTextField.text = [dic objectForKey:KEY_TEXT_MESSAGE];
 }
 
@@ -112,7 +119,7 @@
 // -- Button Actions
 
 - (IBAction)pressButtonSave:(id)sender {
-    if ((![self.callNumberTextField.text isEqual: @""]) && ((![self.mexNumber1TextField.text isEqual: @""]) || (![self.mexNumber2TextField.text isEqual: @""]) || (![self.mexNumber3TextField.text isEqual: @""]))) {
+    if ((![self.callNumberTextField.text isEqual: @""]) && (((![self.mexNumber1TextField.text isEqual: @""]) || (![self.mexNumber2TextField.text isEqual: @""]) || (![self.mexNumber3TextField.text isEqual: @""]))) & (![self.textMessageTextField.text isEqual:@""])) {
         
         NSMutableDictionary *mDic = [[NSMutableDictionary alloc] init];
         [mDic setObject:self.callNumberTextField.text forKey:KEY_CALL_NUMBER];
@@ -131,8 +138,15 @@
 
 
 - (IBAction)pressButtonCancel:(id)sender {
-    [self keyBoardDown];
-    self.tabBarController.selectedIndex = 0;
+    
+    NSDictionary *dic = [[NSDictionary alloc] initWithDictionary:[MFile dictionaryWithString:nil]];
+    if ((![[dic objectForKey:KEY_CALL_NUMBER] isEqual: @""]) & (((![[dic objectForKey:KEY_MEX_1_NUMBER] isEqual: @""]) || (![[dic objectForKey:KEY_MEX_2_NUMBER] isEqual: @""])) & (![[dic objectForKey:KEY_TEXT_MESSAGE] isEqual: @""]))) {
+        
+        [self keyBoardDown];
+        self.tabBarController.selectedIndex = 0;
+    }
+    else 
+        [SettingViewController showAlert];
 }
 
 /**
