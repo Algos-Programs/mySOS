@@ -28,15 +28,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [MFile writeDictionary:[NSDictionary dictionaryWithObject:@"Aiuto sono in pericolo!" forKey:KEY_TEXT_MESSAGE]];
+    //[MFile writeDictionary:[NSDictionary dictionaryWithObject:@"Aiuto sono in pericolo!" forKey:KEY_TEXT_MESSAGE]];
 }
 
-
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {
     
-
     //[self clearFields];
-
+    
     if (freeVersion) {
         [self.switchLocalization setEnabled:NO];
         [self.switchLocalization setOn:NO];
@@ -50,7 +48,7 @@
     self.mexNumber1TextField.enabled = YES;
     self.mexNumber2TextField.enabled = YES;
     self.mexNumber3TextField.enabled = YES;
-
+    
     self.callNumberTextField.text = [dic objectForKey:KEY_CALL_NUMBER];
     self.mexNumber1TextField.text = [dic objectForKey:KEY_MEX_1_NUMBER];
     
@@ -61,6 +59,13 @@
         self.mexNumber2TextField.text = [dic objectForKey:KEY_MEX_2_NUMBER];
     
     self.textMessageTextField.text = [dic objectForKey:KEY_TEXT_MESSAGE];
+
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    
+
 }
 
 - (void)didReceiveMemoryWarning

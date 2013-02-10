@@ -16,18 +16,19 @@
 
 BOOL callNumber = NO;
 BOOL changeView = NO;
+
+NSString *NumberCall = @"";
+NSString *NumberMessage1 = @"";
+NSString *NumberMessage2 = @"";
+NSString *NumberMessage3 = @"";
+NSString *TextMessage = @"";
+
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    //-- Controllo se ci sono già inseriti i dati.
 
-    NSDictionary *dic = [[NSDictionary alloc] initWithDictionary:[MFile dictionaryWithString:nil]];
-    if ([[dic objectForKey:KEY_CALL_NUMBER] isEqual: @""] & [[dic objectForKey:KEY_MEX_1_NUMBER] isEqual: @""] & [[dic objectForKey:KEY_TEXT_MESSAGE] isEqual: @""]) {
-        
-        [SettingViewController showAlerWithMessage:@"Impostare i parametri iniziali nella schermata default"];
-        changeView = YES;
-    }
     
     //_____
     
@@ -43,6 +44,24 @@ BOOL changeView = NO;
 
 - (void)viewWillAppear:(BOOL)animated {
     
+    NSDictionary *dic = [[NSDictionary alloc] initWithDictionary:[MFile dictionaryWithString:nil]];
+    
+    //-- Controllo se ci sono già inseriti i dati.
+#warning Controllo non funzionante.
+    if ([[dic objectForKey:KEY_CALL_NUMBER] isEqual: @""] && [[dic objectForKey:KEY_MEX_1_NUMBER] isEqual: @""] && [[dic objectForKey:KEY_TEXT_MESSAGE] isEqual: @""]) {
+        
+        [SettingViewController showAlerWithMessage:@"Impostare i parametri iniziali nella schermata default"];
+        changeView = YES;
+    }
+    else { // Risulteranno sempre pieni
+        NumberCall = [dic objectForKey:KEY_CALL_NUMBER];
+        NumberMessage1 = [dic objectForKey:KEY_MEX_1_NUMBER];
+        NumberMessage2 = [dic objectForKey:KEY_MEX_2_NUMBER];
+        NumberMessage3 = [dic objectForKey:KEY_MEX_3_NUMBER];
+        TextMessage = [dic objectForKey:KEY_TEXT_MESSAGE];
+        
+    }
+#warning eliminare questo passaggio ed incorporarlo nel if sopra.
     if(changeView)
         self.tabBarController.selectedIndex = 1;
 }
@@ -63,8 +82,11 @@ BOOL changeView = NO;
 }
 
 - (IBAction)pressButtonSendMessage:(id)sender {
+    
+    NSDictionary *dic = [[NSDictionary alloc] initWithDictionary:[MFile dictionaryWithString:nil]];
+    
     callNumber = NO;
-    [self sendMessageWithNumbers:[NSArray arrayWithObject:@"3460602722"] withText:@"Aiuto mi sono tagliato una gamba" withLocation:[FirstViewController findCurrentLocation]];
+    [self sendMessageWithNumbers:[NSArray arrayWithObject:NumberMessage1] withText:TextMessage withLocation:[FirstViewController findCurrentLocation]];
     //[self sendMessage];
 }
 
@@ -72,9 +94,25 @@ BOOL changeView = NO;
     Invia un messagggio e (solo se questo è stato inviato) chiama il numero prefissato.
  */
 - (IBAction)pressButtonSOS:(id)sender {
+    
+    /*
+    NSDictionary *dic = [[NSDictionary alloc] initWithDictionary:[MFile dictionaryWithString:nil]];
+    NSString *numberCall = [[NSString alloc] initWithString:[dic objectForKey:KEY_CALL_NUMBER]];
+    NSString *sendMessageNumber = [[NSString alloc] initWithString:[dic objectForKey:KEY_MEX_1_NUMBER]];
+    NSString *textMessage = [[NSString alloc] initWithString:[dic objectForKey:KEY_TEXT_MESSAGE]];
+    
+#warning Imlementare questi controlli.
+    if (numberCall == nil) {
+        //
+    }
+    if (textMessage == nil) {
+        //
+    }
+     */
     // asserendo callNumber dico di iniziare la chiamata se il messaggio è stato inviato.
     callNumber = YES;
-    [self sendMessageWithNumbers:[NSArray arrayWithObject:@"3460602722"] withText:@"Aiuto mi sono tagliato una gamba" withLocation:[FirstViewController findCurrentLocation]];
+#warning Se message2 non è nil allora invio il mex anche a quel numero.
+    [self sendMessageWithNumbers:[NSArray arrayWithObject:NumberMessage1] withText:TextMessage withLocation:[FirstViewController findCurrentLocation]];
 }
 
 //*************************
@@ -87,7 +125,7 @@ BOOL changeView = NO;
 - (void)callNumber {
     
     //-- Chiama il numero di telefono.
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:0248844556"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[@"tel:" stringByAppendingFormat:NumberCall]]];
 }
 
 //*************************
@@ -103,7 +141,9 @@ BOOL changeView = NO;
 	{
 		controller.body = @"TEST DI PROVA APPLICAZIONE!\nCiao, sono in pericolo, aiutatemi!";
 		//controller.recipients = [NSArray arrayWithObjects:@"3384865894", @"3382053386", nil];
-        controller.recipients = [NSArray arrayWithObjects: @"3460602722", nil];
+#warning Se message2 non è nil allora invio il mex anche a quel numero.
+
+        controller.recipients = [NSArray arrayWithObjects: NumberMessage1, nil];
 		//controller.messageComposeDelegate = self;
 		[self presentModalViewController:controller animated:YES];
         controller.messageComposeDelegate = self;
@@ -118,7 +158,9 @@ BOOL changeView = NO;
 	{
 		controller.body = text;
 		//controller.recipients = [NSArray arrayWithObjects:@"3384865894", @"3382053386", nil];
-        controller.recipients = [NSArray arrayWithObjects: @"3460602722", nil];
+#warning Se message2 non è nil allora invio il mex anche a quel numero.
+
+        controller.recipients = [NSArray arrayWithObjects: NumberMessage1, nil];
 		controller.messageComposeDelegate = self;
 		[self presentModalViewController:controller animated:YES];
         //[[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"sms:3460602722"]];
@@ -131,6 +173,8 @@ BOOL changeView = NO;
     MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
 	if([MFMessageComposeViewController canSendText])
 	{
+#warning Inserire textMessage
+
 		controller.body = @"TEST DI PROVA APPLICAZIONE!\nCiao, sono in pericolo, aiutatemi!";
 		//controller.recipients = [NSArray arrayWithObjects:@"3384865894", @"3382053386", nil];
         controller.recipients = numbers;
@@ -146,9 +190,13 @@ BOOL changeView = NO;
     MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
 	if([MFMessageComposeViewController canSendText])
 	{
-		controller.body = @"TEST DI PROVA APPLICAZIONE!\nCiao, sono in pericolo, aiutatemi!\nMi trovo qui %i, %i";
+#warning Inserire textMessage
+        controller.body = @"TEST DI PROVA APPLICAZIONE!\nCiao, sono in pericolo, aiutatemi!\nMi trovo qui %i, %i";
+        controller.body = TextMessage;
 		//controller.recipients = [NSArray arrayWithObjects:@"3384865894", @"3382053386", nil];
-        controller.recipients = [NSArray arrayWithObjects: @"3460602722", nil];
+#warning Se message2 non è nil allora invio il mex anche a quel numero.
+
+        controller.recipients = [NSArray arrayWithObjects: NumberMessage1, nil];
 		controller.messageComposeDelegate = self;
 		[self presentModalViewController:controller animated:YES];
         //[[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"sms:3460602722"]];
@@ -162,6 +210,7 @@ BOOL changeView = NO;
 	{
         CLLocationCoordinate2D coordinate=[location coordinate];
         
+#warning Inserire textMessage
 
         NSString *coordinateStr = [[NSString alloc] initWithFormat:@"\nMi trovo qui: \nLongiudine: %f \nLatitudine: %f", coordinate.latitude, coordinate.longitude];
         
