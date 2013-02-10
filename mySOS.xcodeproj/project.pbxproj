@@ -48,6 +48,8 @@
 		A9B9D01716C6643B00AE88C4 /* Botton1.png in Resources */ = {isa = PBXBuildFile; fileRef = A9B9D01616C6643B00AE88C4 /* Botton1.png */; };
 		A9B9D01916C664DF00AE88C4 /* Botton2.png in Resources */ = {isa = PBXBuildFile; fileRef = A9B9D01816C664DF00AE88C4 /* Botton2.png */; };
 		A9B9D01B16C666A500AE88C4 /* Botton3.png in Resources */ = {isa = PBXBuildFile; fileRef = A9B9D01A16C666A500AE88C4 /* Botton3.png */; };
+		A9B9D01D16C7D5B600AE88C4 /* SOS.png in Resources */ = {isa = PBXBuildFile; fileRef = A9B9D01C16C7D5B600AE88C4 /* SOS.png */; };
+		A9B9D01F16C7D67E00AE88C4 /* SOS_Pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = A9B9D01E16C7D67E00AE88C4 /* SOS_Pressed.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +116,8 @@
 		A9B9D01616C6643B00AE88C4 /* Botton1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Botton1.png; sourceTree = "<group>"; };
 		A9B9D01816C664DF00AE88C4 /* Botton2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Botton2.png; sourceTree = "<group>"; };
 		A9B9D01A16C666A500AE88C4 /* Botton3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Botton3.png; sourceTree = "<group>"; };
+		A9B9D01C16C7D5B600AE88C4 /* SOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SOS.png; sourceTree = "<group>"; };
+		A9B9D01E16C7D67E00AE88C4 /* SOS_Pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SOS_Pressed.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,8 @@
 				A9B9D01616C6643B00AE88C4 /* Botton1.png */,
 				A9B9D01816C664DF00AE88C4 /* Botton2.png */,
 				A9B9D01A16C666A500AE88C4 /* Botton3.png */,
+				A9B9D01C16C7D5B600AE88C4 /* SOS.png */,
+				A9B9D01E16C7D67E00AE88C4 /* SOS_Pressed.png */,
 				A906077616C2FEFB0014F0CB /* mySOS */,
 				A90607A816C2FEFB0014F0CB /* mySOSTests */,
 				A906076F16C2FEFB0014F0CB /* Frameworks */,
@@ -372,6 +378,8 @@
 				A9B9D01716C6643B00AE88C4 /* Botton1.png in Resources */,
 				A9B9D01916C664DF00AE88C4 /* Botton2.png in Resources */,
 				A9B9D01B16C666A500AE88C4 /* Botton3.png in Resources */,
+				A9B9D01D16C7D5B600AE88C4 /* SOS.png in Resources */,
+				A9B9D01F16C7D67E00AE88C4 /* SOS_Pressed.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
