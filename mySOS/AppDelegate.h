@@ -10,8 +10,9 @@
 #import "FirstViewController.h"
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
+#import "FirstViewController.h"
 
-static BOOL freeVersion = YES;
+static BOOL freeVersion = NO;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

@@ -49,17 +49,31 @@
     self.mexNumber2TextField.enabled = YES;
     self.mexNumber3TextField.enabled = YES;
     
-    self.callNumberTextField.text = [dic objectForKey:KEY_CALL_NUMBER];
-    self.mexNumber1TextField.text = [dic objectForKey:KEY_MEX_1_NUMBER];
+    //-- Call Number.
+    if ([dic objectForKey:KEY_CALL_NUMBER] == nil)
+        self.callNumberTextField.text = @"";
+    else
+        self.callNumberTextField.text = [dic objectForKey:KEY_CALL_NUMBER];
     
+    //-- Mex Number 1
+    if ([dic objectForKey:KEY_MEX_1_NUMBER] == nil)
+        self.mexNumber1TextField.text = @"";
+    else
+        self.mexNumber1TextField.text = [dic objectForKey:KEY_MEX_1_NUMBER];
+
+    //-- Mex Number 2
     if ([dic objectForKey:KEY_MEX_2_NUMBER] == nil) {
         self.mexNumber2TextField.text = @"";
     }
     else
         self.mexNumber2TextField.text = [dic objectForKey:KEY_MEX_2_NUMBER];
     
-    self.textMessageTextField.text = [dic objectForKey:KEY_TEXT_MESSAGE];
-
+    //-- Text SMS 
+    if ([dic objectForKey:KEY_TEXT_MESSAGE] == nil) {
+        self.textMessageTextField.text = @"";
+    }
+    else
+        self.textMessageTextField.text = [dic objectForKey:KEY_TEXT_MESSAGE];
     
 }
 
@@ -131,14 +145,14 @@
         [mDic setObject:self.mexNumber1TextField.text forKey:KEY_MEX_1_NUMBER];
         [mDic setObject:self.mexNumber2TextField.text forKey:KEY_MEX_2_NUMBER];
         [mDic setObject:self.textMessageTextField.text forKey:KEY_TEXT_MESSAGE];
-        
         [MFile writeDictionary:mDic];
+        self.tabBarController.selectedIndex = 0;
     }
     else {
         [SettingViewController showAlert];
     }
     [self keyBoardDown];
-    self.tabBarController.selectedIndex = 0;
+    
 }
 
 
