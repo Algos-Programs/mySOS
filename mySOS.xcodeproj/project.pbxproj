@@ -36,6 +36,9 @@
 		A92EA13116C40B0900976BDA /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A92EA13016C40B0900976BDA /* SettingsViewController.m */; };
 		A92EA13B16C4FDF200976BDA /* NumericCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A92EA13A16C4FDF200976BDA /* NumericCell.m */; };
 		A92EA13E16C4FE1D00976BDA /* MyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A92EA13D16C4FE1D00976BDA /* MyTextField.m */; };
+		A9312BEE16C7D95700FBBB80 /* Call.png in Resources */ = {isa = PBXBuildFile; fileRef = A9312BED16C7D95700FBBB80 /* Call.png */; };
+		A9312BF016C7D9DA00FBBB80 /* Call_1.png in Resources */ = {isa = PBXBuildFile; fileRef = A9312BEF16C7D9DA00FBBB80 /* Call_1.png */; };
+		A9312BF216C7DA6D00FBBB80 /* Send_SMS.png in Resources */ = {isa = PBXBuildFile; fileRef = A9312BF116C7DA6D00FBBB80 /* Send_SMS.png */; };
 		A93FAA3B16C3D599001BBF45 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */; };
 		A93FAA3C16C3F21F001BBF45 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */; };
 		A93FAA3D16C3F227001BBF45 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90607B916C2FF4C0014F0CB /* MessageUI.framework */; };
@@ -103,6 +106,9 @@
 		A92EA13A16C4FDF200976BDA /* NumericCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumericCell.m; sourceTree = "<group>"; };
 		A92EA13C16C4FE1D00976BDA /* MyTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTextField.h; sourceTree = "<group>"; };
 		A92EA13D16C4FE1D00976BDA /* MyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTextField.m; sourceTree = "<group>"; };
+		A9312BED16C7D95700FBBB80 /* Call.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Call.png; sourceTree = "<group>"; };
+		A9312BEF16C7D9DA00FBBB80 /* Call_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Call_1.png; sourceTree = "<group>"; };
+		A9312BF116C7DA6D00FBBB80 /* Send_SMS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Send_SMS.png; sourceTree = "<group>"; };
 		A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A9B9D00216C5139600AE88C4 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		A9B9D00316C5139600AE88C4 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
@@ -160,6 +166,9 @@
 				A9B9D01A16C666A500AE88C4 /* Botton3.png */,
 				A9B9D01C16C7D5B600AE88C4 /* SOS.png */,
 				A9B9D01E16C7D67E00AE88C4 /* SOS_Pressed.png */,
+				A9312BED16C7D95700FBBB80 /* Call.png */,
+				A9312BEF16C7D9DA00FBBB80 /* Call_1.png */,
+				A9312BF116C7DA6D00FBBB80 /* Send_SMS.png */,
 				A906077616C2FEFB0014F0CB /* mySOS */,
 				A90607A816C2FEFB0014F0CB /* mySOSTests */,
 				A906076F16C2FEFB0014F0CB /* Frameworks */,
@@ -380,6 +389,9 @@
 				A9B9D01B16C666A500AE88C4 /* Botton3.png in Resources */,
 				A9B9D01D16C7D5B600AE88C4 /* SOS.png in Resources */,
 				A9B9D01F16C7D67E00AE88C4 /* SOS_Pressed.png in Resources */,
+				A9312BEE16C7D95700FBBB80 /* Call.png in Resources */,
+				A9312BF016C7D9DA00FBBB80 /* Call_1.png in Resources */,
+				A9312BF216C7DA6D00FBBB80 /* Send_SMS.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
