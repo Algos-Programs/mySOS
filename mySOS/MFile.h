@@ -8,9 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+static NSString * const KEY_CALL_NUMBER = @"call";
+static NSString * const KEY_MEX_1_NUMBER = @"mex1";
+static NSString * const KEY_MEX_2_NUMBER = @"mex2";
+static NSString * const KEY_MEX_3_NUMBER = @"mex3";
+static NSString * const KEY_TEXT_MESSAGE = @"textMessage";
+
 @interface MFile : NSObject
-+ (void)write;
+
++ (void)writeWithObject:(NSObject *)obj andKey:(NSString *)key;
++ (void)writeDictionary:(NSDictionary *)dic;
 
 + (NSDictionary *)dictionaryWithString:(NSString *)name;
-
 @end

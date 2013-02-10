@@ -11,6 +11,8 @@
 #import <MessageUI/MessageUI.h>
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
+#import "MFile.h"
+#import "SettingViewController.h"
 
 @interface FirstViewController : UIViewController <UIVideoEditorControllerDelegate, MKReverseGeocoderDelegate>
 

@@ -44,6 +44,10 @@
 		A9B9D00C16C57CE500AE88C4 /* File.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9B9D00B16C57CE500AE88C4 /* File.strings */; };
 		A9B9D00F16C57D1C00AE88C4 /* MFile.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B9D00E16C57D1C00AE88C4 /* MFile.m */; };
 		A9B9D01116C5824E00AE88C4 /* speech_bubble@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9B9D01016C5824E00AE88C4 /* speech_bubble@2x.png */; };
+		A9B9D01316C661F400AE88C4 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = A9B9D01216C661F400AE88C4 /* background.png */; };
+		A9B9D01716C6643B00AE88C4 /* Botton1.png in Resources */ = {isa = PBXBuildFile; fileRef = A9B9D01616C6643B00AE88C4 /* Botton1.png */; };
+		A9B9D01916C664DF00AE88C4 /* Botton2.png in Resources */ = {isa = PBXBuildFile; fileRef = A9B9D01816C664DF00AE88C4 /* Botton2.png */; };
+		A9B9D01B16C666A500AE88C4 /* Botton3.png in Resources */ = {isa = PBXBuildFile; fileRef = A9B9D01A16C666A500AE88C4 /* Botton3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +110,10 @@
 		A9B9D00D16C57D1C00AE88C4 /* MFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFile.h; sourceTree = "<group>"; };
 		A9B9D00E16C57D1C00AE88C4 /* MFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFile.m; sourceTree = "<group>"; };
 		A9B9D01016C5824E00AE88C4 /* speech_bubble@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speech_bubble@2x.png"; sourceTree = "<group>"; };
+		A9B9D01216C661F400AE88C4 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		A9B9D01616C6643B00AE88C4 /* Botton1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Botton1.png; sourceTree = "<group>"; };
+		A9B9D01816C664DF00AE88C4 /* Botton2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Botton2.png; sourceTree = "<group>"; };
+		A9B9D01A16C666A500AE88C4 /* Botton3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Botton3.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +150,10 @@
 			children = (
 				A92EA12D16C40A0F00976BDA /* cog_02@2x.png */,
 				A9B9D01016C5824E00AE88C4 /* speech_bubble@2x.png */,
+				A9B9D01216C661F400AE88C4 /* background.png */,
+				A9B9D01616C6643B00AE88C4 /* Botton1.png */,
+				A9B9D01816C664DF00AE88C4 /* Botton2.png */,
+				A9B9D01A16C666A500AE88C4 /* Botton3.png */,
 				A906077616C2FEFB0014F0CB /* mySOS */,
 				A90607A816C2FEFB0014F0CB /* mySOSTests */,
 				A906076F16C2FEFB0014F0CB /* Frameworks */,
@@ -356,6 +368,10 @@
 				A92EA12E16C40A0F00976BDA /* cog_02@2x.png in Resources */,
 				A9B9D00C16C57CE500AE88C4 /* File.strings in Resources */,
 				A9B9D01116C5824E00AE88C4 /* speech_bubble@2x.png in Resources */,
+				A9B9D01316C661F400AE88C4 /* background.png in Resources */,
+				A9B9D01716C6643B00AE88C4 /* Botton1.png in Resources */,
+				A9B9D01916C664DF00AE88C4 /* Botton2.png in Resources */,
+				A9B9D01B16C666A500AE88C4 /* Botton3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

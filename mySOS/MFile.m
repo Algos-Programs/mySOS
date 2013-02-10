@@ -11,24 +11,35 @@ static NSString * const FILE_NAME = @"File.strings";
 
 @implementation MFile
 
-+ (void)write {
++ (void)writeWithObject:(NSObject *)obj andKey:(NSString *)key {
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *docDir = [paths objectAtIndex: 0];
     NSString *docFile = [docDir stringByAppendingPathComponent: FILE_NAME];
     
-    NSDictionary *dic = [[NSDictionary alloc] initWithObjectsAndKeys:@"casa", @"CACCA", nil];
+    NSDictionary *dic = [[NSDictionary alloc] initWithObjectsAndKeys:obj, key, nil];
     [dic writeToFile:docFile atomically:YES];
 }
 
-+ (NSDictionary *)dictionaryWithString:(NSString *)name {
++ (void)writeDictionary:(NSDictionary *)dic {
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *docDir = [paths objectAtIndex: 0];
     NSString *docFile = [docDir stringByAppendingPathComponent: FILE_NAME];
-
     
-    //NSString *path = [[NSBundle mainBundle] pathForResource:@"File" ofType:@"strings"];
+    [dic writeToFile:docFile atomically:YES];
+}
+
+
++ (NSDictionary *)dictionaryWithString:(NSString *)name {
+    
+    if (name == nil) {
+        name = FILE_NAME;
+    }
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docDir = [paths objectAtIndex: 0];
+    NSString *docFile = [docDir stringByAppendingPathComponent: FILE_NAME];
+
     NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:docFile];
     
     return dictionary;

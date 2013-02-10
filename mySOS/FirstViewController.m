@@ -15,10 +15,22 @@
 @implementation FirstViewController
 
 BOOL callNumber = NO;
-
+BOOL changeView = NO;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //-- Controllo se ci sono già inseriti i dati.
+
+    NSDictionary *dic = [[NSDictionary alloc] initWithDictionary:[MFile dictionaryWithString:nil]];
+    if ([[dic objectForKey:KEY_CALL_NUMBER] isEqual: @""] & [[dic objectForKey:KEY_MEX_1_NUMBER] isEqual: @""] & [[dic objectForKey:KEY_TEXT_MESSAGE] isEqual: @""]) {
+        
+        [SettingViewController showAlerWithMessage:@"Impostare i parametri iniziali nella schermata default"];
+    }
+    
+    //_____
+    
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -26,6 +38,12 @@ BOOL callNumber = NO;
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]]];
+
 }
 
 //*************************

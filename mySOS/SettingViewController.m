@@ -30,7 +30,12 @@
 	// Do any additional setup after loading the view.
 }
 
+
 - (void)viewDidAppear:(BOOL)animated {
+    
+
+    //[self clearFields];
+
     if (freeVersion) {
         [self.switchLocalization setEnabled:NO];
         [self.switchLocalization setOn:NO];
@@ -39,11 +44,16 @@
     else
         [self.switchLocalization setOn:YES];
     
+    NSDictionary *dic = [[NSDictionary alloc] initWithDictionary:[MFile dictionaryWithString:nil]];
+    
     self.mexNumber1TextField.enabled = YES;
     self.mexNumber2TextField.enabled = YES;
     self.mexNumber3TextField.enabled = YES;
 
-    self.textMessageTextField.text = @"Aiuto mi sono tagliato una gamba!";
+    self.callNumberTextField.text = [dic objectForKey:KEY_CALL_NUMBER];
+    self.mexNumber1TextField.text = [dic objectForKey:KEY_MEX_1_NUMBER];
+    self.mexNumber2TextField.text = [dic objectForKey:KEY_MEX_2_NUMBER];
+    self.textMessageTextField.text = [dic objectForKey:KEY_TEXT_MESSAGE];
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,7 +76,7 @@
 - (IBAction)pressMexNumber1TextField:(id)sender {
     
     if (freeVersion) {
-        [self showAlertFreeVersion];
+        [SettingViewController showAlertFreeVersion];
         self.mexNumber1TextField.enabled = NO;
     }
 }
@@ -75,7 +85,7 @@
     
     if (freeVersion) {
         self.mexNumber2TextField.selected = NO;
-        [self showAlertFreeVersion];
+        [SettingViewController showAlertFreeVersion];
         self.mexNumber2TextField.enabled = NO;
     }
 
@@ -84,7 +94,7 @@
 - (IBAction)pressTextMessageTextField:(id)sender  {
     
     if (freeVersion) {
-        [self showAlertFreeVersion];
+        [SettingViewController showAlertFreeVersion];
         self.textMessageTextField.enabled = NO;
     }
 }
@@ -104,17 +114,24 @@
 - (IBAction)pressButtonSave:(id)sender {
     if ((![self.callNumberTextField.text isEqual: @""]) && ((![self.mexNumber1TextField.text isEqual: @""]) || (![self.mexNumber2TextField.text isEqual: @""]) || (![self.mexNumber3TextField.text isEqual: @""]))) {
         
-        [MFile write];
-        [MFile dictionaryWithString:nil];
+        NSMutableDictionary *mDic = [[NSMutableDictionary alloc] init];
+        [mDic setObject:self.callNumberTextField.text forKey:KEY_CALL_NUMBER];
+        [mDic setObject:self.mexNumber1TextField.text forKey:KEY_MEX_1_NUMBER];
+        [mDic setObject:self.mexNumber2TextField.text forKey:KEY_MEX_2_NUMBER];
+        [mDic setObject:self.textMessageTextField.text forKey:KEY_TEXT_MESSAGE];
+        
+        [MFile writeDictionary:mDic];
     }
     else {
-        [self showAlert];
+        [SettingViewController showAlert];
     }
+    [self keyBoardDown];
+    self.tabBarController.selectedIndex = 0;
 }
 
 
 - (IBAction)pressButtonCancel:(id)sender {
-    [self.callNumberTextField resignFirstResponder];
+    [self keyBoardDown];
     self.tabBarController.selectedIndex = 0;
 }
 
@@ -130,16 +147,15 @@
     
     if (freeVersion) {
         [self.switchLocalization setEnabled:NO];
-        [self showAlertFreeVersion];
+        [SettingViewController showAlertFreeVersion];
     }
 }
 
 - (IBAction)touchUpInsideSwitchLocalization:(id)sender {
     if (freeVersion) {
         [self.switchLocalization setEnabled:NO];
-        [self showAlertFreeVersion];
+        [SettingViewController showAlertFreeVersion];
     }
-
 }
 
 
@@ -165,7 +181,7 @@
 #pragma mark - Metodi Aler
 //***************************************
 
-- (void)showAlert {
++ (void)showAlert {
     UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Alert Title here"
                                                    message: @"Alert Message here"
                                                   delegate: self
@@ -173,14 +189,14 @@
                                          otherButtonTitles:@"OK",nil];
     
     alert = [alert init];
-    [alert setTitle:@"Attenzione"];
+    [alert setTitle:@"Attenzione!"];
     [alert setMessage:@"I campi 'call' e almeno un destinatario del messaggio sono obbligatori"];
     [alert show];
 }
 
-- (void)showAlerWithMessage:(NSString *)message {
++ (void)showAlerWithMessage:(NSString *)message {
     
-    UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Attenzione Versione Free"
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Attenzione!"
                                                    message: message
                                                   delegate: self
                                          cancelButtonTitle:@"Cancel"
@@ -188,9 +204,19 @@
     [alert show];
 }
 
-- (void)showAlertFreeVersion {
++ (void)showAlerWithTitle:(NSString *)title withMessage:(NSString *)message {
     
-    [self showAlerWithMessage:@"Se vuoi cambiarlo fai l'aggiornamento a 0.79 €"];
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle: title
+                                                   message: message
+                                                  delegate: self
+                                         cancelButtonTitle:@"Cancel"
+                                         otherButtonTitles:@"OK",nil];
+    [alert show];
+}
+
++ (void)showAlertFreeVersion {
+    
+    [SettingViewController showAlerWithTitle:@"Attenzione!" withMessage:@"Se vuoi cambiarlo fai l'aggiornamento a 0.79 €"];
 }
 
 //***************************************
@@ -206,6 +232,20 @@
     [self.mexNumber2TextField resignFirstResponder];
     [self.mexNumber3TextField resignFirstResponder];
     [self.textMessageTextField resignFirstResponder];
+}
+
+//***************************************
+#pragma mark - Metodi Dictionary / File
+//***************************************
+
+
+- (void)clearFields {
+    NSMutableDictionary *mDic = [[NSMutableDictionary alloc] init];
+    [mDic setObject:@"" forKey:KEY_CALL_NUMBER];
+    [mDic setObject:@"" forKey:KEY_MEX_1_NUMBER];
+    [mDic setObject:@"" forKey:KEY_MEX_2_NUMBER];
+    [mDic setObject:@"" forKey:KEY_TEXT_MESSAGE];
+    [MFile writeDictionary:mDic];
 }
 
 

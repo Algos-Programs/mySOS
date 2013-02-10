@@ -31,7 +31,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oPs-kJ-oRZ">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="129" id="oTy-0W-8ou"/>
+                                    <constraint firstAttribute="width" constant="129" id="rma-sd-B0H"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="tintColor" red="0.027750980328632546" green="0.98521675474171222" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -74,12 +74,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="09g-OV-6C4" firstAttribute="centerX" secondItem="16" secondAttribute="centerX" type="default" id="1Lk-xv-t2y"/>
-                            <constraint firstAttribute="bottom" secondItem="pQY-fB-wT1" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="9AL-Gh-tHS"/>
                             <constraint firstItem="pQY-fB-wT1" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="A7x-Dz-tnQ"/>
+                            <constraint firstAttribute="trailing" secondItem="oPs-kJ-oRZ" secondAttribute="trailing" constant="11" id="R6T-UP-XLP"/>
                             <constraint firstItem="09g-OV-6C4" firstAttribute="top" secondItem="16" secondAttribute="top" constant="20" symbolic="YES" type="default" id="ZDz-YY-peE"/>
-                            <constraint firstAttribute="trailing" secondItem="oPs-kJ-oRZ" secondAttribute="trailing" constant="11" id="imq-xY-bRO"/>
-                            <constraint firstAttribute="bottom" secondItem="oPs-kJ-oRZ" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="k21-5U-Y7R"/>
+                            <constraint firstAttribute="bottom" secondItem="oPs-kJ-oRZ" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="chM-bQ-iQK"/>
+                            <constraint firstItem="09g-OV-6C4" firstAttribute="centerX" secondItem="16" secondAttribute="centerX" type="default" id="k7N-4a-MlS"/>
+                            <constraint firstAttribute="bottom" secondItem="pQY-fB-wT1" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="rOs-d4-8js"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="7"/>
