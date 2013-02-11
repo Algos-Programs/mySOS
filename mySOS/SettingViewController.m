@@ -15,6 +15,10 @@
 @implementation SettingViewController
 @synthesize switchLocalization = _switchLocalization;
 
+
+//***************************
+#pragma mark - Metodi Init
+//****************************
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -31,23 +35,8 @@
     //[MFile writeDictionary:[NSDictionary dictionaryWithObject:@"Aiuto sono in pericolo!" forKey:KEY_TEXT_MESSAGE]];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    
-    //[self clearFields];
-    
-    if (freeVersion) {
-        [self.switchLocalization setEnabled:NO];
-        [self.switchLocalization setOn:NO];
-    }
-    
-    else
-        [self.switchLocalization setOn:YES];
-    
+- (void)initField {
     NSDictionary *dic = [[NSDictionary alloc] initWithDictionary:[MFile dictionaryWithString:nil]];
-    
-    self.mexNumber1TextField.enabled = YES;
-    self.mexNumber2TextField.enabled = YES;
-    self.mexNumber3TextField.enabled = YES;
     
     //-- Call Number.
     if ([dic objectForKey:KEY_CALL_NUMBER] == nil)
@@ -60,7 +49,7 @@
         self.mexNumber1TextField.text = @"";
     else
         self.mexNumber1TextField.text = [dic objectForKey:KEY_MEX_1_NUMBER];
-
+    
     //-- Mex Number 2
     if ([dic objectForKey:KEY_MEX_2_NUMBER] == nil) {
         self.mexNumber2TextField.text = @"";
@@ -74,6 +63,33 @@
     }
     else
         self.textMessageTextField.text = [dic objectForKey:KEY_TEXT_MESSAGE];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    //[self clearFields];
+    
+#warning NON FUNZIONA
+    //anche se FreeVersion è YES non entra nell'if.
+    if (FreeVersion) {
+        [self.switchLocalization setEnabled:NO];
+        [self.switchLocalization setOn:NO];
+    }
+    else
+        [self.switchLocalization setOn:YES];
+    
+    
+    if (FreeVersion) {
+        NSLog(@"Free Version");
+    }
+    else {
+        NSLog(@"Plus Version");
+    }
+    self.mexNumber1TextField.enabled = YES;
+    self.mexNumber2TextField.enabled = YES;
+    self.mexNumber3TextField.enabled = YES;
+    
+    [self initField];
     
 }
 
@@ -101,7 +117,7 @@
 
 - (IBAction)pressMexNumber1TextField:(id)sender {
     
-    if (freeVersion) {
+    if (FreeVersion) {
         [SettingViewController showAlertFreeVersion];
         self.mexNumber1TextField.enabled = NO;
     }
@@ -109,7 +125,7 @@
 
 - (IBAction)pressMexNumber2TextField:(id)sender {
     
-    if (freeVersion) {
+    if (FreeVersion) {
         self.mexNumber2TextField.selected = NO;
         [SettingViewController showAlertFreeVersion];
         self.mexNumber2TextField.enabled = NO;
@@ -119,7 +135,7 @@
 
 - (IBAction)pressTextMessageTextField:(id)sender  {
     
-    if (freeVersion) {
+    if (FreeVersion) {
         [SettingViewController showAlertFreeVersion];
         self.textMessageTextField.enabled = NO;
     }
@@ -130,7 +146,7 @@
  */
 - (IBAction)didChangeCallNumberTextField:(id)sender {
 #warning Fare sempre o solo in free mode?
-    if (freeVersion) {
+    if (FreeVersion) {
         self.mexNumber1TextField.text = self.callNumberTextField.text;
     }
 }
@@ -178,14 +194,14 @@
 
 - (IBAction)beginEditingLocaization:(id)sender {
     
-    if (freeVersion) {
+    if (FreeVersion) {
         [self.switchLocalization setEnabled:NO];
         [SettingViewController showAlertFreeVersion];
     }
 }
 
 - (IBAction)touchUpInsideSwitchLocalization:(id)sender {
-    if (freeVersion) {
+    if (FreeVersion) {
         [self.switchLocalization setEnabled:NO];
         [SettingViewController showAlertFreeVersion];
     }
@@ -271,7 +287,9 @@
 #pragma mark - Metodi Dictionary / File
 //***************************************
 
-
+/**
+    Pulisce inserendo @"" per ogni campo sul Dictionary nel file
+ */
 - (void)clearFields {
     NSMutableDictionary *mDic = [[NSMutableDictionary alloc] init];
     [mDic setObject:@"" forKey:KEY_CALL_NUMBER];

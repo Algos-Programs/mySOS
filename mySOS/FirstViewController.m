@@ -15,7 +15,6 @@
 @implementation FirstViewController
 
 BOOL callNumber = NO;
-BOOL changeView = NO;
 
 NSString *NumberCall = @"";
 NSString *NumberMessage1 = @"";
@@ -28,9 +27,7 @@ NSString *TextMessage = @"";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
     
-    //_____
     
     
 	// Do any additional setup after loading the view, typically from a nib.
@@ -46,24 +43,19 @@ NSString *TextMessage = @"";
     
     NSDictionary *dic = [[NSDictionary alloc] initWithDictionary:[MFile dictionaryWithString:nil]];
     
-    //-- Controllo se ci sono già inseriti i dati.
-#warning Controllo non funzionante.
-    if ([[dic objectForKey:KEY_CALL_NUMBER] isEqual: @""] && [[dic objectForKey:KEY_MEX_1_NUMBER] isEqual: @""] && [[dic objectForKey:KEY_TEXT_MESSAGE] isEqual: @""]) {
-        
+    //-- Controllo se il dic è vuoto.
+    if ([dic count]) {
         [SettingViewController showAlerWithMessage:@"Impostare i parametri iniziali nella schermata default"];
-        changeView = YES;
+        self.tabBarController.selectedIndex = 1;
     }
-    else { // Risulteranno sempre pieni
+    else {
         NumberCall = [dic objectForKey:KEY_CALL_NUMBER];
         NumberMessage1 = [dic objectForKey:KEY_MEX_1_NUMBER];
         NumberMessage2 = [dic objectForKey:KEY_MEX_2_NUMBER];
         NumberMessage3 = [dic objectForKey:KEY_MEX_3_NUMBER];
         TextMessage = [dic objectForKey:KEY_TEXT_MESSAGE];
-        
     }
-#warning eliminare questo passaggio ed incorporarlo nel if sopra.
-    if(changeView)
-        self.tabBarController.selectedIndex = 1;
+
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -254,18 +246,23 @@ NSString *TextMessage = @"";
 #pragma mark - Location
 //*************************
 
+/**
+    Restituisce la localizzazione attuale.
+ */
 + (CLLocation*)findCurrentLocation
 {
     CLLocationManager *locationManager = [[CLLocationManager alloc] init];
     if ([locationManager locationServicesEnabled])
     {
-        //locationManager.delegate = self;
+        //Questo metodo chiede all'utente se l'app può essere localizzata.
+        [locationManager startUpdatingLocation];
+        
+        locationManager.delegate = self;
         locationManager.desiredAccuracy = kCLLocationAccuracyBest;
         locationManager.distanceFilter = kCLDistanceFilterNone;
-        [locationManager startUpdatingLocation];
     }
     CLLocation *location = [locationManager location];
-    
+#pragma mark - aspettare più tempo perchè venga premuto il bottone ok.
     return location;
 }
 @end

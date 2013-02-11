@@ -12,7 +12,10 @@
 #import <MapKit/MapKit.h>
 #import "FirstViewController.h"
 
-static BOOL freeVersion = NO;
+static BOOL FreeVersion = NO;
+static BOOL firstTime = YES;
+
+static CLLocation *Location = nil;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

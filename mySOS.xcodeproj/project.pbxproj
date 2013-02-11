@@ -43,6 +43,49 @@
 		A9312BFA16C7E43A00FBBB80 /* icona3.png in Resources */ = {isa = PBXBuildFile; fileRef = A9312BF916C7E43A00FBBB80 /* icona3.png */; };
 		A9312BFC16C7E53800FBBB80 /* icona4_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = A9312BFB16C7E53800FBBB80 /* icona4_114x114.png */; };
 		A9312BFE16C7E5CE00FBBB80 /* icona5_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = A9312BFD16C7E5CE00FBBB80 /* icona5_114x114.png */; };
+		A93C8F0816C837AD0068C156 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A906077C16C2FEFB0014F0CB /* main.m */; };
+		A93C8F0916C837AD0068C156 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A906078016C2FEFB0014F0CB /* AppDelegate.m */; };
+		A93C8F0A16C837AD0068C156 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A906078F16C2FEFB0014F0CB /* FirstViewController.m */; };
+		A93C8F0B16C837AD0068C156 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A906079616C2FEFB0014F0CB /* SecondViewController.m */; };
+		A93C8F0C16C837AD0068C156 /* MMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A92EA12916C3F7A300976BDA /* MMessage.m */; };
+		A93C8F0D16C837AD0068C156 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A92EA13016C40B0900976BDA /* SettingsViewController.m */; };
+		A93C8F0E16C837AD0068C156 /* NumericCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A92EA13A16C4FDF200976BDA /* NumericCell.m */; };
+		A93C8F0F16C837AD0068C156 /* MyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A92EA13D16C4FE1D00976BDA /* MyTextField.m */; };
+		A93C8F1016C837AD0068C156 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B9D00316C5139600AE88C4 /* SettingViewController.m */; };
+		A93C8F1116C837AD0068C156 /* MPlist.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B9D00716C57C5000AE88C4 /* MPlist.m */; };
+		A93C8F1216C837AD0068C156 /* MFile.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B9D00E16C57D1C00AE88C4 /* MFile.m */; };
+		A93C8F1416C837AD0068C156 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A92EA12B16C3FC5400976BDA /* MapKit.framework */; };
+		A93C8F1516C837AD0068C156 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */; };
+		A93C8F1616C837AD0068C156 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90607B916C2FF4C0014F0CB /* MessageUI.framework */; };
+		A93C8F1716C837AD0068C156 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A906077016C2FEFB0014F0CB /* UIKit.framework */; };
+		A93C8F1816C837AD0068C156 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A906077216C2FEFB0014F0CB /* Foundation.framework */; };
+		A93C8F1916C837AD0068C156 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A906077416C2FEFB0014F0CB /* CoreGraphics.framework */; };
+		A93C8F1B16C837AD0068C156 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A906077916C2FEFB0014F0CB /* InfoPlist.strings */; };
+		A93C8F1C16C837AD0068C156 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A906078216C2FEFB0014F0CB /* Default.png */; };
+		A93C8F1D16C837AD0068C156 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A906078416C2FEFB0014F0CB /* Default@2x.png */; };
+		A93C8F1E16C837AD0068C156 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A906078616C2FEFB0014F0CB /* Default-568h@2x.png */; };
+		A93C8F1F16C837AD0068C156 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A906078816C2FEFB0014F0CB /* MainStoryboard_iPhone.storyboard */; };
+		A93C8F2016C837AD0068C156 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A906078B16C2FEFB0014F0CB /* MainStoryboard_iPad.storyboard */; };
+		A93C8F2116C837AD0068C156 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = A906079116C2FEFB0014F0CB /* first.png */; };
+		A93C8F2216C837AD0068C156 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A906079316C2FEFB0014F0CB /* first@2x.png */; };
+		A93C8F2316C837AD0068C156 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = A906079816C2FEFB0014F0CB /* second.png */; };
+		A93C8F2416C837AD0068C156 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A906079A16C2FEFB0014F0CB /* second@2x.png */; };
+		A93C8F2516C837AD0068C156 /* cog_02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A92EA12D16C40A0F00976BDA /* cog_02@2x.png */; };
+		A93C8F2616C837AD0068C156 /* File.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9B9D00B16C57CE500AE88C4 /* File.strings */; };
+		A93C8F2716C837AD0068C156 /* speech_bubble@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9B9D01016C5824E00AE88C4 /* speech_bubble@2x.png */; };
+		A93C8F2816C837AD0068C156 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = A9B9D01216C661F400AE88C4 /* background.png */; };
+		A93C8F2916C837AD0068C156 /* Botton1.png in Resources */ = {isa = PBXBuildFile; fileRef = A9B9D01616C6643B00AE88C4 /* Botton1.png */; };
+		A93C8F2A16C837AD0068C156 /* Botton2.png in Resources */ = {isa = PBXBuildFile; fileRef = A9B9D01816C664DF00AE88C4 /* Botton2.png */; };
+		A93C8F2B16C837AD0068C156 /* Botton3.png in Resources */ = {isa = PBXBuildFile; fileRef = A9B9D01A16C666A500AE88C4 /* Botton3.png */; };
+		A93C8F2C16C837AD0068C156 /* SOS.png in Resources */ = {isa = PBXBuildFile; fileRef = A9B9D01C16C7D5B600AE88C4 /* SOS.png */; };
+		A93C8F2D16C837AD0068C156 /* SOS_Pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = A9B9D01E16C7D67E00AE88C4 /* SOS_Pressed.png */; };
+		A93C8F2E16C837AD0068C156 /* Call.png in Resources */ = {isa = PBXBuildFile; fileRef = A9312BED16C7D95700FBBB80 /* Call.png */; };
+		A93C8F2F16C837AD0068C156 /* Call_1.png in Resources */ = {isa = PBXBuildFile; fileRef = A9312BEF16C7D9DA00FBBB80 /* Call_1.png */; };
+		A93C8F3016C837AD0068C156 /* Send_SMS.png in Resources */ = {isa = PBXBuildFile; fileRef = A9312BF116C7DA6D00FBBB80 /* Send_SMS.png */; };
+		A93C8F3116C837AD0068C156 /* icona2_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = A9312BF716C7E35400FBBB80 /* icona2_114x114.png */; };
+		A93C8F3216C837AD0068C156 /* icona3.png in Resources */ = {isa = PBXBuildFile; fileRef = A9312BF916C7E43A00FBBB80 /* icona3.png */; };
+		A93C8F3316C837AD0068C156 /* icona4_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = A9312BFB16C7E53800FBBB80 /* icona4_114x114.png */; };
+		A93C8F3416C837AD0068C156 /* icona5_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = A9312BFD16C7E5CE00FBBB80 /* icona5_114x114.png */; };
 		A93FAA3B16C3D599001BBF45 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */; };
 		A93FAA3C16C3F21F001BBF45 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */; };
 		A93FAA3D16C3F227001BBF45 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90607B916C2FF4C0014F0CB /* MessageUI.framework */; };
@@ -117,6 +160,8 @@
 		A9312BF916C7E43A00FBBB80 /* icona3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icona3.png; sourceTree = "<group>"; };
 		A9312BFB16C7E53800FBBB80 /* icona4_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icona4_114x114.png; sourceTree = "<group>"; };
 		A9312BFD16C7E5CE00FBBB80 /* icona5_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icona5_114x114.png; sourceTree = "<group>"; };
+		A93C8F3816C837AD0068C156 /* mySOS Lite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mySOS Lite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A93C8F3916C837AD0068C156 /* mySOS copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "mySOS copy-Info.plist"; path = "/Users/Marco/Documents/MyProjects/mySOS/mySOS copy-Info.plist"; sourceTree = "<absolute>"; };
 		A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A9B9D00216C5139600AE88C4 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		A9B9D00316C5139600AE88C4 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
@@ -160,6 +205,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A93C8F1316C837AD0068C156 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A93C8F1416C837AD0068C156 /* MapKit.framework in Frameworks */,
+				A93C8F1516C837AD0068C156 /* CoreLocation.framework in Frameworks */,
+				A93C8F1616C837AD0068C156 /* MessageUI.framework in Frameworks */,
+				A93C8F1716C837AD0068C156 /* UIKit.framework in Frameworks */,
+				A93C8F1816C837AD0068C156 /* Foundation.framework in Frameworks */,
+				A93C8F1916C837AD0068C156 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -185,6 +243,7 @@
 				A90607A816C2FEFB0014F0CB /* mySOSTests */,
 				A906076F16C2FEFB0014F0CB /* Frameworks */,
 				A906076E16C2FEFB0014F0CB /* Products */,
+				A93C8F3916C837AD0068C156 /* mySOS copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,6 +252,7 @@
 			children = (
 				A906076D16C2FEFB0014F0CB /* mySOS.app */,
 				A90607A116C2FEFB0014F0CB /* mySOSTests.octest */,
+				A93C8F3816C837AD0068C156 /* mySOS Lite.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -350,6 +410,23 @@
 			productReference = A90607A116C2FEFB0014F0CB /* mySOSTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
+		A93C8F0616C837AD0068C156 /* mySOS Lite */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A93C8F3516C837AD0068C156 /* Build configuration list for PBXNativeTarget "mySOS Lite" */;
+			buildPhases = (
+				A93C8F0716C837AD0068C156 /* Sources */,
+				A93C8F1316C837AD0068C156 /* Frameworks */,
+				A93C8F1A16C837AD0068C156 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "mySOS Lite";
+			productName = mySOS;
+			productReference = A93C8F3816C837AD0068C156 /* mySOS Lite.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -373,6 +450,7 @@
 			targets = (
 				A906076C16C2FEFB0014F0CB /* mySOS */,
 				A90607A016C2FEFB0014F0CB /* mySOSTests */,
+				A93C8F0616C837AD0068C156 /* mySOS Lite */,
 			);
 		};
 /* End PBXProject section */
@@ -419,6 +497,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A93C8F1A16C837AD0068C156 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A93C8F1B16C837AD0068C156 /* InfoPlist.strings in Resources */,
+				A93C8F1C16C837AD0068C156 /* Default.png in Resources */,
+				A93C8F1D16C837AD0068C156 /* Default@2x.png in Resources */,
+				A93C8F1E16C837AD0068C156 /* Default-568h@2x.png in Resources */,
+				A93C8F1F16C837AD0068C156 /* MainStoryboard_iPhone.storyboard in Resources */,
+				A93C8F2016C837AD0068C156 /* MainStoryboard_iPad.storyboard in Resources */,
+				A93C8F2116C837AD0068C156 /* first.png in Resources */,
+				A93C8F2216C837AD0068C156 /* first@2x.png in Resources */,
+				A93C8F2316C837AD0068C156 /* second.png in Resources */,
+				A93C8F2416C837AD0068C156 /* second@2x.png in Resources */,
+				A93C8F2516C837AD0068C156 /* cog_02@2x.png in Resources */,
+				A93C8F2616C837AD0068C156 /* File.strings in Resources */,
+				A93C8F2716C837AD0068C156 /* speech_bubble@2x.png in Resources */,
+				A93C8F2816C837AD0068C156 /* background.png in Resources */,
+				A93C8F2916C837AD0068C156 /* Botton1.png in Resources */,
+				A93C8F2A16C837AD0068C156 /* Botton2.png in Resources */,
+				A93C8F2B16C837AD0068C156 /* Botton3.png in Resources */,
+				A93C8F2C16C837AD0068C156 /* SOS.png in Resources */,
+				A93C8F2D16C837AD0068C156 /* SOS_Pressed.png in Resources */,
+				A93C8F2E16C837AD0068C156 /* Call.png in Resources */,
+				A93C8F2F16C837AD0068C156 /* Call_1.png in Resources */,
+				A93C8F3016C837AD0068C156 /* Send_SMS.png in Resources */,
+				A93C8F3116C837AD0068C156 /* icona2_114x114.png in Resources */,
+				A93C8F3216C837AD0068C156 /* icona3.png in Resources */,
+				A93C8F3316C837AD0068C156 /* icona4_114x114.png in Resources */,
+				A93C8F3416C837AD0068C156 /* icona5_114x114.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -461,6 +572,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				A90607B016C2FEFB0014F0CB /* mySOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A93C8F0716C837AD0068C156 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A93C8F0816C837AD0068C156 /* main.m in Sources */,
+				A93C8F0916C837AD0068C156 /* AppDelegate.m in Sources */,
+				A93C8F0A16C837AD0068C156 /* FirstViewController.m in Sources */,
+				A93C8F0B16C837AD0068C156 /* SecondViewController.m in Sources */,
+				A93C8F0C16C837AD0068C156 /* MMessage.m in Sources */,
+				A93C8F0D16C837AD0068C156 /* SettingsViewController.m in Sources */,
+				A93C8F0E16C837AD0068C156 /* NumericCell.m in Sources */,
+				A93C8F0F16C837AD0068C156 /* MyTextField.m in Sources */,
+				A93C8F1016C837AD0068C156 /* SettingViewController.m in Sources */,
+				A93C8F1116C837AD0068C156 /* MPlist.m in Sources */,
+				A93C8F1216C837AD0068C156 /* MFile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,6 +753,30 @@
 			};
 			name = Release;
 		};
+		A93C8F3616C837AD0068C156 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "mySOS/mySOS-Prefix.pch";
+				INFOPLIST_FILE = "mySOS copy-Info.plist";
+				"OTHER_CFLAGS[arch=*]" = "-DLITE_VERSION=1";
+				PRODUCT_NAME = "mySOS Lite";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A93C8F3716C837AD0068C156 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "mySOS/mySOS-Prefix.pch";
+				INFOPLIST_FILE = "mySOS copy-Info.plist";
+				"OTHER_CFLAGS[arch=*]" = "-DLITE_VERSION=1";
+				PRODUCT_NAME = "mySOS Lite";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -650,6 +803,15 @@
 			buildConfigurations = (
 				A90607B716C2FEFB0014F0CB /* Debug */,
 				A90607B816C2FEFB0014F0CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A93C8F3516C837AD0068C156 /* Build configuration list for PBXNativeTarget "mySOS Lite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A93C8F3616C837AD0068C156 /* Debug */,
+				A93C8F3716C837AD0068C156 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

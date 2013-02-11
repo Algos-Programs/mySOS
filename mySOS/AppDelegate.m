@@ -8,12 +8,18 @@
 
 #import "AppDelegate.h"
 
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //-- è un is che si attiva quando la versione è free.
+#ifdef LITE_VERSION
+    FreeVersion = YES;
+    NSLog (@"Lite Version");
+#endif
+    
     // Override point for customization after application launch.
-    [FirstViewController findCurrentLocation];
     return YES;
 }
 							
