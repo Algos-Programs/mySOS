@@ -22,13 +22,12 @@ NSString *NumberMessage2 = @"";
 NSString *NumberMessage3 = @"";
 NSString *TextMessage = @"";
 
-
+NSString *coordinateUrl = @"";
+static CLLocation *Location = nil;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    
     
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -41,10 +40,12 @@ NSString *TextMessage = @"";
 
 - (void)viewWillAppear:(BOOL)animated {
     
+    Location = [FirstViewController findCurrentLocation];
+
     NSDictionary *dic = [[NSDictionary alloc] initWithDictionary:[MFile dictionaryWithString:nil]];
-    
+
     //-- Controllo se il dic è vuoto.
-    if ([dic count]) {
+    if ([[dic allKeys]count] == 0) {
         [SettingViewController showAlerWithMessage:@"Impostare i parametri iniziali nella schermata default"];
         self.tabBarController.selectedIndex = 1;
     }
@@ -204,7 +205,7 @@ NSString *TextMessage = @"";
         
 #warning Inserire textMessage
 
-        NSString *coordinateStr = [[NSString alloc] initWithFormat:@"\nMi trovo qui: \nLongiudine: %f \nLatitudine: %f", coordinate.latitude, coordinate.longitude];
+        NSString *coordinateStr = [[NSString alloc] initWithFormat:@"\nMi trovo qui: \nLatitudine: %f \nLongitudine: %f\n",coordinate.latitude, coordinate.longitude];
         
         text = [text stringByAppendingString:coordinateStr];
         controller.body = text;
@@ -218,6 +219,7 @@ NSString *TextMessage = @"";
 
 /**
     Decido cosa fare a seconda dell'esito del messaggio.
+    (Send o Cancel)
  */
 - (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result {
     
@@ -256,14 +258,19 @@ NSString *TextMessage = @"";
     {
         //Questo metodo chiede all'utente se l'app può essere localizzata.
         [locationManager startUpdatingLocation];
-        
         locationManager.delegate = self;
         locationManager.desiredAccuracy = kCLLocationAccuracyBest;
         locationManager.distanceFilter = kCLDistanceFilterNone;
     }
     CLLocation *location = [locationManager location];
 #pragma mark - aspettare più tempo perchè venga premuto il bottone ok.
+    coordinateUrl  = [NSString stringWithFormat:@"http://maps.google.com/maps?q=%1.6f,%1.6f",
+                                     location.coordinate.latitude,
+                                     location.coordinate.longitude];
+    
+    //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:googleMapsURLString]];
     return location;
 }
+
 @end
 

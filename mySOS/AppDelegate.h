@@ -15,8 +15,6 @@
 static BOOL FreeVersion = NO;
 static BOOL firstTime = YES;
 
-static CLLocation *Location = nil;
-
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
