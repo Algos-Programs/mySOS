@@ -14,7 +14,7 @@
 
 @implementation SettingViewController
 @synthesize switchLocalization = _switchLocalization;
-
+@synthesize liteVersion = _liteVersion;
 
 //***************************
 #pragma mark - Metodi Init
@@ -31,6 +31,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+#ifdef LITE_VERSION
+    _liteVersion = YES;
+    NSLog (@"Lite Version");
+#endif
+
 	// Do any additional setup after loading the view.
     //[MFile writeDictionary:[NSDictionary dictionaryWithObject:@"Aiuto sono in pericolo!" forKey:KEY_TEXT_MESSAGE]];
 }
@@ -70,8 +75,8 @@
     //[self clearFields];
     
 #warning NON FUNZIONA
-    //anche se FreeVersion è YES non entra nell'if.
-    if (FreeVersion) {
+
+    if (_liteVersion) {
         [self.switchLocalization setEnabled:NO];
         [self.switchLocalization setOn:NO];
     }
@@ -79,12 +84,14 @@
         [self.switchLocalization setOn:YES];
     
     
-    if (FreeVersion) {
+    if (_liteVersion) {
         NSLog(@"Free Version");
     }
     else {
-        NSLog(@"Plus Version");
+        NSLog(
+              @"Plus Version");
     }
+     
     self.mexNumber1TextField.enabled = YES;
     self.mexNumber2TextField.enabled = YES;
     self.mexNumber3TextField.enabled = YES;
@@ -117,15 +124,14 @@
 
 - (IBAction)pressMexNumber1TextField:(id)sender {
     
-    if (FreeVersion) {
+    if (_liteVersion) {
         [SettingViewController showAlertFreeVersion];
         self.mexNumber1TextField.enabled = NO;
     }
 }
 
 - (IBAction)pressMexNumber2TextField:(id)sender {
-    
-    if (FreeVersion) {
+    if (_liteVersion) {
         self.mexNumber2TextField.selected = NO;
         [SettingViewController showAlertFreeVersion];
         self.mexNumber2TextField.enabled = NO;
@@ -135,7 +141,7 @@
 
 - (IBAction)pressTextMessageTextField:(id)sender  {
     
-    if (FreeVersion) {
+    if (_liteVersion) {
         [SettingViewController showAlertFreeVersion];
         self.textMessageTextField.enabled = NO;
     }
@@ -146,7 +152,7 @@
  */
 - (IBAction)didChangeCallNumberTextField:(id)sender {
 #warning Fare sempre o solo in free mode?
-    if (FreeVersion) {
+    if (_liteVersion) {
         self.mexNumber1TextField.text = self.callNumberTextField.text;
     }
 }
@@ -194,14 +200,14 @@
 
 - (IBAction)beginEditingLocaization:(id)sender {
     
-    if (FreeVersion) {
+    if (_liteVersion) {
         [self.switchLocalization setEnabled:NO];
         [SettingViewController showAlertFreeVersion];
     }
 }
 
 - (IBAction)touchUpInsideSwitchLocalization:(id)sender {
-    if (FreeVersion) {
+    if (_liteVersion) {
         [self.switchLocalization setEnabled:NO];
         [SettingViewController showAlertFreeVersion];
     }

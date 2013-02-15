@@ -15,7 +15,6 @@
 {
     //-- è un is che si attiva quando la versione è free.
 #ifdef LITE_VERSION
-    FreeVersion = YES;
     NSLog (@"Lite Version");
 #endif
     

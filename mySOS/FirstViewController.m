@@ -76,8 +76,6 @@ static CLLocation *Location = nil;
 
 - (IBAction)pressButtonSendMessage:(id)sender {
     
-    NSDictionary *dic = [[NSDictionary alloc] initWithDictionary:[MFile dictionaryWithString:nil]];
-    
     callNumber = NO;
     [self sendMessageWithNumbers:[NSArray arrayWithObject:NumberMessage1] withText:TextMessage withLocation:[FirstViewController findCurrentLocation]];
     //[self sendMessage];
@@ -105,6 +103,7 @@ static CLLocation *Location = nil;
     // asserendo callNumber dico di iniziare la chiamata se il messaggio è stato inviato.
     callNumber = YES;
 #warning Se message2 non è nil allora invio il mex anche a quel numero.
+    
     [self sendMessageWithNumbers:[NSArray arrayWithObject:NumberMessage1] withText:TextMessage withLocation:[FirstViewController findCurrentLocation]];
 }
 
@@ -118,83 +117,12 @@ static CLLocation *Location = nil;
 - (void)callNumber {
     
     //-- Chiama il numero di telefono.
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[@"tel:" stringByAppendingFormat:NumberCall]]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[@"tel:" stringByAppendingString:NumberCall]]];
 }
 
 //*************************
 #pragma mark - Messages
 //*************************
-/**
- Invia il messaggio ad un numero.
- */
-- (void)sendMessage {
-    
-    MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
-	if([MFMessageComposeViewController canSendText])
-	{
-		controller.body = @"TEST DI PROVA APPLICAZIONE!\nCiao, sono in pericolo, aiutatemi!";
-		//controller.recipients = [NSArray arrayWithObjects:@"3384865894", @"3382053386", nil];
-#warning Se message2 non è nil allora invio il mex anche a quel numero.
-
-        controller.recipients = [NSArray arrayWithObjects: NumberMessage1, nil];
-		//controller.messageComposeDelegate = self;
-		[self presentModalViewController:controller animated:YES];
-        controller.messageComposeDelegate = self;
-        //[[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"sms:3460602722"]];
-	}
-}
-
-- (void)sendMessageWithText:(NSString *)text {
-    
-    MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
-	if([MFMessageComposeViewController canSendText])
-	{
-		controller.body = text;
-		//controller.recipients = [NSArray arrayWithObjects:@"3384865894", @"3382053386", nil];
-#warning Se message2 non è nil allora invio il mex anche a quel numero.
-
-        controller.recipients = [NSArray arrayWithObjects: NumberMessage1, nil];
-		controller.messageComposeDelegate = self;
-		[self presentModalViewController:controller animated:YES];
-        //[[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"sms:3460602722"]];
-	}
-    
-}
-
-- (void)sendMessageWithNumbers:(NSArray *)numbers {
-    
-    MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
-	if([MFMessageComposeViewController canSendText])
-	{
-#warning Inserire textMessage
-
-		controller.body = @"TEST DI PROVA APPLICAZIONE!\nCiao, sono in pericolo, aiutatemi!";
-		//controller.recipients = [NSArray arrayWithObjects:@"3384865894", @"3382053386", nil];
-        controller.recipients = numbers;
-		controller.messageComposeDelegate = self;
-		[self presentModalViewController:controller animated:YES];
-        //[[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"sms:3460602722"]];
-	}
-}
-
-
-- (void)sendMessageWithLocation:(CLLocation *)location {
-    
-    MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
-	if([MFMessageComposeViewController canSendText])
-	{
-#warning Inserire textMessage
-        controller.body = @"TEST DI PROVA APPLICAZIONE!\nCiao, sono in pericolo, aiutatemi!\nMi trovo qui %i, %i";
-        controller.body = TextMessage;
-		//controller.recipients = [NSArray arrayWithObjects:@"3384865894", @"3382053386", nil];
-#warning Se message2 non è nil allora invio il mex anche a quel numero.
-
-        controller.recipients = [NSArray arrayWithObjects: NumberMessage1, nil];
-		controller.messageComposeDelegate = self;
-		[self presentModalViewController:controller animated:YES];
-        //[[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"sms:3460602722"]];
-	}
-}
 
 - (void)sendMessageWithNumbers:(NSArray *)numbers withText:(NSString *)text withLocation:(CLLocation *)location {
     
@@ -210,7 +138,8 @@ static CLLocation *Location = nil;
         text = [text stringByAppendingString:coordinateStr];
         controller.body = text;
         controller.recipients = numbers;
-		[self presentModalViewController:controller animated:YES];
+		//[self presentModalViewController:controller animated:YES]; 
+        [self presentViewController:controller animated:YES completion:nil];
         controller.messageComposeDelegate = self;
 	}
     
@@ -240,7 +169,8 @@ static CLLocation *Location = nil;
 			break;
 	}
     
-	[self dismissModalViewControllerAnimated:YES];
+	//[self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
     
 }
 
@@ -254,11 +184,20 @@ static CLLocation *Location = nil;
 + (CLLocation*)findCurrentLocation
 {
     CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+    /*
     if ([locationManager locationServicesEnabled])
     {
         //Questo metodo chiede all'utente se l'app può essere localizzata.
         [locationManager startUpdatingLocation];
         locationManager.delegate = self;
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        locationManager.distanceFilter = kCLDistanceFilterNone;
+    }
+    */
+    if ([CLLocationManager locationServicesEnabled]) {
+        //Questo metodo chiede all'utente se l'app può essere localizzata.
+        [locationManager startUpdatingLocation];
+        locationManager.delegate = locationManager.delegate;
         locationManager.desiredAccuracy = kCLLocationAccuracyBest;
         locationManager.distanceFilter = kCLDistanceFilterNone;
     }

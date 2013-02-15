@@ -11,6 +11,8 @@
 #import "AppDelegate.h"
 @interface SettingViewController : UIViewController <UITextFieldDelegate>
 
+@property (nonatomic) BOOL liteVersion;
+
 //-- TextField Outlet
 @property (weak, nonatomic) IBOutlet UITextField *callNumberTextField;
 @property (weak, nonatomic) IBOutlet UITextField *mexNumber1TextField;

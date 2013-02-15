@@ -14,7 +14,7 @@
 #import "MFile.h"
 #import "SettingViewController.h"
 
-@interface FirstViewController : UIViewController <UIVideoEditorControllerDelegate, MKReverseGeocoderDelegate>
+@interface FirstViewController : UIViewController <UIVideoEditorControllerDelegate, MFMessageComposeViewControllerDelegate, CLLocationManagerDelegate>
 
 @property (nonatomic, retain) MKMapView *userLocationAddMapView;
 
@@ -24,7 +24,6 @@
 - (IBAction)pressButtonSOS:(id)sender;
 
 - (void)sendMessageWithNumbers:(NSArray *)numbers withText:(NSString *)text withLocation:(CLLocation *)location;
-- (CLLocation*)findCurrentLocation;
 
 + (CLLocation*)findCurrentLocation;
 

@@ -12,9 +12,6 @@
 #import <MapKit/MapKit.h>
 #import "FirstViewController.h"
 
-static BOOL FreeVersion = NO;
-static BOOL firstTime = YES;
-
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
