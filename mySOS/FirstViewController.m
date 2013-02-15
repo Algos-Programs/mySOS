@@ -77,8 +77,14 @@ static CLLocation *Location = nil;
 - (IBAction)pressButtonSendMessage:(id)sender {
     
     callNumber = NO;
-    [self sendMessageWithNumbers:[NSArray arrayWithObject:NumberMessage1] withText:TextMessage withLocation:[FirstViewController findCurrentLocation]];
-    //[self sendMessage];
+    SettingViewController *sc = [[SettingViewController alloc] init];
+    
+    if ([sc location]) {
+        [self sendMessageWithNumbers:[NSArray arrayWithObject:NumberMessage1] withText:TextMessage withLocation:[FirstViewController findCurrentLocation]];
+    }
+    else {
+        [self sendMessageWithNumbers:[NSArray arrayWithObject:NumberMessage1] withText:TextMessage withLocation:nil];
+    }
 }
 
 /**
@@ -124,16 +130,27 @@ static CLLocation *Location = nil;
 #pragma mark - Messages
 //*************************
 
+/**
+ Invia un messaggio
+    Destinatari: Array
+    Testo: text
+    Location: se NON è nil le inserisce nel testo nel messaggio.
+ */
 - (void)sendMessageWithNumbers:(NSArray *)numbers withText:(NSString *)text withLocation:(CLLocation *)location {
-    
     MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init];
 	if([MFMessageComposeViewController canSendText])
 	{
-        CLLocationCoordinate2D coordinate=[location coordinate];
+        NSString *coordinateStr = [NSString alloc];
+        if (location != nil) {
+            CLLocationCoordinate2D coordinate=[location coordinate];
+            coordinateStr = [coordinateStr initWithFormat:@"\nMi trovo qui: \nLatitudine: %f \nLongitudine: %f\n",coordinate.latitude, coordinate.longitude];
+        }
+        else {
+            coordinateStr = [coordinateStr initWithString:@""];
+        }
         
 #warning Inserire textMessage
 
-        NSString *coordinateStr = [[NSString alloc] initWithFormat:@"\nMi trovo qui: \nLatitudine: %f \nLongitudine: %f\n",coordinate.latitude, coordinate.longitude];
         
         text = [text stringByAppendingString:coordinateStr];
         controller.body = text;

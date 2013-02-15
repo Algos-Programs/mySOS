@@ -12,6 +12,7 @@
 @interface SettingViewController : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic) BOOL liteVersion;
+@property (nonatomic) BOOL location;
 
 //-- TextField Outlet
 @property (weak, nonatomic) IBOutlet UITextField *callNumberTextField;

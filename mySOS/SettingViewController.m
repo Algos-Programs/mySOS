@@ -15,10 +15,12 @@
 @implementation SettingViewController
 @synthesize switchLocalization = _switchLocalization;
 @synthesize liteVersion = _liteVersion;
+@synthesize location = _location;
 
-//***************************
-#pragma mark - Metodi Init
-//****************************
+//********************************
+#pragma mark - Metodi System Init
+//********************************
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -28,48 +30,22 @@
     return self;
 }
 
+- (id)init {
+    
+    [self initLocalVariables];
+    
+    return self;
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-#ifdef LITE_VERSION
-    _liteVersion = YES;
-    NSLog (@"Lite Version");
-#endif
-
+    
+    [self initLocalVariables];
 	// Do any additional setup after loading the view.
     //[MFile writeDictionary:[NSDictionary dictionaryWithObject:@"Aiuto sono in pericolo!" forKey:KEY_TEXT_MESSAGE]];
 }
-
-- (void)initField {
-    NSDictionary *dic = [[NSDictionary alloc] initWithDictionary:[MFile dictionaryWithString:nil]];
-    
-    //-- Call Number.
-    if ([dic objectForKey:KEY_CALL_NUMBER] == nil)
-        self.callNumberTextField.text = @"";
-    else
-        self.callNumberTextField.text = [dic objectForKey:KEY_CALL_NUMBER];
-    
-    //-- Mex Number 1
-    if ([dic objectForKey:KEY_MEX_1_NUMBER] == nil)
-        self.mexNumber1TextField.text = @"";
-    else
-        self.mexNumber1TextField.text = [dic objectForKey:KEY_MEX_1_NUMBER];
-    
-    //-- Mex Number 2
-    if ([dic objectForKey:KEY_MEX_2_NUMBER] == nil) {
-        self.mexNumber2TextField.text = @"";
-    }
-    else
-        self.mexNumber2TextField.text = [dic objectForKey:KEY_MEX_2_NUMBER];
-    
-    //-- Text SMS 
-    if ([dic objectForKey:KEY_TEXT_MESSAGE] == nil) {
-        self.textMessageTextField.text = @"";
-    }
-    else
-        self.textMessageTextField.text = [dic objectForKey:KEY_TEXT_MESSAGE];
-}
-
 - (void)viewWillAppear:(BOOL)animated {
     
     //[self clearFields];
@@ -110,6 +86,54 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+//********************************
+#pragma mark - Metod Init
+//********************************
+
+- (void)initLocalVariables {
+    _liteVersion = NO;
+    _location = YES;
+    
+#ifdef LITE_VERSION
+    _liteVersion = YES;
+    _location = NO;
+    
+    NSLog (@"Lite Version");
+#endif
+    
+}
+
+- (void)initField {
+    NSDictionary *dic = [[NSDictionary alloc] initWithDictionary:[MFile dictionaryWithString:nil]];
+    
+    //-- Call Number.
+    if ([dic objectForKey:KEY_CALL_NUMBER] == nil)
+        self.callNumberTextField.text = @"";
+    else
+        self.callNumberTextField.text = [dic objectForKey:KEY_CALL_NUMBER];
+    
+    //-- Mex Number 1
+    if ([dic objectForKey:KEY_MEX_1_NUMBER] == nil)
+        self.mexNumber1TextField.text = @"";
+    else
+        self.mexNumber1TextField.text = [dic objectForKey:KEY_MEX_1_NUMBER];
+    
+    //-- Mex Number 2
+    if ([dic objectForKey:KEY_MEX_2_NUMBER] == nil) {
+        self.mexNumber2TextField.text = @"";
+    }
+    else
+        self.mexNumber2TextField.text = [dic objectForKey:KEY_MEX_2_NUMBER];
+    
+    //-- Text SMS
+    if ([dic objectForKey:KEY_TEXT_MESSAGE] == nil) {
+        self.textMessageTextField.text = @"";
+    }
+    else
+        self.textMessageTextField.text = [dic objectForKey:KEY_TEXT_MESSAGE];
+}
+
 
 //***************************************
 #pragma mark - Metodi Actions
@@ -161,6 +185,9 @@
 
 - (IBAction)pressButtonSave:(id)sender {
     if ((![self.callNumberTextField.text isEqual: @""]) && (((![self.mexNumber1TextField.text isEqual: @""]) || (![self.mexNumber2TextField.text isEqual: @""]) || (![self.mexNumber3TextField.text isEqual: @""]))) & (![self.textMessageTextField.text isEqual:@""])) {
+        
+        //if ([self.switchLocalization isOn])
+#warning Continuare da qui!
         
         NSMutableDictionary *mDic = [[NSMutableDictionary alloc] init];
         [mDic setObject:self.callNumberTextField.text forKey:KEY_CALL_NUMBER];

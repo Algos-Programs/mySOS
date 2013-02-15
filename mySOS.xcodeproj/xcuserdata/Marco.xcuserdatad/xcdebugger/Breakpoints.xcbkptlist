@@ -4,29 +4,16 @@
    version = "1.0">
    <FileBreakpoints>
       <FileBreakpoint
-         shouldBeEnabled = "No"
+         shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "mySOS/FirstViewController.m"
-         timestampString = "382641764.592722"
+         timestampString = "382651117.107028"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "81"
-         endingLineNumber = "81"
+         startingLineNumber = "203"
+         endingLineNumber = "203"
          landmarkName = "-pressButtonSendMessage:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "mySOS/FirstViewController.m"
-         timestampString = "382642271.375261"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "186"
-         endingLineNumber = "186"
-         landmarkName = "+findCurrentLocation"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -73,12 +60,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "mySOS/FirstViewController.m"
-         timestampString = "382642271.375261"
+         timestampString = "382651117.107028"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "155"
-         endingLineNumber = "155"
-         landmarkName = "-messageComposeViewController:didFinishWithResult:"
+         startingLineNumber = "172"
+         endingLineNumber = "172"
+         landmarkName = "-pressButtonSendMessage:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -255,11 +242,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "mySOS/SettingViewController.h"
-         timestampString = "382359436.891849"
+         timestampString = "382650049.384674"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "19"
-         endingLineNumber = "19"
+         startingLineNumber = "20"
+         endingLineNumber = "20"
          landmarkName = "mexNumber2TextField"
          landmarkType = "19">
       </FileBreakpoint>
@@ -268,11 +255,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "mySOS/SettingViewController.m"
-         timestampString = "382641764.592722"
+         timestampString = "382650805.757118"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "172"
-         endingLineNumber = "172"
+         startingLineNumber = "196"
+         endingLineNumber = "196"
          landmarkName = "-pressButtonSave:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -307,11 +294,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "mySOS/SettingViewController.m"
-         timestampString = "382641764.592722"
+         timestampString = "382650805.757118"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "201"
-         endingLineNumber = "201"
+         startingLineNumber = "225"
+         endingLineNumber = "225"
          landmarkName = "-beginEditingLocaization:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -320,11 +307,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "mySOS/SettingViewController.m"
-         timestampString = "382641764.592722"
+         timestampString = "382650805.757118"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "208"
-         endingLineNumber = "208"
+         startingLineNumber = "232"
+         endingLineNumber = "232"
          landmarkName = "@implementation SettingViewController"
          landmarkType = "3">
       </FileBreakpoint>
@@ -346,11 +333,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "mySOS/SettingViewController.m"
-         timestampString = "382641764.592722"
+         timestampString = "382650805.757118"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "168"
-         endingLineNumber = "168"
+         startingLineNumber = "192"
+         endingLineNumber = "192"
          landmarkName = "-pressButtonSave:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -359,11 +346,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "mySOS/SettingViewController.m"
-         timestampString = "382641764.592722"
+         timestampString = "382650805.757118"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "166"
-         endingLineNumber = "166"
+         startingLineNumber = "190"
+         endingLineNumber = "190"
          landmarkName = "-pressButtonSave:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -372,37 +359,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "mySOS/FirstViewController.m"
-         timestampString = "382641764.592722"
+         timestampString = "382651117.107028"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "104"
-         endingLineNumber = "104"
-         landmarkName = "-pressButtonSOS:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "mySOS/SettingViewController.m"
-         timestampString = "382362358.735744"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "37"
-         endingLineNumber = "37"
-         landmarkName = "-viewDidLoad"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "mySOS/FirstViewController.m"
-         timestampString = "382641764.592722"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "79"
-         endingLineNumber = "79"
+         startingLineNumber = "110"
+         endingLineNumber = "110"
          landmarkName = "-pressButtonSendMessage:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -411,12 +372,25 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "mySOS/FirstViewController.m"
-         timestampString = "382642271.375261"
+         timestampString = "382651117.107028"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "120"
-         endingLineNumber = "120"
-         landmarkName = "-callNumber"
+         startingLineNumber = "83"
+         endingLineNumber = "83"
+         landmarkName = "-pressButtonSendMessage:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "mySOS/FirstViewController.m"
+         timestampString = "382651117.107028"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "126"
+         endingLineNumber = "126"
+         landmarkName = "-pressButtonSendMessage:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -424,11 +398,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "mySOS/SettingViewController.m"
-         timestampString = "382641764.592722"
+         timestampString = "382650805.757118"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "163"
-         endingLineNumber = "163"
+         startingLineNumber = "187"
+         endingLineNumber = "187"
          landmarkName = "-pressButtonSave:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -437,11 +411,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "mySOS/SettingViewController.m"
-         timestampString = "382641764.592722"
+         timestampString = "382650805.757118"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "161"
-         endingLineNumber = "161"
+         startingLineNumber = "185"
+         endingLineNumber = "185"
          landmarkName = "@implementation SettingViewController"
          landmarkType = "3">
       </FileBreakpoint>
@@ -450,12 +424,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "mySOS/FirstViewController.m"
-         timestampString = "382642271.375261"
+         timestampString = "382651117.107028"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "129"
-         endingLineNumber = "129"
-         landmarkName = "-sendMessageWithNumbers:withText:withLocation:"
+         startingLineNumber = "140"
+         endingLineNumber = "140"
+         landmarkName = "-pressButtonSendMessage:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -463,11 +437,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "mySOS/SettingViewController.m"
-         timestampString = "382641764.592722"
+         timestampString = "382650805.757118"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "92"
-         endingLineNumber = "92"
+         startingLineNumber = "68"
+         endingLineNumber = "68"
          landmarkName = "-viewWillAppear:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -476,11 +450,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "mySOS/SettingViewController.m"
-         timestampString = "382641764.592722"
+         timestampString = "382650805.757118"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "76"
-         endingLineNumber = "76"
+         startingLineNumber = "52"
+         endingLineNumber = "52"
          landmarkName = "-viewWillAppear:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -489,11 +463,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "mySOS/SettingViewController.m"
-         timestampString = "382641764.592722"
+         timestampString = "382650805.757118"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "77"
-         endingLineNumber = "77"
+         startingLineNumber = "53"
+         endingLineNumber = "53"
          landmarkName = "-viewWillAppear:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -502,25 +476,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "mySOS/FirstViewController.m"
-         timestampString = "382642271.375261"
+         timestampString = "382651117.107028"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "206"
-         endingLineNumber = "206"
-         landmarkName = "+findCurrentLocation"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "mySOS/FirstViewController.m"
-         timestampString = "382642271.375261"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "136"
-         endingLineNumber = "136"
-         landmarkName = "-sendMessageWithNumbers:withText:withLocation:"
+         startingLineNumber = "223"
+         endingLineNumber = "223"
+         landmarkName = "-pressButtonSendMessage:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -554,11 +515,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "mySOS/SettingViewController.m"
-         timestampString = "382641764.592722"
+         timestampString = "382650805.757118"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "132"
-         endingLineNumber = "132"
+         startingLineNumber = "156"
+         endingLineNumber = "156"
          landmarkName = "@implementation SettingViewController"
          landmarkType = "3">
       </FileBreakpoint>
@@ -566,13 +527,13 @@
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "mySOS/SettingViewController.m"
-         timestampString = "382362358.735744"
+         filePath = "mySOS/FirstViewController.m"
+         timestampString = "382651117.107028"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "38"
-         endingLineNumber = "38"
-         landmarkName = "-viewDidLoad"
+         startingLineNumber = "159"
+         endingLineNumber = "159"
+         landmarkName = "-pressButtonSendMessage:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -580,25 +541,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "mySOS/FirstViewController.m"
-         timestampString = "382642271.375261"
+         timestampString = "382651117.107028"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "142"
-         endingLineNumber = "142"
-         landmarkName = "-sendMessageWithNumbers:withText:withLocation:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "mySOS/FirstViewController.m"
-         timestampString = "382642271.375261"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "139"
-         endingLineNumber = "139"
-         landmarkName = "-sendMessageWithNumbers:withText:withLocation:"
+         startingLineNumber = "156"
+         endingLineNumber = "156"
+         landmarkName = "-pressButtonSendMessage:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
