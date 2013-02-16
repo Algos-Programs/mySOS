@@ -144,7 +144,9 @@ static CLLocation *Location = nil;
         if (location != nil) {
             CLLocationCoordinate2D coordinate=[location coordinate];
             coordinateStr = [coordinateStr initWithFormat:@"\nMi trovo qui: \nLatitudine: %f \nLongitudine: %f\n",coordinate.latitude, coordinate.longitude];
-            NSString *googleUrl = [NSString stringWithFormat:@"\nhttps://maps.google.it/maps?saddr=%f,%f", location.coordinate.latitude, location.coordinate.longitude];
+            
+            NSString *googleUrl = [[NSString alloc] initWithString:[self googleMapsURL:location]];
+            
 
             //https://maps.google.it/maps?saddr=45.422408,9.125234
             coordinateStr = [coordinateStr stringByAppendingString:googleUrl];
@@ -164,18 +166,6 @@ static CLLocation *Location = nil;
         controller.messageComposeDelegate = self;
 	}
     
-}
-
-- (NSString *)testURLCoordinate {
-    
-    CLLocationCoordinate2D start = { 34.052222, -118.243611 };
-    CLLocationCoordinate2D destination = { 37.322778, -122.031944 };
-    
-    NSString *googleMapsURLString = [NSString stringWithFormat:@"http://maps.google.com/?saddr=%1.6f,%1.6f&daddr=%1.6f,%1.6f",
-                                     start.latitude, start.longitude, destination.latitude, destination.longitude];
-    
-    //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:googleMapsURLString]];
-    return googleMapsURLString;
 }
 
 
@@ -243,6 +233,16 @@ static CLLocation *Location = nil;
     //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:googleMapsURLString]];
     return location;
 }
+
+/**
+ Genera un url di google maps passata la location
+ */
+- (NSString *)googleMapsURL:(CLLocation *)location {
+    NSString *googleUrl = [NSString stringWithFormat:@"\nhttps://maps.google.it/maps?saddr=%f,%f", location.coordinate.latitude, location.coordinate.longitude];
+    return googleUrl;
+}
+
+
 
 @end
 
