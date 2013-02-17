@@ -56,9 +56,9 @@
         [self.switchLocalization setEnabled:NO];
         [self.switchLocalization setOn:NO];
     }
-    else
+    else {
         [self.switchLocalization setOn:YES];
-    
+    }
     
     if (_liteVersion) {
         NSLog(@"Free Version");
@@ -93,7 +93,9 @@
 
 - (void)initLocalVariables {
     _liteVersion = NO;
-    _location = YES;
+    [self setLocation];
+    //_location = YES;
+#warning Verificare se funziona
     
 #ifdef LITE_VERSION
     _liteVersion = YES;
@@ -103,7 +105,6 @@
 #endif
     
 }
-
 - (void)initField {
     NSDictionary *dic = [[NSDictionary alloc] initWithDictionary:[MFile dictionaryWithString:nil]];
     
@@ -132,6 +133,35 @@
     }
     else
         self.textMessageTextField.text = [dic objectForKey:KEY_TEXT_MESSAGE];
+    
+    [self setSwitchLocation:dic];
+}
+
+//***************************************
+#pragma mark - Metodi Set
+//***************************************
+
+/**
+    Imposta lo switch location On o OFF a sencoda del valore contenuto del dictionary.
+ */
+- (void)setSwitchLocation:(NSDictionary *)dic {
+    //-- Location
+    if ([dic objectForKey:KEY_LOCATION_ACIVE] == nil) {
+        self.switchLocalization.on = YES;
+    }
+    else {
+        NSString *str = [[NSString alloc] initWithString:[dic objectForKey:KEY_LOCATION_ACIVE]];
+        self.switchLocalization.on = [self boolValueFromString:str];
+    }
+}
+
+/**
+    Imposta la variabile dell'istaze _location con il valore BOOL contenuto del dictonary.
+ */
+- (void)setLocation {
+    NSDictionary *dic = [[NSDictionary alloc] initWithDictionary:[MFile dictionaryWithString:nil]];
+    NSString *str = [[NSString alloc] initWithString:[dic objectForKey:KEY_LOCATION_ACIVE]];
+    _location = [self boolValueFromString: str];
 }
 
 
@@ -194,6 +224,14 @@
         [mDic setObject:self.mexNumber1TextField.text forKey:KEY_MEX_1_NUMBER];
         [mDic setObject:self.mexNumber2TextField.text forKey:KEY_MEX_2_NUMBER];
         [mDic setObject:self.textMessageTextField.text forKey:KEY_TEXT_MESSAGE];
+        
+        if ([self.switchLocalization isOn]) {
+            [mDic setObject:@"YES" forKey:KEY_LOCATION_ACIVE];
+        }
+        else {
+            [mDic setObject:@"NO" forKey:KEY_LOCATION_ACIVE];
+        }
+        
         [MFile writeDictionary:mDic];
         self.tabBarController.selectedIndex = 0;
     }
@@ -201,7 +239,6 @@
         [SettingViewController showAlert];
     }
     [self keyBoardDown];
-    
 }
 
 
@@ -316,6 +353,20 @@
     [self.textMessageTextField resignFirstResponder];
 }
 
+/**
+    Viene passata una stringa che contenga YES o NO (in maiuscolo).
+    Il metodo restituisce il valore BOOL corrispondente.
+ */
+- (BOOL)boolValueFromString:(NSString *)str {
+    
+    if ([str isEqualToString:@"YES"])
+        return YES;
+    
+    else
+        return NO;
+}
+
+
 //***************************************
 #pragma mark - Metodi Dictionary / File
 //***************************************
@@ -331,6 +382,4 @@
     [mDic setObject:@"" forKey:KEY_TEXT_MESSAGE];
     [MFile writeDictionary:mDic];
 }
-
-
 @end

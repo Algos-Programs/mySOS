@@ -13,6 +13,7 @@ static NSString * const KEY_MEX_1_NUMBER = @"mex1";
 static NSString * const KEY_MEX_2_NUMBER = @"mex2";
 static NSString * const KEY_MEX_3_NUMBER = @"mex3";
 static NSString * const KEY_TEXT_MESSAGE = @"textMessage";
+static NSString * const KEY_LOCATION_ACIVE = @"locationActive";
 
 @interface MFile : NSObject
 

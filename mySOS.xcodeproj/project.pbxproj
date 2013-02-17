@@ -43,6 +43,8 @@
 		A9312BFA16C7E43A00FBBB80 /* icona3.png in Resources */ = {isa = PBXBuildFile; fileRef = A9312BF916C7E43A00FBBB80 /* icona3.png */; };
 		A9312BFC16C7E53800FBBB80 /* icona4_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = A9312BFB16C7E53800FBBB80 /* icona4_114x114.png */; };
 		A9312BFE16C7E5CE00FBBB80 /* icona5_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = A9312BFD16C7E5CE00FBBB80 /* icona5_114x114.png */; };
+		A93600C016D14953005E946B /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93600BF16D14953005E946B /* AddressBook.framework */; };
+		A93600C116D14959005E946B /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93600BF16D14953005E946B /* AddressBook.framework */; };
 		A93C8F0816C837AD0068C156 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A906077C16C2FEFB0014F0CB /* main.m */; };
 		A93C8F0916C837AD0068C156 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A906078016C2FEFB0014F0CB /* AppDelegate.m */; };
 		A93C8F0A16C837AD0068C156 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A906078F16C2FEFB0014F0CB /* FirstViewController.m */; };
@@ -160,6 +162,7 @@
 		A9312BF916C7E43A00FBBB80 /* icona3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icona3.png; sourceTree = "<group>"; };
 		A9312BFB16C7E53800FBBB80 /* icona4_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icona4_114x114.png; sourceTree = "<group>"; };
 		A9312BFD16C7E5CE00FBBB80 /* icona5_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icona5_114x114.png; sourceTree = "<group>"; };
+		A93600BF16D14953005E946B /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		A93C8F3816C837AD0068C156 /* mySOS Lite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mySOS Lite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93C8F3916C837AD0068C156 /* mySOS copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "mySOS copy-Info.plist"; path = "/Users/Marco/Documents/MyProjects/mySOS/mySOS copy-Info.plist"; sourceTree = "<absolute>"; };
 		A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -184,6 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A93600C016D14953005E946B /* AddressBook.framework in Frameworks */,
 				A92EA12C16C3FC5400976BDA /* MapKit.framework in Frameworks */,
 				A93FAA3B16C3D599001BBF45 /* CoreLocation.framework in Frameworks */,
 				A90607BA16C2FF4C0014F0CB /* MessageUI.framework in Frameworks */,
@@ -209,6 +213,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A93600C116D14959005E946B /* AddressBook.framework in Frameworks */,
 				A93C8F1416C837AD0068C156 /* MapKit.framework in Frameworks */,
 				A93C8F1516C837AD0068C156 /* CoreLocation.framework in Frameworks */,
 				A93C8F1616C837AD0068C156 /* MessageUI.framework in Frameworks */,
@@ -260,6 +265,7 @@
 		A906076F16C2FEFB0014F0CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A93600BF16D14953005E946B /* AddressBook.framework */,
 				A92EA12B16C3FC5400976BDA /* MapKit.framework */,
 				A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */,
 				A90607B916C2FF4C0014F0CB /* MessageUI.framework */,

@@ -109,8 +109,13 @@ static CLLocation *Location = nil;
     // asserendo callNumber dico di iniziare la chiamata se il messaggio è stato inviato.
     callNumber = YES;
 #warning Se message2 non è nil allora invio il mex anche a quel numero.
-    
-    [self sendMessageWithNumbers:[NSArray arrayWithObject:NumberMessage1] withText:TextMessage withLocation:[FirstViewController findCurrentLocation]];
+    SettingViewController *svc = [[SettingViewController alloc] init];
+    if ([svc location]) {
+        [self sendMessageWithNumbers:[NSArray arrayWithObject:NumberMessage1] withText:TextMessage withLocation:[FirstViewController findCurrentLocation]];
+    }
+    else {
+        [self sendMessageWithNumbers:[NSArray arrayWithObject:NumberMessage1] withText:TextMessage withLocation:nil];
+    }
 }
 
 //*************************

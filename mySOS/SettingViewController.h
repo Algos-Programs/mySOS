@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "MFile.h"
 #import "AppDelegate.h"
+#import <AddressBook/AddressBook.h>
+
 @interface SettingViewController : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic) BOOL liteVersion;
