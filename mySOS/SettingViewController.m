@@ -41,13 +41,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+#warning Riattivare.
     [self initLocalVariables];
 	// Do any additional setup after loading the view.
     //[MFile writeDictionary:[NSDictionary dictionaryWithObject:@"Aiuto sono in pericolo!" forKey:KEY_TEXT_MESSAGE]];
 }
 - (void)viewWillAppear:(BOOL)animated {
     
+    int c = 9;
     //[self clearFields];
     
 #warning NON FUNZIONA
@@ -73,7 +74,6 @@
     self.mexNumber3TextField.enabled = YES;
     
     [self initField];
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -160,8 +160,13 @@
  */
 - (void)setLocation {
     NSDictionary *dic = [[NSDictionary alloc] initWithDictionary:[MFile dictionaryWithString:nil]];
-    NSString *str = [[NSString alloc] initWithString:[dic objectForKey:KEY_LOCATION_ACIVE]];
-    _location = [self boolValueFromString: str];
+    NSString *str = [NSString alloc];
+    if ([[dic allKeys] count] != 0) {
+        str = [str initWithString:[dic objectForKey:KEY_LOCATION_ACIVE]];
+        _location = [self boolValueFromString: str];
+    }
+    else
+    _location = YES;
 }
 
 

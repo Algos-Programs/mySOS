@@ -23,9 +23,8 @@ NSString *NumberMessage3 = @"";
 NSString *TextMessage = @"";
 
 NSString *coordinateUrl = @"";
-static CLLocation *Location = nil;
 
-- (void)viewDidLoad
+- (void)viewDidLoad  //ok
 {
     [super viewDidLoad];
     
@@ -40,7 +39,7 @@ static CLLocation *Location = nil;
 
 - (void)viewWillAppear:(BOOL)animated {
     
-    Location = [FirstViewController findCurrentLocation];
+    //Location = [FirstViewController findCurrentLocation];
 
     NSDictionary *dic = [[NSDictionary alloc] initWithDictionary:[MFile dictionaryWithString:nil]];
 
@@ -48,6 +47,7 @@ static CLLocation *Location = nil;
     if ([[dic allKeys]count] == 0) {
         [SettingViewController showAlerWithMessage:@"Impostare i parametri iniziali nella schermata default"];
         self.tabBarController.selectedIndex = 1;
+        
     }
     else {
         NumberCall = [dic objectForKey:KEY_CALL_NUMBER];

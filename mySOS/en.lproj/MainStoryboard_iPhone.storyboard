@@ -74,7 +74,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J3S-8P-DCF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="483" y="538"/>
+            <point key="canvasLocation" x="671" y="540"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="msp-jq-Zdp">
@@ -173,7 +173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3kb-OL-WUe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="897" y="538"/>
+            <point key="canvasLocation" x="1113" y="-240"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="bw7-f7-gwR">
@@ -328,7 +328,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1307" y="538"/>
+            <point key="canvasLocation" x="1255" y="540"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
@@ -342,7 +342,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="2" kind="relationship" relationship="viewControllers" id="26"/>
-                        <segue destination="aWq-m0-Rfk" kind="relationship" relationship="viewControllers" id="bo4-dE-x3m"/>
+                        <segue destination="aWq-m0-Rfk" kind="relationship" relationship="viewControllers" id="rnL-8e-ZQJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
@@ -357,40 +357,6 @@
         <image name="Send_SMS.png" width="130" height="46"/>
         <image name="cog_02@2x.png" width="52" height="52"/>
     </resources>
-    <classes>
-        <class className="FirstViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="pressButtonCallMe:"/>
-                <relationship kind="action" name="pressButtonSOS:"/>
-                <relationship kind="action" name="pressButtonSendMessage:"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SettingViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="beginEditingLocaization:"/>
-                <relationship kind="action" name="didChangeCallNumberTextField:"/>
-                <relationship kind="action" name="gestureClouseKeyBoard:"/>
-                <relationship kind="action" name="pressButtonCancel:"/>
-                <relationship kind="action" name="pressButtonSave:"/>
-                <relationship kind="action" name="pressCallNumberTextField:"/>
-                <relationship kind="action" name="pressMexNumber1TextField:"/>
-                <relationship kind="action" name="pressMexNumber2TextField:"/>
-                <relationship kind="action" name="pressTextMessageTextField:"/>
-                <relationship kind="action" name="touchUpInsideSwitchLocalization:"/>
-                <relationship kind="outlet" name="callNumberTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="mexNumber1TextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="mexNumber2TextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="mexNumber3TextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="switchLocalization" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="textMessageTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
