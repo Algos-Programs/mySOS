@@ -40,7 +40,7 @@ NSString *coordinateUrl = @"";
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    
+
     
     //Location = [FirstViewController findCurrentLocation];
     _location = [_location init];
