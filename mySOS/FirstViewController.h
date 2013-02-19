@@ -14,10 +14,11 @@
 #import "MFile.h"
 #import "SettingViewController.h"
 
-@interface FirstViewController : UIViewController <UIVideoEditorControllerDelegate, MFMessageComposeViewControllerDelegate, CLLocationManagerDelegate>
+@interface FirstViewController : UIViewController <UIVideoEditorControllerDelegate, MFMessageComposeViewControllerDelegate, CLLocationManagerDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, retain) MKMapView *userLocationAddMapView;
-
+@property (nonatomic, strong) CLLocation *location;
+@property (nonatomic, strong) CLLocationManager *locationManager;
 
 - (IBAction)pressButtonCallMe:(id)sender;
 - (IBAction)pressButtonSendMessage:(id)sender;
@@ -26,5 +27,6 @@
 - (void)sendMessageWithNumbers:(NSArray *)numbers withText:(NSString *)text withLocation:(CLLocation *)location;
 
 + (CLLocation*)findCurrentLocation;
++ (NSString *)googleMapsURL:(CLLocation *)location;
 
 @end

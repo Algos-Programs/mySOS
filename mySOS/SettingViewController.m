@@ -282,7 +282,6 @@
     }
 }
 
-
 //***************************************
 #pragma mark - Metodi Intercettazione
 //***************************************
@@ -338,9 +337,27 @@
     [alert show];
 }
 
++ (void)showAlertSingleButtonWithTitle:(NSString *)title withMessage:(NSString *)message {
+    
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle: title
+                                                   message: message
+                                                  delegate: self
+                                         cancelButtonTitle:@"OK"
+                                         otherButtonTitles:nil];
+    [alert show];
+}
+
 + (void)showAlertFreeVersion {
     
     [SettingViewController showAlerWithTitle:@"Attenzione!" withMessage:@"Se vuoi cambiarlo fai l'aggiornamento a 0.79 €"];
+}
+
++ (void)showAlertMainArgoments {
+    [SettingViewController showAlertSingleButtonWithTitle:@"Attenzione" withMessage:@"Impostare i parametri iniziali nella schermata default"];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    int c = 9;
 }
 
 //***************************************

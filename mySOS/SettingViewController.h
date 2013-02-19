@@ -11,7 +11,7 @@
 #import "AppDelegate.h"
 #import <AddressBook/AddressBook.h>
 
-@interface SettingViewController : UIViewController <UITextFieldDelegate>
+@interface SettingViewController : UIViewController <UITextFieldDelegate, UITabBarControllerDelegate, UITabBarDelegate, UIAlertViewDelegate>
 
 @property (nonatomic) BOOL liteVersion;
 @property (nonatomic) BOOL location;
@@ -67,11 +67,25 @@
 + (void)showAlerWithTitle:(NSString *)title withMessage:(NSString *)message;
 
 /**
+    Mostra un alert con titolo e messaggio desiderato
+    con un solo pulsante OK.
+ */
++ (void)showAlertSingleButtonWithTitle:(NSString *)title withMessage:(NSString *)message;
+
+/**
     Mostra un alert apposta per la versione free
     titolo: Attenzione Versione free!
     message: Se vuoi cambiarlo fai l'aggiornamento a 0.79 €.
     buttons: Cancel e OK.
  */
 + (void)showAlertFreeVersion;
+
+/**
+    Mostra un alert quando non i paramentri iniziali non sono inseriti.
+    titolo: Attenzione
+    message: Impostare i parametri iniziali nella schermata default    
+    buttons: OK.
+ */
++ (void)showAlertMainArgoments;
 
 @end
