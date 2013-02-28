@@ -30,6 +30,7 @@
 		A90607AD16C2FEFB0014F0CB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A90607AB16C2FEFB0014F0CB /* InfoPlist.strings */; };
 		A90607B016C2FEFB0014F0CB /* mySOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A90607AF16C2FEFB0014F0CB /* mySOSTests.m */; };
 		A90607BA16C2FF4C0014F0CB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90607B916C2FF4C0014F0CB /* MessageUI.framework */; };
+		A928C04216D3E7A0003C0FD0 /* algos1.png in Resources */ = {isa = PBXBuildFile; fileRef = A928C04116D3E7A0003C0FD0 /* algos1.png */; };
 		A92EA12A16C3F7A300976BDA /* MMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A92EA12916C3F7A300976BDA /* MMessage.m */; };
 		A92EA12C16C3FC5400976BDA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A92EA12B16C3FC5400976BDA /* MapKit.framework */; };
 		A92EA12E16C40A0F00976BDA /* cog_02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A92EA12D16C40A0F00976BDA /* cog_02@2x.png */; };
@@ -91,6 +92,12 @@
 		A93FAA3B16C3D599001BBF45 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */; };
 		A93FAA3C16C3F21F001BBF45 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */; };
 		A93FAA3D16C3F227001BBF45 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90607B916C2FF4C0014F0CB /* MessageUI.framework */; };
+		A9619E8216DCAD7F007124B7 /* icona6.png in Resources */ = {isa = PBXBuildFile; fileRef = A9619E8116DCAD7F007124B7 /* icona6.png */; };
+		A9619E8316DCAD8B007124B7 /* icona6.png in Resources */ = {isa = PBXBuildFile; fileRef = A9619E8116DCAD7F007124B7 /* icona6.png */; };
+		A9619E8516DCAFB6007124B7 /* house@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9619E8416DCAFB6007124B7 /* house@2x.png */; };
+		A9619E8716DCB004007124B7 /* house.png in Resources */ = {isa = PBXBuildFile; fileRef = A9619E8616DCB004007124B7 /* house.png */; };
+		A9619E8916DCB16B007124B7 /* Send_SMS_Giallo.png in Resources */ = {isa = PBXBuildFile; fileRef = A9619E8816DCB16B007124B7 /* Send_SMS_Giallo.png */; };
+		A9619E8B16DCB174007124B7 /* Call_Giallo.png in Resources */ = {isa = PBXBuildFile; fileRef = A9619E8A16DCB174007124B7 /* Call_Giallo.png */; };
 		A9B9D00416C5139600AE88C4 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B9D00316C5139600AE88C4 /* SettingViewController.m */; };
 		A9B9D00816C57C5000AE88C4 /* MPlist.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B9D00716C57C5000AE88C4 /* MPlist.m */; };
 		A9B9D00C16C57CE500AE88C4 /* File.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9B9D00B16C57CE500AE88C4 /* File.strings */; };
@@ -145,6 +152,7 @@
 		A90607AE16C2FEFB0014F0CB /* mySOSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mySOSTests.h; sourceTree = "<group>"; };
 		A90607AF16C2FEFB0014F0CB /* mySOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mySOSTests.m; sourceTree = "<group>"; };
 		A90607B916C2FF4C0014F0CB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		A928C04116D3E7A0003C0FD0 /* algos1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = algos1.png; sourceTree = "<group>"; };
 		A92EA12816C3F7A300976BDA /* MMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMessage.h; sourceTree = "<group>"; };
 		A92EA12916C3F7A300976BDA /* MMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMessage.m; sourceTree = "<group>"; };
 		A92EA12B16C3FC5400976BDA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -166,6 +174,11 @@
 		A93C8F3816C837AD0068C156 /* mySOS Lite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mySOS Lite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93C8F3916C837AD0068C156 /* mySOS copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "mySOS copy-Info.plist"; path = "/Users/Marco/Documents/MyProjects/mySOS/mySOS copy-Info.plist"; sourceTree = "<absolute>"; };
 		A93FAA3A16C3D599001BBF45 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A9619E8116DCAD7F007124B7 /* icona6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icona6.png; sourceTree = "<group>"; };
+		A9619E8416DCAFB6007124B7 /* house@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "house@2x.png"; sourceTree = "<group>"; };
+		A9619E8616DCB004007124B7 /* house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = house.png; sourceTree = "<group>"; };
+		A9619E8816DCB16B007124B7 /* Send_SMS_Giallo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Send_SMS_Giallo.png; sourceTree = "<group>"; };
+		A9619E8A16DCB174007124B7 /* Call_Giallo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Call_Giallo.png; sourceTree = "<group>"; };
 		A9B9D00216C5139600AE88C4 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		A9B9D00316C5139600AE88C4 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		A9B9D00616C57C5000AE88C4 /* MPlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPlist.h; sourceTree = "<group>"; };
@@ -244,6 +257,12 @@
 				A9312BED16C7D95700FBBB80 /* Call.png */,
 				A9312BEF16C7D9DA00FBBB80 /* Call_1.png */,
 				A9312BF116C7DA6D00FBBB80 /* Send_SMS.png */,
+				A928C04116D3E7A0003C0FD0 /* algos1.png */,
+				A9619E8116DCAD7F007124B7 /* icona6.png */,
+				A9619E8416DCAFB6007124B7 /* house@2x.png */,
+				A9619E8616DCB004007124B7 /* house.png */,
+				A9619E8816DCB16B007124B7 /* Send_SMS_Giallo.png */,
+				A9619E8A16DCB174007124B7 /* Call_Giallo.png */,
 				A906077616C2FEFB0014F0CB /* mySOS */,
 				A90607A816C2FEFB0014F0CB /* mySOSTests */,
 				A906076F16C2FEFB0014F0CB /* Frameworks */,
@@ -492,6 +511,12 @@
 				A9312BFA16C7E43A00FBBB80 /* icona3.png in Resources */,
 				A9312BFC16C7E53800FBBB80 /* icona4_114x114.png in Resources */,
 				A9312BFE16C7E5CE00FBBB80 /* icona5_114x114.png in Resources */,
+				A928C04216D3E7A0003C0FD0 /* algos1.png in Resources */,
+				A9619E8216DCAD7F007124B7 /* icona6.png in Resources */,
+				A9619E8516DCAFB6007124B7 /* house@2x.png in Resources */,
+				A9619E8716DCB004007124B7 /* house.png in Resources */,
+				A9619E8916DCB16B007124B7 /* Send_SMS_Giallo.png in Resources */,
+				A9619E8B16DCB174007124B7 /* Call_Giallo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +558,7 @@
 				A93C8F3216C837AD0068C156 /* icona3.png in Resources */,
 				A93C8F3316C837AD0068C156 /* icona4_114x114.png in Resources */,
 				A93C8F3416C837AD0068C156 /* icona5_114x114.png in Resources */,
+				A9619E8316DCAD8B007124B7 /* icona6.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

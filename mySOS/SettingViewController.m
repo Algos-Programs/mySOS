@@ -63,6 +63,8 @@
     
     if (_liteVersion) {
         NSLog(@"Free Version");
+#warning Vedere se mettere oppure no.
+        _textMessageTextField.text = @"Aiutatemi!";
     }
     else {
         NSLog(
@@ -128,13 +130,14 @@
         self.mexNumber2TextField.text = [dic objectForKey:KEY_MEX_2_NUMBER];
     
     //-- Text SMS
-    if ([dic objectForKey:KEY_TEXT_MESSAGE] == nil) {
-        self.textMessageTextField.text = @"";
+    if (!_liteVersion) {
+        if ([dic objectForKey:KEY_TEXT_MESSAGE] == nil) {
+            self.textMessageTextField.text = @"";
+        }
+        else
+            self.textMessageTextField.text = [dic objectForKey:KEY_TEXT_MESSAGE];
     }
-    else
-        self.textMessageTextField.text = [dic objectForKey:KEY_TEXT_MESSAGE];
-    
-    [self setSwitchLocation:dic];
+        [self setSwitchLocation:dic];
 }
 
 //***************************************
@@ -161,12 +164,15 @@
 - (void)setLocation {
     NSDictionary *dic = [[NSDictionary alloc] initWithDictionary:[MFile dictionaryWithString:nil]];
     NSString *str = [NSString alloc];
+    
     if ([[dic allKeys] count] != 0) {
         str = [str initWithString:[dic objectForKey:KEY_LOCATION_ACIVE]];
         _location = [self boolValueFromString: str];
     }
     else
     _location = YES;
+     
+#warning riabilitare if non funzionante
 }
 
 
