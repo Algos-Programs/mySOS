@@ -52,7 +52,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "223"
          endingLineNumber = "223"
-         landmarkName = "-messageComposeViewController:didFinishWithResult:"
+         landmarkName = "-sendMessageWithNumbers:withText:withLocation:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -65,7 +65,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "103"
          endingLineNumber = "103"
-         landmarkName = "-pressButtonCallMe:"
+         landmarkName = "-viewDidAppear:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -351,8 +351,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "125"
          endingLineNumber = "125"
-         landmarkName = "-pressButtonSOS:"
-         landmarkType = "5">
+         landmarkName = "@implementation FirstViewController"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
@@ -364,7 +364,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "112"
          endingLineNumber = "112"
-         landmarkName = "-pressButtonSendMessage:"
+         landmarkName = "-viewDidAppear:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -481,8 +481,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "198"
          endingLineNumber = "198"
-         landmarkName = "-sendMessageWithNumbers:withText:withLocation:"
-         landmarkType = "5">
+         landmarkName = "@implementation FirstViewController"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
@@ -494,8 +494,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "195"
          endingLineNumber = "195"
-         landmarkName = "-sendMessageWithNumbers:withText:withLocation:"
-         landmarkType = "5">
+         landmarkName = "@implementation FirstViewController"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
@@ -507,8 +507,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "194"
          endingLineNumber = "194"
-         landmarkName = "-sendMessageWithNumbers:withText:withLocation:"
-         landmarkType = "5">
+         landmarkName = "@implementation FirstViewController"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
@@ -533,7 +533,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "244"
          endingLineNumber = "244"
-         landmarkName = "+findCurrentLocation"
+         landmarkName = "-messageComposeViewController:didFinishWithResult:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -546,7 +546,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "108"
          endingLineNumber = "108"
-         landmarkName = "-pressButtonSendMessage:"
+         landmarkName = "-viewDidAppear:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -585,7 +585,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "184"
          endingLineNumber = "184"
-         landmarkName = "-sendMessageWithNumbers:withText:withLocation:"
+         landmarkName = "-callNumber"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -598,8 +598,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "190"
          endingLineNumber = "190"
-         landmarkName = "-sendMessageWithNumbers:withText:withLocation:"
-         landmarkType = "5">
+         landmarkName = "@implementation FirstViewController"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
@@ -702,8 +702,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "143"
          endingLineNumber = "143"
-         landmarkName = "-alertView:clickedButtonAtIndex:"
-         landmarkType = "5">
+         landmarkName = "@implementation FirstViewController"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
@@ -728,7 +728,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "155"
          endingLineNumber = "155"
-         landmarkName = "-callNumber"
+         landmarkName = "-pressButtonSOS:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -741,7 +741,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "57"
          endingLineNumber = "57"
-         landmarkName = "-findCurrentLocation"
+         landmarkName = "-viewWillAppear:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -754,7 +754,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "47"
          endingLineNumber = "47"
-         landmarkName = "-viewWillAppear:"
+         landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
