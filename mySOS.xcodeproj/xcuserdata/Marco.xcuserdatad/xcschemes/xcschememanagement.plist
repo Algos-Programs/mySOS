@@ -4,6 +4,21 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>mySOS Lite copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>mySOS copy 2.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>mySOS copy 4.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>mySOS copy.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -28,6 +43,16 @@
 			<true/>
 		</dict>
 		<key>A93C8F0616C837AD0068C156</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A99C8A451704594100DCFF05</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A99C8A7D170459B900DCFF05</key>
 		<dict>
 			<key>primary</key>
 			<true/>

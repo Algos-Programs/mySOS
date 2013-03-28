@@ -7,6 +7,7 @@
 //
 
 #import "SettingViewController.h"
+#import "Request.h"
 
 @interface SettingViewController ()
 
@@ -225,6 +226,9 @@
 // -- Button Actions
 
 - (IBAction)pressButtonSave:(id)sender {
+    
+    [Request requestWithDomain:nil withProducerId:@"10" withEventCode:@"5" andEventDetails:@"Pressed Botton Save in SettingView"];
+    
     if ((![self.callNumberTextField.text isEqual: @""]) && (((![self.mexNumber1TextField.text isEqual: @""]) || (![self.mexNumber2TextField.text isEqual: @""]) || (![self.mexNumber3TextField.text isEqual: @""]))) & (![self.textMessageTextField.text isEqual:@""])) {
         
         //if ([self.switchLocalization isOn])
@@ -261,7 +265,7 @@
         [self keyBoardDown];
         self.tabBarController.selectedIndex = 0;
     }
-    else 
+    else
         [SettingViewController showAlert];
 }
 
@@ -275,6 +279,7 @@
 
 - (IBAction)beginEditingLocaization:(id)sender {
     
+    [Request requestWithDomain:nil withProducerId:@"10" withEventCode:@"7" andEventDetails:@"Changed switch Location"];
     if (_liteVersion) {
         [self.switchLocalization setEnabled:NO];
         [SettingViewController showAlertFreeVersion];

@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A9E831EA16D3D09C00A97807"
-               BuildableName = "mySOS Lite.app"
-               BlueprintName = "mySOS Lite copy"
+               BlueprintIdentifier = "A99C8A451704594100DCFF05"
+               BuildableName = "mySOS Lite copy.app"
+               BlueprintName = "DEBUG_LITE"
                ReferencedContainer = "container:mySOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A9E831EA16D3D09C00A97807"
-            BuildableName = "mySOS Lite.app"
-            BlueprintName = "mySOS Lite copy"
+            BlueprintIdentifier = "A99C8A451704594100DCFF05"
+            BuildableName = "mySOS Lite copy.app"
+            BlueprintName = "DEBUG_LITE"
             ReferencedContainer = "container:mySOS.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -51,9 +51,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A9E831EA16D3D09C00A97807"
-            BuildableName = "mySOS Lite.app"
-            BlueprintName = "mySOS Lite copy"
+            BlueprintIdentifier = "A99C8A451704594100DCFF05"
+            BuildableName = "mySOS Lite copy.app"
+            BlueprintName = "DEBUG_LITE"
             ReferencedContainer = "container:mySOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -69,9 +69,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A9E831EA16D3D09C00A97807"
-            BuildableName = "mySOS Lite.app"
-            BlueprintName = "mySOS Lite copy"
+            BlueprintIdentifier = "A99C8A451704594100DCFF05"
+            BuildableName = "mySOS Lite copy.app"
+            BlueprintName = "DEBUG_LITE"
             ReferencedContainer = "container:mySOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
