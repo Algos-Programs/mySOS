@@ -106,6 +106,8 @@
 		A9619E8B16DCB174007124B7 /* Call_Giallo.png in Resources */ = {isa = PBXBuildFile; fileRef = A9619E8A16DCB174007124B7 /* Call_Giallo.png */; };
 		A984C2E016FA28F700686328 /* Bottone5.png in Resources */ = {isa = PBXBuildFile; fileRef = A984C2DF16FA28F700686328 /* Bottone5.png */; };
 		A984C2E216FA2B2300686328 /* bootone 6.png in Resources */ = {isa = PBXBuildFile; fileRef = A984C2E116FA2B2300686328 /* bootone 6.png */; };
+		A99224911704B27400777E95 /* icon_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = A99224901704B27400777E95 /* icon_114x114.png */; };
+		A99224951704B27700777E95 /* icon_57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = A99224941704B27700777E95 /* icon_57x57.png */; };
 		A99C8A421704536900DCFF05 /* sosImage.png in Resources */ = {isa = PBXBuildFile; fileRef = A99C8A411704536900DCFF05 /* sosImage.png */; };
 		A99C8A471704594100DCFF05 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A906077C16C2FEFB0014F0CB /* main.m */; };
 		A99C8A481704594100DCFF05 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A906078016C2FEFB0014F0CB /* AppDelegate.m */; };
@@ -313,6 +315,8 @@
 		A9619E8A16DCB174007124B7 /* Call_Giallo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Call_Giallo.png; sourceTree = "<group>"; };
 		A984C2DF16FA28F700686328 /* Bottone5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bottone5.png; sourceTree = "<group>"; };
 		A984C2E116FA2B2300686328 /* bootone 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bootone 6.png"; sourceTree = "<group>"; };
+		A99224901704B27400777E95 /* icon_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_114x114.png; sourceTree = "<group>"; };
+		A99224941704B27700777E95 /* icon_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_57x57.png; sourceTree = "<group>"; };
 		A99C8A411704536900DCFF05 /* sosImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sosImage.png; sourceTree = "<group>"; };
 		A99C8A7B1704594100DCFF05 /* mySOS Lite copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mySOS Lite copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A99C8A7C1704594100DCFF05 /* mySOS Lite copy4-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "mySOS Lite copy4-Info.plist"; path = "/Users/Marco/Documents/MyProjects/mySOS/mySOS Lite copy4-Info.plist"; sourceTree = "<absolute>"; };
@@ -407,6 +411,8 @@
 		A906076416C2FEFB0014F0CB = {
 			isa = PBXGroup;
 			children = (
+				A99224941704B27700777E95 /* icon_57x57.png */,
+				A99224901704B27400777E95 /* icon_114x114.png */,
 				A906077616C2FEFB0014F0CB /* mySOS */,
 				A90607A816C2FEFB0014F0CB /* mySOSTests */,
 				A906076F16C2FEFB0014F0CB /* Frameworks */,
@@ -808,6 +814,8 @@
 				A984C2E216FA2B2300686328 /* bootone 6.png in Resources */,
 				A9214B9816FE089D00A37C63 /* RequestLegend.rtf in Resources */,
 				A99C8A421704536900DCFF05 /* sosImage.png in Resources */,
+				A99224911704B27400777E95 /* icon_114x114.png in Resources */,
+				A99224951704B27700777E95 /* icon_57x57.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1148,6 +1156,7 @@
 				GCC_PREFIX_HEADER = "mySOS/mySOS-Prefix.pch";
 				INFOPLIST_FILE = "mySOS/mySOS-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1159,6 +1168,7 @@
 				GCC_PREFIX_HEADER = "mySOS/mySOS-Prefix.pch";
 				INFOPLIST_FILE = "mySOS/mySOS-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
