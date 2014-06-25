@@ -30,11 +30,8 @@
 		A90607AD16C2FEFB0014F0CB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A90607AB16C2FEFB0014F0CB /* InfoPlist.strings */; };
 		A90607B016C2FEFB0014F0CB /* mySOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A90607AF16C2FEFB0014F0CB /* mySOSTests.m */; };
 		A90607BA16C2FF4C0014F0CB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90607B916C2FF4C0014F0CB /* MessageUI.framework */; };
-		A9214B4B16FC5D0B00A37C63 /* Request.m in Sources */ = {isa = PBXBuildFile; fileRef = A9214B3D16FC5D0B00A37C63 /* Request.m */; };
 		A9214B4C16FC5D0B00A37C63 /* Request.m in Sources */ = {isa = PBXBuildFile; fileRef = A9214B3D16FC5D0B00A37C63 /* Request.m */; };
-		A9214B4D16FC5D0B00A37C63 /* RequestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9214B3F16FC5D0B00A37C63 /* RequestDelegate.m */; };
 		A9214B4E16FC5D0B00A37C63 /* RequestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9214B3F16FC5D0B00A37C63 /* RequestDelegate.m */; };
-		A9214B4F16FC5D0B00A37C63 /* RequestEventDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9214B4116FC5D0B00A37C63 /* RequestEventDelegate.m */; };
 		A9214B5016FC5D0B00A37C63 /* RequestEventDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9214B4116FC5D0B00A37C63 /* RequestEventDelegate.m */; };
 		A9214B9816FE089D00A37C63 /* RequestLegend.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A9214B9716FE089D00A37C63 /* RequestLegend.rtf */; };
 		A9214B9916FE089D00A37C63 /* RequestLegend.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A9214B9716FE089D00A37C63 /* RequestLegend.rtf */; };
@@ -247,6 +244,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18647B7C195B6E6600EED75E /* Request-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Request-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		18647B7D195B6E6600EED75E /* Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Request.h; sourceTree = SOURCE_ROOT; };
+		18647B7E195B6E6600EED75E /* Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Request.m; sourceTree = SOURCE_ROOT; };
+		18647B7F195B6E6600EED75E /* RequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestDelegate.h; sourceTree = SOURCE_ROOT; };
+		18647B80195B6E6600EED75E /* RequestDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestDelegate.m; sourceTree = SOURCE_ROOT; };
+		18647B81195B6E6600EED75E /* RequestEventDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestEventDelegate.h; sourceTree = SOURCE_ROOT; };
+		18647B82195B6E6600EED75E /* RequestEventDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestEventDelegate.m; sourceTree = SOURCE_ROOT; };
 		A906076D16C2FEFB0014F0CB /* mySOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mySOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A906077016C2FEFB0014F0CB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A906077216C2FEFB0014F0CB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -408,6 +412,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18647B7B195B6E5600EED75E /* LibRequest */ = {
+			isa = PBXGroup;
+			children = (
+				18647B7C195B6E6600EED75E /* Request-Prefix.pch */,
+				18647B7D195B6E6600EED75E /* Request.h */,
+				18647B7E195B6E6600EED75E /* Request.m */,
+				18647B7F195B6E6600EED75E /* RequestDelegate.h */,
+				18647B80195B6E6600EED75E /* RequestDelegate.m */,
+				18647B81195B6E6600EED75E /* RequestEventDelegate.h */,
+				18647B82195B6E6600EED75E /* RequestEventDelegate.m */,
+			);
+			name = LibRequest;
+			sourceTree = "<group>";
+		};
 		A906076416C2FEFB0014F0CB = {
 			isa = PBXGroup;
 			children = (
@@ -512,6 +530,7 @@
 		A9214B3916FC5D0B00A37C63 /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				18647B7B195B6E5600EED75E /* LibRequest */,
 				A9214B3A16FC5D0B00A37C63 /* Request */,
 				A9214B4216FC5D0B00A37C63 /* Request.xcodeproj */,
 			);
@@ -728,6 +747,7 @@
 		A906076516C2FEFB0014F0CB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastTestingUpgradeCheck = 0510;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = algos;
 			};
@@ -968,9 +988,6 @@
 				A9B9D00416C5139600AE88C4 /* SettingViewController.m in Sources */,
 				A9B9D00816C57C5000AE88C4 /* MPlist.m in Sources */,
 				A9B9D00F16C57D1C00AE88C4 /* MFile.m in Sources */,
-				A9214B4B16FC5D0B00A37C63 /* Request.m in Sources */,
-				A9214B4D16FC5D0B00A37C63 /* RequestDelegate.m in Sources */,
-				A9214B4F16FC5D0B00A37C63 /* RequestEventDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

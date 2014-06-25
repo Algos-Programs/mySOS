@@ -7,7 +7,7 @@
 //
 
 #import "SettingViewController.h"
-#import "Request.h"
+//#import "Request.h"
 
 @interface SettingViewController ()
 
@@ -227,7 +227,7 @@
 
 - (IBAction)pressButtonSave:(id)sender {
     
-    [Request requestWithDomain:nil withEventCode:@"5" andEventDetails:@"Pressed Botton Save in SettingView"];
+    //[Request requestWithDomain:nil withEventCode:@"5" andEventDetails:@"Pressed Botton Save in SettingView"];
     
     if ((![self.callNumberTextField.text isEqual: @""]) && (((![self.mexNumber1TextField.text isEqual: @""]) || (![self.mexNumber2TextField.text isEqual: @""]) || (![self.mexNumber3TextField.text isEqual: @""]))) & (![self.textMessageTextField.text isEqual:@""])) {
         
@@ -279,7 +279,7 @@
 
 - (IBAction)beginEditingLocaization:(id)sender {
     
-    [Request requestWithDomain:nil withEventCode:@"7" andEventDetails:@"Changed switch Location"];
+    // [Request requestWithDomain:nil withEventCode:@"7" andEventDetails:@"Changed switch Location"];
     if (_liteVersion) {
         [self.switchLocalization setEnabled:NO];
         [SettingViewController showAlertFreeVersion];

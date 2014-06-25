@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8CE10DD5-41DD-4D6E-B917-894D04D25268</string>
+	<key>IDESourceControlProjectName</key>
+	<string>mySOS</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7ECB7726-0239-4042-965C-DDB223ED6CA1</key>
+		<string>https://github.com/Librerie/LibRequest.git</string>
+		<key>96B4B643-DBB3-486B-88C0-BBEF243DD41E</key>
+		<string>https://github.com/Algos-Programs/mySOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>mySOS.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7ECB7726-0239-4042-965C-DDB223ED6CA1</key>
+		<string>../../LibRequest</string>
+		<key>96B4B643-DBB3-486B-88C0-BBEF243DD41E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Algos-Programs/mySOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>96B4B643-DBB3-486B-88C0-BBEF243DD41E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7ECB7726-0239-4042-965C-DDB223ED6CA1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LibRequest</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>96B4B643-DBB3-486B-88C0-BBEF243DD41E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>mySOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -7,8 +7,7 @@
 //
 
 #import "FirstViewController.h"
-#import "Request.h"
-
+// #import "Request.h"
 @interface FirstViewController ()
 
 @end
@@ -32,7 +31,7 @@ NSString *coordinateUrl = @"";
     [super viewDidLoad];
     _location = [CLLocation alloc];
     
-    [Request requestWithDomain:nil withEventCode:@"1" andEventDetails:@"App Opened"];
+    //[Request requestWithDomain:nil withEventCode:@"1" andEventDetails:@"App Opened"];
 	// Do any additional setup after loading the view, typically from a nib.
     //[Request requestWithDomain:nil];
 }
@@ -105,12 +104,12 @@ NSString *coordinateUrl = @"";
 
 - (IBAction)pressButtonCallMe:(id)sender {
     [self callNumber];
-    [Request requestWithDomain:nil withEventCode:@"2" andEventDetails:@"Pressed Botton Call"];
+    //[Request requestWithDomain:nil withEventCode:@"2" andEventDetails:@"Pressed Botton Call"];
 }
 
 - (IBAction)pressButtonSendMessage:(id)sender {
     
-    [Request requestWithDomain:nil withEventCode:@"3" andEventDetails:@"Pressed Button Send SMS"];
+    //[Request requestWithDomain:nil withEventCode:@"3" andEventDetails:@"Pressed Button Send SMS"];
 
     callNumber = NO;
     SettingViewController *sc = [[SettingViewController alloc] init];
@@ -129,7 +128,7 @@ NSString *coordinateUrl = @"";
 - (IBAction)pressButtonSOS:(id)sender {
     
     
-    [Request requestWithDomain:nil withEventCode:@"4" andEventDetails:@"Pressed Button SOS"];
+    //[Request requestWithDomain:nil withEventCode:@"4" andEventDetails:@"Pressed Button SOS"];
     
     // asserendo callNumber dico di iniziare la chiamata se il messaggio è stato inviato.
     callNumber = YES;
